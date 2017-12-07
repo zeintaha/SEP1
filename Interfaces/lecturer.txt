@@ -35,6 +35,11 @@ public class PleaseProvideControllerClassName {
     @FXML // fx:id="txtEmail"
     private TextField txtEmail; // Value injected by FXMLLoader
 
+    @FXML
+    void addLecturer(ActionEvent event) {
+
+    }
+
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() {
         assert txtPhone != null : "fx:id=\"txtPhone\" was not injected: check your FXML file 'lecturer.fxml'.";
