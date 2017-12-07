@@ -19,7 +19,7 @@ public class Event
    {
       this.type = type;
       this.title = title;
-      this.date = date; 
+      this.date = date;
       this.time = time;
       this.duration = duration;
       this.lecturer = lecturer;
@@ -28,13 +28,27 @@ public class Event
       this.numOfParticipants = numOfParticipants;
       participantsEvent = new Participants[getNumOfParticipants()];
    }
-   
-   public void addParticipantsToEvent(ArrayList<Participants> participants) {
-      
-         participantsEvent[numOfParticipants] = participants.toArray();
-      
+
+   public void addParticipantsToEvent(ArrayList<Participants> participants)
+   {
+
+      for (int i = 0; i < numOfParticipants; i++)
+      {
+         participantsEvent[i] = participants.get(i);
+      }
+
    }
    
+   public void removeParticipantsFromEvent(int iD) {
+      ArrayList<Participants> participants = new ArrayList<Participants>();
+      for(int i = 0; i < participantsEvent.length; i++) {
+         participants.add(participantsEvent[i]);
+      }
+      for(int i = 0; i < participants.size(); i++) {
+      participants.get(i).deleteParticipant(iD);
+      }
+      addParticipantsToEvent(participants);
+   }
 
    public Activity_Subject getType()
    {
@@ -125,5 +139,20 @@ public class Event
    {
       this.numOfParticipants = numOfParticipants;
    }
-   
+
+   public boolean equals(Object obj)
+   {
+      if (!(obj instanceof Event))
+      {
+         return false;
+      }
+
+      Event other = (Event) obj;
+      return type.equals(other.type) && title.equals(other.title)
+            && date.equals(other.date) && time.equals(other.time)
+            && duration.equals(other.duration)
+            && lecturer.equals(other.lecturer) && price == (other.price)
+            && discountedPrice == (other.discountedPrice)
+            && numOfParticipants == (other.numOfParticipants);
+   }
 }

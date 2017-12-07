@@ -1,4 +1,3 @@
-
 public class Clock
 {
    private int hour;
