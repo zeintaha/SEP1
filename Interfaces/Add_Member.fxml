@@ -14,18 +14,18 @@
                   <Label layoutX="50.0" layoutY="263.0" text="Start of membership" />
                   <Label layoutX="88.0" layoutY="223.0" text="Preferances:" />
                   <ComboBox fx:id="cmbPreferences" layoutX="220.0" layoutY="219.0" prefWidth="150.0" />
+                  <DatePicker fx:id="dteStartOfMembership" layoutX="217.0" layoutY="259.0" />
+                  <Label layoutX="123.0" layoutY="169.0" text="Email:" />
+                  <Label layoutX="119.0" layoutY="132.0" text="Phone:" />
+                  <Label layoutX="115.0" layoutY="91.0" text="Address:" />
+                  <Label layoutX="120.0" layoutY="43.0" text="Name:" />
+                  <TextField fx:id="txtEmail" layoutX="216.0" layoutY="165.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="txtPhone" layoutX="216.0" layoutY="128.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="txtAddress" layoutX="216.0" layoutY="87.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="txtName" layoutX="216.0" layoutY="39.0" prefHeight="25.0" prefWidth="176.0" />
                </children>
             </AnchorPane>
         </content>
       </TitledPane>
-      <TextField fx:id="txtName" layoutX="222.0" layoutY="65.0" prefHeight="25.0" prefWidth="176.0" />
-      <TextField fx:id="txtAddress" layoutX="222.0" layoutY="111.0" prefHeight="25.0" prefWidth="176.0" />
-      <TextField fx:id="txtPhone" layoutX="222.0" layoutY="154.0" prefHeight="25.0" prefWidth="176.0" />
-      <TextField fx:id="txtEmail" layoutX="222.0" layoutY="201.0" prefHeight="25.0" prefWidth="176.0" />
-      <Label layoutX="122.0" layoutY="69.0" text="Name:" />
-      <Label layoutX="122.0" layoutY="115.0" text="Address:" />
-      <Label layoutX="122.0" layoutY="158.0" text="Phone:" />
-      <Label layoutX="122.0" layoutY="205.0" text="Email:" />
-      <DatePicker fx:id="dteStartOfMembership" layoutX="223.0" layoutY="284.0" />
    </children>
 </AnchorPane>

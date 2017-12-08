@@ -6,14 +6,16 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="189.0" prefWidth="609.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TitledPane animated="false" prefHeight="195.0" prefWidth="609.0" text="Edit Members">
+      <TitledPane animated="false" prefHeight="195.0" prefWidth="609.0" text="Delete member">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="403.0" prefWidth="607.0">
                <children>
-                  <Button fx:id="btnEditMember" layoutX="438.0" layoutY="125.0" mnemonicParsing="false" onAction="#deleteMember" text="Delete Member" />
+                  <Button fx:id="btnDeleteMember" layoutX="448.0" layoutY="97.0" mnemonicParsing="false" onAction="#deleteMember" text="Delete member" />
                   <TextField fx:id="txtMemberId" layoutX="207.0" layoutY="52.0" prefHeight="25.0" prefWidth="178.0" />
                   <Label layoutX="88.0" layoutY="56.0" text="Member ID:" />
                   <Button fx:id="btnSearchId" layoutX="448.0" layoutY="52.0" mnemonicParsing="false" onAction="#searchId" text="Search ID" />
+                  <Label layoutX="72.0" layoutY="101.0" text="Select member:" />
+                  <ComboBox fx:id="cmbMember" layoutX="207.0" layoutY="97.0" prefWidth="150.0" />
                </children>
             </AnchorPane>
         </content>

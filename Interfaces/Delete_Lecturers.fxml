@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="189.0" prefWidth="609.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TitledPane animated="false" prefHeight="195.0" prefWidth="609.0" text="Delete lecturers">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="403.0" prefWidth="607.0">
+               <children>
+                  <Button fx:id="btnDeleteLecturer" layoutX="448.0" layoutY="97.0" mnemonicParsing="false" onAction="#deleteLecturer" text="Delete lecturer" />
+                  <TextField fx:id="txtLecturersName" layoutX="207.0" layoutY="52.0" prefHeight="25.0" prefWidth="178.0" />
+                  <Label layoutX="59.0" layoutY="56.0" text="Lecturer's name:" />
+                  <Button fx:id="btnSearchLecturer" layoutX="448.0" layoutY="52.0" mnemonicParsing="false" onAction="#searchLecturer" text="Search lecturer" />
+                  <Label layoutX="72.0" layoutY="101.0" text="Select lecturer:" />
+                  <ComboBox layoutX="207.0" layoutY="97.0" prefWidth="150.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

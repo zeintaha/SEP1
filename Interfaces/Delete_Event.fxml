@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="244.0" prefWidth="609.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TitledPane animated="false" layoutY="-5.0" prefHeight="254.0" prefWidth="609.0" text="Delete event">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="406.0" prefWidth="607.0">
+               <children>
+                  <Button fx:id="btnDeleteEvent" layoutX="498.0" layoutY="173.0" mnemonicParsing="false" onAction="#deleteEvent" text="Delete event" />
+                  <ComboBox fx:id="cmbEvent" layoutX="222.0" layoutY="127.0" prefHeight="25.0" prefWidth="176.0" promptText="select event" />
+                  <Label layoutX="81.0" layoutY="131.0" text="Select event:" />
+                  <DatePicker fx:id="dteStartDate" layoutX="217.0" layoutY="76.0" promptText="Starting date:" />
+                  <DatePicker fx:id="dteEndDate" layoutX="411.0" layoutY="76.0" promptText="End date:" />
+                  <Label layoutX="43.0" layoutY="80.0" text="Select date intervall" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

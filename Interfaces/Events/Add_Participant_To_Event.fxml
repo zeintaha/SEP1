@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="764.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TitledPane animated="false" layoutX="-7.0" layoutY="-2.0" prefHeight="600.0" prefWidth="769.0" text="Add participant to event">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="574.0" prefWidth="761.0">
+               <children>
+                  <Button fx:id="btnSaveChanges" layoutX="665.0" layoutY="535.0" mnemonicParsing="false" onAction="#saveChanges" text="Save changes" />
+                  <Label layoutX="113.0" layoutY="163.0" text="Non-member participant" />
+                  <Label layoutX="357.0" layoutY="210.0" text=" Member ID" />
+                  <TextField fx:id="txtMember" layoutX="447.0" layoutY="204.0" prefHeight="25.0" prefWidth="176.0" />
+                  <Label layoutX="83.0" layoutY="32.0" text="Title of event" />
+                  <TextField fx:id="txtTitleEvent" layoutX="213.0" layoutY="28.0" prefHeight="25.0" prefWidth="176.0" promptText="Enter name" />
+                  <Button fx:id="btnSearchEvent" layoutX="454.0" layoutY="28.0" mnemonicParsing="false" onAction="#searchEvent" text="Search Event" />
+                  <Label layoutX="110.0" layoutY="78.0" text="Event" />
+                  <ComboBox fx:id="cmbEvent" layoutX="213.0" layoutY="74.0" prefWidth="150.0" />
+                  <Button fx:id="btnSearchId" layoutX="643.0" layoutY="204.0" mnemonicParsing="false" onAction="#searchId" text="Search ID" />
+                  <ComboBox fx:id="cmbMember" layoutX="447.0" layoutY="261.0" prefWidth="150.0" />
+                  <Label layoutX="367.0" layoutY="265.0" text="Member" />
+                  <Button fx:id="btnAddParticipant" layoutX="540.0" layoutY="535.0" mnemonicParsing="false" onAction="#addParticipant" text="Add participant" />
+                  <TextField fx:id="txtName" layoutX="100.0" layoutY="205.0" prefHeight="25.0" prefWidth="176.0" />
+                  <Label layoutX="27.0" layoutY="209.0" text="Name" />
+                  <Label layoutX="28.0" layoutY="266.0" text="Address:" />
+                  <TextField fx:id="txtAddress" layoutX="101.0" layoutY="262.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="txtEmail" layoutX="101.0" layoutY="377.0" prefHeight="25.0" prefWidth="176.0" />
+                  <Label layoutX="28.0" layoutY="381.0" text="Email:" />
+                  <Label layoutX="27.0" layoutY="324.0" text="Phone:" />
+                  <TextField fx:id="txtPhone" layoutX="100.0" layoutY="320.0" prefHeight="25.0" prefWidth="176.0" />
+                  <Label layoutX="14.0" layoutY="434.0" text="Preferences:" />
+                  <TextField fx:id="txtPreferences" layoutX="101.0" layoutY="430.0" prefHeight="25.0" prefWidth="176.0" />
+                  <Label layoutX="470.0" layoutY="163.0" text="Member participant" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>
