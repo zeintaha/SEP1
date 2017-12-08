@@ -4,15 +4,17 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="191.0" prefWidth="424.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="241.0" prefWidth="424.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TitledPane animated="false" prefHeight="191.0" prefWidth="423.0" text="Edit activity subject">
+      <TitledPane animated="false" prefHeight="247.0" prefWidth="423.0" text="Edit activity subject">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="165.0" prefWidth="353.0">
                <children>
-                  <Button fx:id="btnEditActivity" layoutX="322.0" layoutY="126.0" mnemonicParsing="false" onAction="#editActivity" text="Edit activity" />
-                  <Label layoutX="81.0" layoutY="50.0" text="Activity subject:" />
+                  <Button fx:id="btnSaveChanges" layoutX="331.0" layoutY="182.0" mnemonicParsing="false" onAction="#saveChanges" text="Save changes" />
+                  <Label layoutX="81.0" layoutY="50.0" text="Select subject:" />
                   <ComboBox fx:id="cmbActivitySubject" layoutX="193.0" layoutY="46.0" prefHeight="25.0" prefWidth="176.0" promptText="select subject" />
+                  <Label layoutX="95.0" layoutY="118.0" text="Activity" />
+                  <TextField fx:id="txtActivity" layoutX="193.0" layoutY="114.0" />
                </children>
             </AnchorPane>
         </content>
