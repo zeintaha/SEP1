@@ -4,15 +4,17 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="160.0" prefWidth="481.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="186.0" prefWidth="495.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TitledPane animated="false" prefHeight="160.0" prefWidth="489.0" text="Add activity subject">
+      <TitledPane animated="false" prefHeight="186.0" prefWidth="481.0" text="Add activity subject">
          <content>
-            <AnchorPane prefHeight="139.0" prefWidth="492.0">
+            <AnchorPane prefHeight="177.0" prefWidth="492.0">
                <children>
-                  <Label layoutX="51.0" layoutY="57.0" text="Activity Subject:" />
-                  <Button fx:id="btnAddActivitySubject" layoutX="350.0" layoutY="124.0" mnemonicParsing="false" onAction="#addActivitySubject" text="Add Activity Subject" />
+                  <Label layoutX="51.0" layoutY="57.0" text="Activity name:" />
+                  <Button fx:id="btnAddActivitySubject" layoutX="360.0" layoutY="136.0" mnemonicParsing="false" onAction="#addActivitySubject" text="Add Activity Subject" />
                   <TextField fx:id="txtActivitySubject" layoutX="190.0" layoutY="53.0" />
+                  <Label layoutX="55.0" layoutY="103.0" text="Activity type:" />
+                  <TextField fx:id="txtActivityType" layoutX="190.0" layoutY="99.0" />
                </children>
             </AnchorPane>
          </content>

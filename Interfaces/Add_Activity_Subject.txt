@@ -22,6 +22,9 @@ public class PleaseProvideControllerClassName {
     @FXML // fx:id="txtActivitySubject"
     private TextField txtActivitySubject; // Value injected by FXMLLoader
 
+    @FXML // fx:id="txtActivityType"
+    private TextField txtActivityType; // Value injected by FXMLLoader
+
     @FXML
     void addActivitySubject(ActionEvent event) {
 
@@ -31,6 +34,7 @@ public class PleaseProvideControllerClassName {
     void initialize() {
         assert btnAddActivitySubject != null : "fx:id=\"btnAddActivitySubject\" was not injected: check your FXML file 'Add_Activity_Subject.fxml'.";
         assert txtActivitySubject != null : "fx:id=\"txtActivitySubject\" was not injected: check your FXML file 'Add_Activity_Subject.fxml'.";
+        assert txtActivityType != null : "fx:id=\"txtActivityType\" was not injected: check your FXML file 'Add_Activity_Subject.fxml'.";
 
     }
 }
