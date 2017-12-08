@@ -42,6 +42,11 @@ public class PleaseProvideControllerClassName {
 
     }
 
+    @FXML
+    void cmbSelectSubject(ActionEvent event) {
+
+    }
+
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() {
         assert btnAddActivitySubject != null : "fx:id=\"btnAddActivitySubject\" was not injected: check your FXML file '2 in 1.fxml'.";
