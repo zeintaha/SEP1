@@ -6,6 +6,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 
@@ -23,29 +24,32 @@ public class PleaseProvideControllerClassName {
     @FXML // fx:id="txtMember"
     private TextField txtMember; // Value injected by FXMLLoader
 
-    @FXML // fx:id="txtTitleEvent"
-    private TextField txtTitleEvent; // Value injected by FXMLLoader
-
     @FXML // fx:id="txtName"
     private TextField txtName; // Value injected by FXMLLoader
 
-    @FXML // fx:id="btnSearchEvent"
-    private Button btnSearchEvent; // Value injected by FXMLLoader
+    @FXML // fx:id="txtTitleEvent"
+    private TextField txtTitleEvent; // Value injected by FXMLLoader
 
     @FXML // fx:id="txtPreferences"
     private TextField txtPreferences; // Value injected by FXMLLoader
 
+    @FXML // fx:id="btnSearchEvent"
+    private Button btnSearchEvent; // Value injected by FXMLLoader
+
     @FXML // fx:id="txtEmail"
     private TextField txtEmail; // Value injected by FXMLLoader
 
-    @FXML // fx:id="btnSaveChanges"
-    private Button btnSaveChanges; // Value injected by FXMLLoader
+    @FXML // fx:id="btnCreateNewMember"
+    private Button btnCreateNewMember; // Value injected by FXMLLoader
+
+    @FXML // fx:id="cmbParticipantList"
+    private ComboBox<?> cmbParticipantList; // Value injected by FXMLLoader
 
     @FXML // fx:id="btnSearchId"
     private Button btnSearchId; // Value injected by FXMLLoader
 
-    @FXML // fx:id="cmbMember"
-    private ComboBox<?> cmbMember; // Value injected by FXMLLoader
+    @FXML // fx:id="chkMember"
+    private CheckBox chkMember; // Value injected by FXMLLoader
 
     @FXML // fx:id="txtAddress"
     private TextField txtAddress; // Value injected by FXMLLoader
@@ -56,13 +60,16 @@ public class PleaseProvideControllerClassName {
     @FXML // fx:id="btnAddParticipant"
     private Button btnAddParticipant; // Value injected by FXMLLoader
 
+    @FXML // fx:id="chkNonMember"
+    private CheckBox chkNonMember; // Value injected by FXMLLoader
+
     @FXML
-    void saveChanges(ActionEvent event) {
+    void addParticipant(ActionEvent event) {
 
     }
 
     @FXML
-    void searchEvent(ActionEvent event) {
+    void participantList(ActionEvent event) {
 
     }
 
@@ -72,7 +79,27 @@ public class PleaseProvideControllerClassName {
     }
 
     @FXML
-    void addParticipant(ActionEvent event) {
+    void eventList(ActionEvent event) {
+
+    }
+
+    @FXML
+    void searchEvent(ActionEvent event) {
+
+    }
+
+    @FXML
+    void createNewMember(ActionEvent event) {
+
+    }
+
+    @FXML
+    void memberList(ActionEvent event) {
+
+    }
+
+    @FXML
+    void nonMemberList(ActionEvent event) {
 
     }
 
@@ -80,17 +107,19 @@ public class PleaseProvideControllerClassName {
     void initialize() {
         assert txtPhone != null : "fx:id=\"txtPhone\" was not injected: check your FXML file 'Add_Participant_To_Event.fxml'.";
         assert txtMember != null : "fx:id=\"txtMember\" was not injected: check your FXML file 'Add_Participant_To_Event.fxml'.";
-        assert txtTitleEvent != null : "fx:id=\"txtTitleEvent\" was not injected: check your FXML file 'Add_Participant_To_Event.fxml'.";
         assert txtName != null : "fx:id=\"txtName\" was not injected: check your FXML file 'Add_Participant_To_Event.fxml'.";
-        assert btnSearchEvent != null : "fx:id=\"btnSearchEvent\" was not injected: check your FXML file 'Add_Participant_To_Event.fxml'.";
+        assert txtTitleEvent != null : "fx:id=\"txtTitleEvent\" was not injected: check your FXML file 'Add_Participant_To_Event.fxml'.";
         assert txtPreferences != null : "fx:id=\"txtPreferences\" was not injected: check your FXML file 'Add_Participant_To_Event.fxml'.";
+        assert btnSearchEvent != null : "fx:id=\"btnSearchEvent\" was not injected: check your FXML file 'Add_Participant_To_Event.fxml'.";
         assert txtEmail != null : "fx:id=\"txtEmail\" was not injected: check your FXML file 'Add_Participant_To_Event.fxml'.";
-        assert btnSaveChanges != null : "fx:id=\"btnSaveChanges\" was not injected: check your FXML file 'Add_Participant_To_Event.fxml'.";
+        assert btnCreateNewMember != null : "fx:id=\"btnCreateNewMember\" was not injected: check your FXML file 'Add_Participant_To_Event.fxml'.";
+        assert cmbParticipantList != null : "fx:id=\"cmbParticipantList\" was not injected: check your FXML file 'Add_Participant_To_Event.fxml'.";
         assert btnSearchId != null : "fx:id=\"btnSearchId\" was not injected: check your FXML file 'Add_Participant_To_Event.fxml'.";
-        assert cmbMember != null : "fx:id=\"cmbMember\" was not injected: check your FXML file 'Add_Participant_To_Event.fxml'.";
+        assert chkMember != null : "fx:id=\"chkMember\" was not injected: check your FXML file 'Add_Participant_To_Event.fxml'.";
         assert txtAddress != null : "fx:id=\"txtAddress\" was not injected: check your FXML file 'Add_Participant_To_Event.fxml'.";
         assert cmbEvent != null : "fx:id=\"cmbEvent\" was not injected: check your FXML file 'Add_Participant_To_Event.fxml'.";
         assert btnAddParticipant != null : "fx:id=\"btnAddParticipant\" was not injected: check your FXML file 'Add_Participant_To_Event.fxml'.";
+        assert chkNonMember != null : "fx:id=\"chkNonMember\" was not injected: check your FXML file 'Add_Participant_To_Event.fxml'.";
 
     }
 }

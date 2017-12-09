@@ -18,61 +18,76 @@ public class PleaseProvideControllerClassName {
     @FXML // URL location of the FXML file that was given to the FXMLLoader
     private URL location;
 
+    @FXML // fx:id="btnSaveChanges"
+    private Button btnSaveChanges; // Value injected by FXMLLoader
+
     @FXML // fx:id="dteStartDate"
     private DatePicker dteStartDate; // Value injected by FXMLLoader
 
     @FXML // fx:id="txtDate"
     private TextField txtDate; // Value injected by FXMLLoader
 
-    @FXML // fx:id="btnEditEvent"
-    private Button btnEditEvent; // Value injected by FXMLLoader
-
-    @FXML // fx:id="cmbEvent"
-    private ComboBox<?> cmbEvent; // Value injected by FXMLLoader
-
-    @FXML // fx:id="txtType"
-    private TextField txtType; // Value injected by FXMLLoader
+    @FXML // fx:id="cmbSelectEvent"
+    private ComboBox<?> cmbSelectEvent; // Value injected by FXMLLoader
 
     @FXML // fx:id="dteEndDate"
     private DatePicker dteEndDate; // Value injected by FXMLLoader
 
+    @FXML // fx:id="txtType"
+    private TextField txtType; // Value injected by FXMLLoader
+
     @FXML // fx:id="txtPrice"
     private TextField txtPrice; // Value injected by FXMLLoader
-
-    @FXML // fx:id="txtDuration"
-    private TextField txtDuration; // Value injected by FXMLLoader
 
     @FXML // fx:id="txtDiscountedPrice"
     private TextField txtDiscountedPrice; // Value injected by FXMLLoader
 
+    @FXML // fx:id="txtDuration"
+    private TextField txtDuration; // Value injected by FXMLLoader
+
     @FXML // fx:id="txtLecturer"
     private TextField txtLecturer; // Value injected by FXMLLoader
-
-    @FXML // fx:id="txtTime"
-    private TextField txtTime; // Value injected by FXMLLoader
 
     @FXML // fx:id="txtTitle"
     private TextField txtTitle; // Value injected by FXMLLoader
 
+    @FXML // fx:id="txtTime"
+    private TextField txtTime; // Value injected by FXMLLoader
+
     @FXML
-    void editEvent(ActionEvent event) {
+    void dteEndDate(ActionEvent event) {
+
+    }
+
+    @FXML
+    void dteStartDate(ActionEvent event) {
+
+    }
+
+    @FXML
+    void cmbSelectEvent(ActionEvent event) {
+
+    }
+
+    @FXML
+    void saveChanges(ActionEvent event) {
 
     }
 
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() {
+        assert btnSaveChanges != null : "fx:id=\"btnSaveChanges\" was not injected: check your FXML file 'Edit_Event.fxml'.";
         assert dteStartDate != null : "fx:id=\"dteStartDate\" was not injected: check your FXML file 'Edit_Event.fxml'.";
         assert txtDate != null : "fx:id=\"txtDate\" was not injected: check your FXML file 'Edit_Event.fxml'.";
-        assert btnEditEvent != null : "fx:id=\"btnEditEvent\" was not injected: check your FXML file 'Edit_Event.fxml'.";
-        assert cmbEvent != null : "fx:id=\"cmbEvent\" was not injected: check your FXML file 'Edit_Event.fxml'.";
-        assert txtType != null : "fx:id=\"txtType\" was not injected: check your FXML file 'Edit_Event.fxml'.";
+        assert cmbSelectEvent != null : "fx:id=\"cmbSelectEvent\" was not injected: check your FXML file 'Edit_Event.fxml'.";
         assert dteEndDate != null : "fx:id=\"dteEndDate\" was not injected: check your FXML file 'Edit_Event.fxml'.";
+        assert txtType != null : "fx:id=\"txtType\" was not injected: check your FXML file 'Edit_Event.fxml'.";
         assert txtPrice != null : "fx:id=\"txtPrice\" was not injected: check your FXML file 'Edit_Event.fxml'.";
-        assert txtDuration != null : "fx:id=\"txtDuration\" was not injected: check your FXML file 'Edit_Event.fxml'.";
         assert txtDiscountedPrice != null : "fx:id=\"txtDiscountedPrice\" was not injected: check your FXML file 'Edit_Event.fxml'.";
+        assert txtDuration != null : "fx:id=\"txtDuration\" was not injected: check your FXML file 'Edit_Event.fxml'.";
         assert txtLecturer != null : "fx:id=\"txtLecturer\" was not injected: check your FXML file 'Edit_Event.fxml'.";
-        assert txtTime != null : "fx:id=\"txtTime\" was not injected: check your FXML file 'Edit_Event.fxml'.";
         assert txtTitle != null : "fx:id=\"txtTitle\" was not injected: check your FXML file 'Edit_Event.fxml'.";
+        assert txtTime != null : "fx:id=\"txtTime\" was not injected: check your FXML file 'Edit_Event.fxml'.";
 
     }
 }

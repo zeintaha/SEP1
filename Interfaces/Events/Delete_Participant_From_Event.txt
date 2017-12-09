@@ -26,14 +26,14 @@ public class PleaseProvideControllerClassName {
     @FXML // fx:id="btnSearchId"
     private Button btnSearchId; // Value injected by FXMLLoader
 
-    @FXML // fx:id="txtParticipant"
-    private TextField txtParticipant; // Value injected by FXMLLoader
+    @FXML // fx:id="cmbMember"
+    private ComboBox<?> cmbMember; // Value injected by FXMLLoader
 
     @FXML // fx:id="btnSearchParticipant"
     private Button btnSearchParticipant; // Value injected by FXMLLoader
 
-    @FXML // fx:id="cmbMember"
-    private ComboBox<?> cmbMember; // Value injected by FXMLLoader
+    @FXML // fx:id="txtParticipant"
+    private TextField txtParticipant; // Value injected by FXMLLoader
 
     @FXML // fx:id="btnDeleteMember"
     private Button btnDeleteMember; // Value injected by FXMLLoader
@@ -41,27 +41,17 @@ public class PleaseProvideControllerClassName {
     @FXML // fx:id="btnSearchEvent"
     private Button btnSearchEvent; // Value injected by FXMLLoader
 
-    @FXML // fx:id="txtParticipantsName"
-    private TextField txtParticipantsName; // Value injected by FXMLLoader
+    @FXML // fx:id="txtNameOfEvent"
+    private TextField txtNameOfEvent; // Value injected by FXMLLoader
 
     @FXML // fx:id="btnDeleteParticipant"
     private Button btnDeleteParticipant; // Value injected by FXMLLoader
 
-    @FXML // fx:id="cmbLecturers"
-    private ComboBox<?> cmbLecturers; // Value injected by FXMLLoader
+    @FXML // fx:id="cmbEventList"
+    private ComboBox<?> cmbEventList; // Value injected by FXMLLoader
 
     @FXML
-    void searchEvent(ActionEvent event) {
-
-    }
-
-    @FXML
-    void searchParticipant(ActionEvent event) {
-
-    }
-
-    @FXML
-    void searchId(ActionEvent event) {
+    void deleteParticipant(ActionEvent event) {
 
     }
 
@@ -71,7 +61,32 @@ public class PleaseProvideControllerClassName {
     }
 
     @FXML
-    void deleteParticipant(ActionEvent event) {
+    void searchId(ActionEvent event) {
+
+    }
+
+    @FXML
+    void memberList(ActionEvent event) {
+
+    }
+
+    @FXML
+    void paticipantList(ActionEvent event) {
+
+    }
+
+    @FXML
+    void searchParticipant(ActionEvent event) {
+
+    }
+
+    @FXML
+    void eventList(ActionEvent event) {
+
+    }
+
+    @FXML
+    void searchEvent(ActionEvent event) {
 
     }
 
@@ -80,14 +95,14 @@ public class PleaseProvideControllerClassName {
         assert txtMemberId != null : "fx:id=\"txtMemberId\" was not injected: check your FXML file 'Delete_Participant_From_Event.fxml'.";
         assert cmbParicipant != null : "fx:id=\"cmbParicipant\" was not injected: check your FXML file 'Delete_Participant_From_Event.fxml'.";
         assert btnSearchId != null : "fx:id=\"btnSearchId\" was not injected: check your FXML file 'Delete_Participant_From_Event.fxml'.";
-        assert txtParticipant != null : "fx:id=\"txtParticipant\" was not injected: check your FXML file 'Delete_Participant_From_Event.fxml'.";
-        assert btnSearchParticipant != null : "fx:id=\"btnSearchParticipant\" was not injected: check your FXML file 'Delete_Participant_From_Event.fxml'.";
         assert cmbMember != null : "fx:id=\"cmbMember\" was not injected: check your FXML file 'Delete_Participant_From_Event.fxml'.";
+        assert btnSearchParticipant != null : "fx:id=\"btnSearchParticipant\" was not injected: check your FXML file 'Delete_Participant_From_Event.fxml'.";
+        assert txtParticipant != null : "fx:id=\"txtParticipant\" was not injected: check your FXML file 'Delete_Participant_From_Event.fxml'.";
         assert btnDeleteMember != null : "fx:id=\"btnDeleteMember\" was not injected: check your FXML file 'Delete_Participant_From_Event.fxml'.";
         assert btnSearchEvent != null : "fx:id=\"btnSearchEvent\" was not injected: check your FXML file 'Delete_Participant_From_Event.fxml'.";
-        assert txtParticipantsName != null : "fx:id=\"txtParticipantsName\" was not injected: check your FXML file 'Delete_Participant_From_Event.fxml'.";
+        assert txtNameOfEvent != null : "fx:id=\"txtNameOfEvent\" was not injected: check your FXML file 'Delete_Participant_From_Event.fxml'.";
         assert btnDeleteParticipant != null : "fx:id=\"btnDeleteParticipant\" was not injected: check your FXML file 'Delete_Participant_From_Event.fxml'.";
-        assert cmbLecturers != null : "fx:id=\"cmbLecturers\" was not injected: check your FXML file 'Delete_Participant_From_Event.fxml'.";
+        assert cmbEventList != null : "fx:id=\"cmbEventList\" was not injected: check your FXML file 'Delete_Participant_From_Event.fxml'.";
 
     }
 }

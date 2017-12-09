@@ -6,27 +6,19 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="388.0" prefWidth="609.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TitledPane animated="false" prefHeight="388.0" prefWidth="609.0" text="Edit Members">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="403.0" prefWidth="607.0">
-               <children>
-                  <Button fx:id="btnEditMember" layoutX="500.0" layoutY="323.0" mnemonicParsing="false" onAction="#editMember" text="Edit Member" />
-                  <Label layoutX="88.0" layoutY="306.0" text="Preferances:" />
-                  <ComboBox fx:id="cmbPreferences" layoutX="208.0" layoutY="302.0" prefWidth="150.0" />
-                  <Label layoutX="121.0" layoutY="262.0" text="Email:" />
-                  <TextField fx:id="txtEmail" layoutX="208.0" layoutY="256.0" prefHeight="25.0" prefWidth="176.0" />
-                  <Label layoutX="113.0" layoutY="211.0" text="Phone:" />
-                  <TextField fx:id="txtPhone" layoutX="208.0" layoutY="207.0" prefHeight="25.0" prefWidth="176.0" />
-                  <Label layoutX="104.0" layoutY="160.0" text="Address:" />
-                  <TextField fx:id="txtAddress" layoutX="207.0" layoutY="156.0" prefHeight="25.0" prefWidth="176.0" />
-                  <TextField fx:id="txtName" layoutX="208.0" layoutY="107.0" prefHeight="25.0" prefWidth="176.0" />
-                  <Label layoutX="116.0" layoutY="111.0" text="Name:" />
-                  <TextField fx:id="txtMemberId" layoutX="207.0" layoutY="52.0" prefHeight="25.0" prefWidth="178.0" />
-                  <Label layoutX="88.0" layoutY="56.0" text="Member ID:" />
-                  <Button fx:id="btnSearchId" layoutX="448.0" layoutY="52.0" mnemonicParsing="false" onAction="#searchId" text="Search ID" />
-               </children>
-            </AnchorPane>
-        </content>
-      </TitledPane>
+      <Button fx:id="btnSearchId" layoutX="458.0" layoutY="62.0" mnemonicParsing="false" onAction="#searchId" text="Search ID" />
+      <Label layoutX="98.0" layoutY="66.0" text="Member ID:" />
+      <TextField fx:id="txtMemberId" layoutX="217.0" layoutY="62.0" prefHeight="25.0" prefWidth="178.0" />
+      <Label layoutX="126.0" layoutY="121.0" text="Name:" />
+      <TextField fx:id="txtName" layoutX="218.0" layoutY="117.0" prefHeight="25.0" prefWidth="176.0" />
+      <TextField fx:id="txtAddress" layoutX="217.0" layoutY="166.0" prefHeight="25.0" prefWidth="176.0" />
+      <Label layoutX="114.0" layoutY="170.0" text="Address:" />
+      <TextField fx:id="txtPhone" layoutX="218.0" layoutY="217.0" prefHeight="25.0" prefWidth="176.0" />
+      <Label layoutX="123.0" layoutY="221.0" text="Phone:" />
+      <TextField fx:id="txtEmail" layoutX="218.0" layoutY="266.0" prefHeight="25.0" prefWidth="176.0" />
+      <Label layoutX="131.0" layoutY="272.0" text="Email:" />
+      <ComboBox fx:id="cmbPreferences" layoutX="218.0" layoutY="312.0" onAction="#preferances" prefWidth="150.0" />
+      <Label layoutX="98.0" layoutY="316.0" text="Preferances:" />
+      <Button fx:id="btnEditMember" layoutX="510.0" layoutY="349.0" mnemonicParsing="false" onAction="#editMember" text="Edit Member" />
    </children>
 </AnchorPane>

@@ -20,20 +20,25 @@ public class PleaseProvideControllerClassName {
     @FXML // fx:id="txtPhone"
     private TextField txtPhone; // Value injected by FXMLLoader
 
-    @FXML // fx:id="cmbCategory"
-    private ComboBox<?> cmbCategory; // Value injected by FXMLLoader
-
     @FXML // fx:id="txtName"
     private TextField txtName; // Value injected by FXMLLoader
+
+    @FXML // fx:id="cmbSelectCategory"
+    private ComboBox<?> cmbSelectCategory; // Value injected by FXMLLoader
 
     @FXML // fx:id="txtAddress"
     private TextField txtAddress; // Value injected by FXMLLoader
 
+    @FXML // fx:id="txtEmail"
+    private TextField txtEmail; // Value injected by FXMLLoader
+
     @FXML // fx:id="btnAddLecturer"
     private Button btnAddLecturer; // Value injected by FXMLLoader
 
-    @FXML // fx:id="txtEmail"
-    private TextField txtEmail; // Value injected by FXMLLoader
+    @FXML
+    void selectCategory(ActionEvent event) {
+
+    }
 
     @FXML
     void addLecturer(ActionEvent event) {
@@ -43,11 +48,11 @@ public class PleaseProvideControllerClassName {
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() {
         assert txtPhone != null : "fx:id=\"txtPhone\" was not injected: check your FXML file 'lecturer.fxml'.";
-        assert cmbCategory != null : "fx:id=\"cmbCategory\" was not injected: check your FXML file 'lecturer.fxml'.";
         assert txtName != null : "fx:id=\"txtName\" was not injected: check your FXML file 'lecturer.fxml'.";
+        assert cmbSelectCategory != null : "fx:id=\"cmbSelectCategory\" was not injected: check your FXML file 'lecturer.fxml'.";
         assert txtAddress != null : "fx:id=\"txtAddress\" was not injected: check your FXML file 'lecturer.fxml'.";
-        assert btnAddLecturer != null : "fx:id=\"btnAddLecturer\" was not injected: check your FXML file 'lecturer.fxml'.";
         assert txtEmail != null : "fx:id=\"txtEmail\" was not injected: check your FXML file 'lecturer.fxml'.";
+        assert btnAddLecturer != null : "fx:id=\"btnAddLecturer\" was not injected: check your FXML file 'lecturer.fxml'.";
 
     }
 }

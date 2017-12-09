@@ -24,11 +24,11 @@ public class PleaseProvideControllerClassName {
     @FXML // fx:id="btnAddMember"
     private Button btnAddMember; // Value injected by FXMLLoader
 
-    @FXML // fx:id="cmbPreferences"
-    private ComboBox<?> cmbPreferences; // Value injected by FXMLLoader
-
     @FXML // fx:id="txtName"
     private TextField txtName; // Value injected by FXMLLoader
+
+    @FXML // fx:id="cmbPreferences"
+    private ComboBox<?> cmbPreferences; // Value injected by FXMLLoader
 
     @FXML // fx:id="dteStartOfMembership"
     private DatePicker dteStartOfMembership; // Value injected by FXMLLoader
@@ -40,6 +40,16 @@ public class PleaseProvideControllerClassName {
     private TextField txtEmail; // Value injected by FXMLLoader
 
     @FXML
+    void dteStartOfMembership(ActionEvent event) {
+
+    }
+
+    @FXML
+    void cmbPreferences(ActionEvent event) {
+
+    }
+
+    @FXML
     void addMember(ActionEvent event) {
 
     }
@@ -48,8 +58,8 @@ public class PleaseProvideControllerClassName {
     void initialize() {
         assert txtPhone != null : "fx:id=\"txtPhone\" was not injected: check your FXML file 'Add_Member.fxml'.";
         assert btnAddMember != null : "fx:id=\"btnAddMember\" was not injected: check your FXML file 'Add_Member.fxml'.";
-        assert cmbPreferences != null : "fx:id=\"cmbPreferences\" was not injected: check your FXML file 'Add_Member.fxml'.";
         assert txtName != null : "fx:id=\"txtName\" was not injected: check your FXML file 'Add_Member.fxml'.";
+        assert cmbPreferences != null : "fx:id=\"cmbPreferences\" was not injected: check your FXML file 'Add_Member.fxml'.";
         assert dteStartOfMembership != null : "fx:id=\"dteStartOfMembership\" was not injected: check your FXML file 'Add_Member.fxml'.";
         assert txtAddress != null : "fx:id=\"txtAddress\" was not injected: check your FXML file 'Add_Member.fxml'.";
         assert txtEmail != null : "fx:id=\"txtEmail\" was not injected: check your FXML file 'Add_Member.fxml'.";

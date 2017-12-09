@@ -23,6 +23,11 @@ public class PleaseProvideControllerClassName {
     private Button btnEditActivity; // Value injected by FXMLLoader
 
     @FXML
+    void activitySubject(ActionEvent event) {
+
+    }
+
+    @FXML
     void editActivity(ActionEvent event) {
 
     }

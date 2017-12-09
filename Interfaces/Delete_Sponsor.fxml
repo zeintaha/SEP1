@@ -6,17 +6,9 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="189.0" prefWidth="609.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TitledPane animated="false" prefHeight="195.0" prefWidth="609.0" text="Delete sponsor">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="403.0" prefWidth="607.0">
-               <children>
-                  <Button fx:id="btnDeleteSponsor" layoutX="438.0" layoutY="125.0" mnemonicParsing="false" onAction="#deleteSponsor" text="Delete sponsor" />
-                  <TextField fx:id="txtSponsor" layoutX="207.0" layoutY="52.0" prefHeight="25.0" prefWidth="178.0" />
-                  <Label layoutX="88.0" layoutY="56.0" text="Sponsor's name" />
-                  <Button fx:id="btnSearchSponsor" layoutX="438.0" layoutY="52.0" mnemonicParsing="false" onAction="#searchSponsor" text="Search sponsor" />
-               </children>
-            </AnchorPane>
-        </content>
-      </TitledPane>
+      <Button fx:id="btnSearchSponsor" layoutX="448.0" layoutY="62.0" mnemonicParsing="false" onAction="#searchSponsor" text="Search sponsor" />
+      <Label layoutX="98.0" layoutY="66.0" text="Sponsor's name" />
+      <TextField fx:id="txtSponsor" layoutX="217.0" layoutY="62.0" prefHeight="25.0" prefWidth="178.0" />
+      <Button fx:id="btnDeleteSponsor" layoutX="448.0" layoutY="135.0" mnemonicParsing="false" onAction="#deleteSponsor" text="Delete sponsor" />
    </children>
 </AnchorPane>

@@ -20,11 +20,11 @@ public class PleaseProvideControllerClassName {
     @FXML // fx:id="txtPhone"
     private TextField txtPhone; // Value injected by FXMLLoader
 
-    @FXML // fx:id="btnAddSponsor"
-    private Button btnAddSponsor; // Value injected by FXMLLoader
-
     @FXML // fx:id="btnSearch"
     private Button btnSearch; // Value injected by FXMLLoader
+
+    @FXML // fx:id="btnAddSponsor"
+    private Button btnAddSponsor; // Value injected by FXMLLoader
 
     @FXML // fx:id="txtName"
     private TextField txtName; // Value injected by FXMLLoader
@@ -42,20 +42,25 @@ public class PleaseProvideControllerClassName {
     private ComboBox<?> cmbActivitySubject; // Value injected by FXMLLoader
 
     @FXML
-    void addSponsor(ActionEvent event) {
+    void searchSponsor(ActionEvent event) {
 
     }
 
     @FXML
-    void searchSponsor(ActionEvent event) {
+    void cmbActivitySubject(ActionEvent event) {
+
+    }
+
+    @FXML
+    void addSponsor(ActionEvent event) {
 
     }
 
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() {
         assert txtPhone != null : "fx:id=\"txtPhone\" was not injected: check your FXML file 'Edit_Sponsor.fxml'.";
-        assert btnAddSponsor != null : "fx:id=\"btnAddSponsor\" was not injected: check your FXML file 'Edit_Sponsor.fxml'.";
         assert btnSearch != null : "fx:id=\"btnSearch\" was not injected: check your FXML file 'Edit_Sponsor.fxml'.";
+        assert btnAddSponsor != null : "fx:id=\"btnAddSponsor\" was not injected: check your FXML file 'Edit_Sponsor.fxml'.";
         assert txtName != null : "fx:id=\"txtName\" was not injected: check your FXML file 'Edit_Sponsor.fxml'.";
         assert txtSponsorName != null : "fx:id=\"txtSponsorName\" was not injected: check your FXML file 'Edit_Sponsor.fxml'.";
         assert txtAddress != null : "fx:id=\"txtAddress\" was not injected: check your FXML file 'Edit_Sponsor.fxml'.";

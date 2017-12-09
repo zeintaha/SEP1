@@ -6,24 +6,20 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="609.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TitledPane animated="false" layoutY="-1.0" prefHeight="406.0" prefWidth="609.0" text="Lecturer">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="380.0" prefWidth="506.0">
-               <children>
-                  <Button fx:id="btnAddLecturer" layoutX="412.0" layoutY="302.0" mnemonicParsing="false" onAction="#addLecturer" text="Add Lecturer" />
-               </children>
-            </AnchorPane>
-        </content>
-      </TitledPane>
-      <TextField fx:id="txtName" layoutX="222.0" layoutY="65.0" prefHeight="25.0" prefWidth="176.0" />
-      <TextField fx:id="txtAddress" layoutX="222.0" layoutY="111.0" prefHeight="25.0" prefWidth="176.0" />
-      <TextField fx:id="txtPhone" layoutX="222.0" layoutY="154.0" prefHeight="25.0" prefWidth="176.0" />
-      <TextField fx:id="txtEmail" layoutX="222.0" layoutY="201.0" prefHeight="25.0" prefWidth="176.0" />
-      <Label layoutX="122.0" layoutY="69.0" text="Name:" />
-      <Label layoutX="122.0" layoutY="115.0" text="Address:" />
-      <Label layoutX="122.0" layoutY="158.0" text="Phone:" />
-      <Label layoutX="122.0" layoutY="205.0" text="Email:" />
-      <ComboBox fx:id="cmbCategory" layoutX="222.0" layoutY="257.0" prefHeight="25.0" prefWidth="176.0" promptText="Select subject" />
-      <Label layoutX="84.0" layoutY="261.0" text="Activity subject:" />
+      <Pane prefHeight="400.0" prefWidth="609.0">
+         <children>
+            <Label layoutX="111.0" layoutY="276.0" text="Activity subject:" />
+            <Button fx:id="btnAddLecturer" layoutX="457.0" layoutY="302.0" mnemonicParsing="false" onAction="#addLecturer" text="Add Lecturer" />
+            <TextField fx:id="txtName" layoutX="242.0" layoutY="85.0" prefHeight="25.0" prefWidth="176.0" />
+            <TextField fx:id="txtAddress" layoutX="242.0" layoutY="131.0" prefHeight="25.0" prefWidth="176.0" />
+            <TextField fx:id="txtPhone" layoutX="242.0" layoutY="174.0" prefHeight="25.0" prefWidth="176.0" />
+            <TextField fx:id="txtEmail" layoutX="242.0" layoutY="221.0" prefHeight="25.0" prefWidth="176.0" />
+            <Label layoutX="142.0" layoutY="89.0" text="Name:" />
+            <Label layoutX="142.0" layoutY="135.0" text="Address:" />
+            <Label layoutX="142.0" layoutY="178.0" text="Phone:" />
+            <Label layoutX="142.0" layoutY="225.0" text="Email:" />
+            <ComboBox fx:id="cmbCategory" layoutX="242.0" layoutY="277.0" onAction="#cmbCategory" prefHeight="25.0" prefWidth="176.0" promptText="Select subject" />
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

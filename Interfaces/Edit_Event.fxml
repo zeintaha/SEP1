@@ -6,35 +6,27 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="644.0" prefWidth="609.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TitledPane animated="false" layoutY="-5.0" prefHeight="651.0" prefWidth="609.0" text="Edit event">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="490.0" prefWidth="607.0">
-               <children>
-                  <Button fx:id="btnEditEvent" layoutX="516.0" layoutY="586.0" mnemonicParsing="false" onAction="#editEvent" text="Edit event" />
-                  <TextField fx:id="txtDuration" layoutX="222.0" layoutY="374.0" prefHeight="25.0" prefWidth="176.0" />
-                  <ComboBox fx:id="cmbEvent" layoutX="222.0" layoutY="127.0" prefHeight="25.0" prefWidth="176.0" promptText="select event" />
-                  <Label layoutX="116.0" layoutY="321.0" text="Time:" />
-                  <Label layoutX="116.0" layoutY="268.0" text="Date:" />
-                  <Label layoutX="117.0" layoutY="219.0" text="Title:" />
-                  <Label layoutX="116.0" layoutY="177.0" text="Type:" />
-                  <TextField fx:id="txtTime" layoutX="222.0" layoutY="317.0" prefHeight="25.0" prefWidth="176.0" />
-                  <TextField fx:id="txtType" layoutX="222.0" layoutY="173.0" prefHeight="25.0" prefWidth="176.0" />
-                  <Label layoutX="97.0" layoutY="377.0" text="Duration:" />
-                  <Label layoutX="81.0" layoutY="131.0" text="Select event:" />
-                  <Label layoutX="48.0" layoutY="433.0" text="Lecturer/Lecturers:" />
-                  <Label layoutX="121.0" layoutY="486.0" prefHeight="25.0" prefWidth="36.0" text="Price:" />
-                  <Label layoutX="56.0" layoutY="536.0" text="Discounted price:" />
-                  <TextField fx:id="txtLecturer" layoutX="222.0" layoutY="429.0" />
-                  <TextField fx:id="txtPrice" layoutX="222.0" layoutY="484.0" />
-                  <TextField fx:id="txtDiscountedPrice" layoutX="222.0" layoutY="532.0" />
-                  <DatePicker fx:id="dteStartDate" layoutX="217.0" layoutY="76.0" promptText="Starting date:" />
-                  <DatePicker fx:id="dteEndDate" layoutX="411.0" layoutY="76.0" promptText="End date:" />
-                  <Label layoutX="43.0" layoutY="80.0" text="Select date intervall" />
-               </children>
-            </AnchorPane>
-        </content>
-      </TitledPane>
-      <TextField fx:id="txtTitle" layoutX="222.0" layoutY="239.0" prefHeight="25.0" prefWidth="176.0" />
-      <TextField fx:id="txtDate" layoutX="222.0" layoutY="288.0" prefHeight="25.0" prefWidth="176.0" />
+      <TextField fx:id="txtDate" layoutX="232.0" layoutY="274.0" prefHeight="25.0" prefWidth="176.0" />
+      <TextField fx:id="txtTitle" layoutX="232.0" layoutY="225.0" prefHeight="25.0" prefWidth="176.0" />
+      <Label layoutX="53.0" layoutY="90.0" text="Select date intervall" />
+      <DatePicker fx:id="dteEndDate" layoutX="421.0" layoutY="86.0" onAction="#dteEndDate" promptText="End date:" />
+      <DatePicker fx:id="dteStartDate" layoutX="227.0" layoutY="86.0" onAction="#dteStartDate" promptText="Starting date:" />
+      <TextField fx:id="txtDiscountedPrice" layoutX="232.0" layoutY="542.0" />
+      <TextField fx:id="txtPrice" layoutX="232.0" layoutY="494.0" />
+      <TextField fx:id="txtLecturer" layoutX="232.0" layoutY="439.0" />
+      <Label layoutX="66.0" layoutY="546.0" text="Discounted price:" />
+      <Label layoutX="131.0" layoutY="496.0" prefHeight="25.0" prefWidth="36.0" text="Price:" />
+      <Label layoutX="58.0" layoutY="443.0" text="Lecturer/Lecturers:" />
+      <Label layoutX="91.0" layoutY="141.0" text="Select event:" />
+      <Label layoutX="107.0" layoutY="387.0" text="Duration:" />
+      <TextField fx:id="txtType" layoutX="232.0" layoutY="183.0" prefHeight="25.0" prefWidth="176.0" />
+      <TextField fx:id="txtTime" layoutX="232.0" layoutY="327.0" prefHeight="25.0" prefWidth="176.0" />
+      <Label layoutX="126.0" layoutY="187.0" text="Type:" />
+      <Label layoutX="127.0" layoutY="229.0" text="Title:" />
+      <Label layoutX="126.0" layoutY="278.0" text="Date:" />
+      <Label layoutX="126.0" layoutY="331.0" text="Time:" />
+      <ComboBox fx:id="cmbSelectEvent" layoutX="232.0" layoutY="137.0" onAction="#cmbSelectEvent" prefHeight="25.0" prefWidth="176.0" promptText="select event" />
+      <TextField fx:id="txtDuration" layoutX="232.0" layoutY="384.0" prefHeight="25.0" prefWidth="176.0" />
+      <Button fx:id="btnSaveChanges" layoutX="508.0" layoutY="605.0" mnemonicParsing="false" onAction="#saveChanges" text="Save changes" />
    </children>
 </AnchorPane>

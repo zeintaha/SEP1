@@ -26,12 +26,12 @@ public class PleaseProvideControllerClassName {
     private TextField txtSponsor; // Value injected by FXMLLoader
 
     @FXML
-    void deleteSponsor(ActionEvent event) {
+    void searchSponsor(ActionEvent event) {
 
     }
 
     @FXML
-    void searchSponsor(ActionEvent event) {
+    void deleteSponsor(ActionEvent event) {
 
     }
 

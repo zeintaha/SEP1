@@ -6,16 +6,8 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="191.0" prefWidth="424.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TitledPane animated="false" prefHeight="191.0" prefWidth="423.0" text="Edit activity subject">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="165.0" prefWidth="353.0">
-               <children>
-                  <Button fx:id="btnEditActivity" layoutX="322.0" layoutY="126.0" mnemonicParsing="false" onAction="#editActivity" text="Edit activity" />
-                  <Label layoutX="81.0" layoutY="50.0" text="Activity subject:" />
-                  <ComboBox fx:id="cmbActivitySubject" layoutX="193.0" layoutY="46.0" prefHeight="25.0" prefWidth="176.0" promptText="select subject" />
-               </children>
-            </AnchorPane>
-        </content>
-      </TitledPane>
+      <ComboBox fx:id="cmbActivitySubject" layoutX="137.0" layoutY="56.0" onAction="#activitySubject" prefHeight="25.0" prefWidth="176.0" promptText="select subject" />
+      <Label layoutX="25.0" layoutY="60.0" text="Activity subject:" />
+      <Button fx:id="btnEditActivity" layoutX="333.0" layoutY="152.0" mnemonicParsing="false" onAction="#editActivity" text="Edit activity" />
    </children>
 </AnchorPane>

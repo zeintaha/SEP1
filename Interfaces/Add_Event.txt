@@ -26,26 +26,31 @@ public class PleaseProvideControllerClassName {
     @FXML // fx:id="txtType"
     private TextField txtType; // Value injected by FXMLLoader
 
-    @FXML // fx:id="btnAddEvent"
-    private Button btnAddEvent; // Value injected by FXMLLoader
-
     @FXML // fx:id="txtPrice"
     private TextField txtPrice; // Value injected by FXMLLoader
 
-    @FXML // fx:id="txtDuration"
-    private TextField txtDuration; // Value injected by FXMLLoader
+    @FXML // fx:id="btnAddEvent"
+    private Button btnAddEvent; // Value injected by FXMLLoader
 
     @FXML // fx:id="txtDiscountedPrice"
     private TextField txtDiscountedPrice; // Value injected by FXMLLoader
 
+    @FXML // fx:id="txtDuration"
+    private TextField txtDuration; // Value injected by FXMLLoader
+
     @FXML // fx:id="txtLecturer"
     private TextField txtLecturer; // Value injected by FXMLLoader
+
+    @FXML // fx:id="txtTitle"
+    private TextField txtTitle; // Value injected by FXMLLoader
 
     @FXML // fx:id="txtTime"
     private TextField txtTime; // Value injected by FXMLLoader
 
-    @FXML // fx:id="txtTitle"
-    private TextField txtTitle; // Value injected by FXMLLoader
+    @FXML
+    void dteStartDate(ActionEvent event) {
+
+    }
 
     @FXML
     void addEvent(ActionEvent event) {
@@ -57,13 +62,13 @@ public class PleaseProvideControllerClassName {
         assert dteStartDate != null : "fx:id=\"dteStartDate\" was not injected: check your FXML file 'Add_Event.fxml'.";
         assert txtDate != null : "fx:id=\"txtDate\" was not injected: check your FXML file 'Add_Event.fxml'.";
         assert txtType != null : "fx:id=\"txtType\" was not injected: check your FXML file 'Add_Event.fxml'.";
-        assert btnAddEvent != null : "fx:id=\"btnAddEvent\" was not injected: check your FXML file 'Add_Event.fxml'.";
         assert txtPrice != null : "fx:id=\"txtPrice\" was not injected: check your FXML file 'Add_Event.fxml'.";
-        assert txtDuration != null : "fx:id=\"txtDuration\" was not injected: check your FXML file 'Add_Event.fxml'.";
+        assert btnAddEvent != null : "fx:id=\"btnAddEvent\" was not injected: check your FXML file 'Add_Event.fxml'.";
         assert txtDiscountedPrice != null : "fx:id=\"txtDiscountedPrice\" was not injected: check your FXML file 'Add_Event.fxml'.";
+        assert txtDuration != null : "fx:id=\"txtDuration\" was not injected: check your FXML file 'Add_Event.fxml'.";
         assert txtLecturer != null : "fx:id=\"txtLecturer\" was not injected: check your FXML file 'Add_Event.fxml'.";
-        assert txtTime != null : "fx:id=\"txtTime\" was not injected: check your FXML file 'Add_Event.fxml'.";
         assert txtTitle != null : "fx:id=\"txtTitle\" was not injected: check your FXML file 'Add_Event.fxml'.";
+        assert txtTime != null : "fx:id=\"txtTime\" was not injected: check your FXML file 'Add_Event.fxml'.";
 
     }
 }

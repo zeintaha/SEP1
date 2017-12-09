@@ -6,18 +6,14 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="186.0" prefWidth="495.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TitledPane animated="false" prefHeight="186.0" prefWidth="481.0" text="Add activity subject">
-         <content>
-            <AnchorPane prefHeight="177.0" prefWidth="492.0">
-               <children>
-                  <Label layoutX="51.0" layoutY="57.0" text="Activity name:" />
-                  <Button fx:id="btnAddActivitySubject" layoutX="360.0" layoutY="136.0" mnemonicParsing="false" onAction="#addActivitySubject" text="Add Activity Subject" />
-                  <TextField fx:id="txtActivitySubject" layoutX="190.0" layoutY="53.0" />
-                  <Label layoutX="55.0" layoutY="103.0" text="Activity type:" />
-                  <TextField fx:id="txtActivityType" layoutX="190.0" layoutY="99.0" />
-               </children>
-            </AnchorPane>
-         </content>
-      </TitledPane>
+      <Pane prefHeight="200.0" prefWidth="504.0">
+         <children>
+            <TextField fx:id="txtActivityType1" layoutX="199.0" layoutY="86.0" />
+            <Label layoutX="64.0" layoutY="90.0" text="Activity type:" />
+            <TextField fx:id="txtActivitySubject1" layoutX="199.0" layoutY="40.0" />
+            <Label layoutX="60.0" layoutY="44.0" text="Activity name:" />
+            <Button fx:id="btnAddActivitySubject1" layoutX="348.0" layoutY="140.0" mnemonicParsing="false" onAction="#addActivitySubject" text="Add Activity Subject" />
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

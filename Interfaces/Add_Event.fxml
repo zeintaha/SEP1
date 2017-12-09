@@ -6,32 +6,25 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="585.0" prefWidth="609.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TitledPane animated="false" layoutY="-5.0" prefHeight="595.0" prefWidth="609.0" text="Add event">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="490.0" prefWidth="607.0">
-               <children>
-                  <Button fx:id="btnAddEvent" layoutX="516.0" layoutY="525.0" mnemonicParsing="false" onAction="#addEvent" text="Add event" />
-                  <TextField fx:id="txtDuration" layoutX="222.0" layoutY="324.0" prefHeight="25.0" prefWidth="176.0" />
-                  <Label layoutX="116.0" layoutY="271.0" text="Time:" />
-                  <Label layoutX="116.0" layoutY="218.0" text="Date:" />
-                  <Label layoutX="117.0" layoutY="169.0" text="Title:" />
-                  <Label layoutX="116.0" layoutY="127.0" text="Type:" />
-                  <TextField fx:id="txtTime" layoutX="222.0" layoutY="267.0" prefHeight="25.0" prefWidth="176.0" />
-                  <TextField fx:id="txtDate" layoutX="222.0" layoutY="223.0" prefHeight="25.0" prefWidth="176.0" />
-                  <TextField fx:id="txtType" layoutX="222.0" layoutY="123.0" prefHeight="25.0" prefWidth="176.0" />
-                  <TextField fx:id="txtTitle" layoutX="222.0" layoutY="174.0" prefHeight="25.0" prefWidth="176.0" />
-                  <Label layoutX="97.0" layoutY="327.0" text="Duration:" />
-                  <Label layoutX="48.0" layoutY="383.0" text="Lecturer/Lecturers:" />
-                  <Label layoutX="121.0" layoutY="436.0" prefHeight="25.0" prefWidth="36.0" text="Price:" />
-                  <Label layoutX="56.0" layoutY="486.0" text="Discounted price:" />
-                  <TextField fx:id="txtLecturer" layoutX="222.0" layoutY="379.0" />
-                  <TextField fx:id="txtPrice" layoutX="222.0" layoutY="434.0" />
-                  <TextField fx:id="txtDiscountedPrice" layoutX="222.0" layoutY="482.0" />
-                  <DatePicker fx:id="dteStartDate" layoutX="225.0" layoutY="76.0" promptText="Starting date:" />
-                  <Label layoutX="80.0" layoutY="80.0" text="Select date:" />
-               </children>
-            </AnchorPane>
-        </content>
-      </TitledPane>
+      <Pane prefHeight="585.0" prefWidth="609.0" />
+      <Label layoutX="90.0" layoutY="90.0" text="Select date:" />
+      <DatePicker fx:id="dteStartDate" layoutX="235.0" layoutY="86.0" onAction="#dteStartDate" promptText="Starting date:" />
+      <TextField fx:id="txtDiscountedPrice" layoutX="232.0" layoutY="492.0" />
+      <TextField fx:id="txtPrice" layoutX="232.0" layoutY="444.0" />
+      <TextField fx:id="txtLecturer" layoutX="232.0" layoutY="389.0" />
+      <Label layoutX="66.0" layoutY="496.0" text="Discounted price:" />
+      <Label layoutX="131.0" layoutY="446.0" prefHeight="25.0" prefWidth="36.0" text="Price:" />
+      <Label layoutX="58.0" layoutY="393.0" text="Lecturer/Lecturers:" />
+      <Label layoutX="107.0" layoutY="337.0" text="Duration:" />
+      <TextField fx:id="txtTitle" layoutX="232.0" layoutY="184.0" prefHeight="25.0" prefWidth="176.0" />
+      <TextField fx:id="txtType" layoutX="232.0" layoutY="133.0" prefHeight="25.0" prefWidth="176.0" />
+      <TextField fx:id="txtDate" layoutX="232.0" layoutY="233.0" prefHeight="25.0" prefWidth="176.0" />
+      <TextField fx:id="txtTime" layoutX="232.0" layoutY="277.0" prefHeight="25.0" prefWidth="176.0" />
+      <Label layoutX="126.0" layoutY="137.0" text="Type:" />
+      <Label layoutX="127.0" layoutY="179.0" text="Title:" />
+      <Label layoutX="126.0" layoutY="228.0" text="Date:" />
+      <Label layoutX="126.0" layoutY="281.0" text="Time:" />
+      <TextField fx:id="txtDuration" layoutX="232.0" layoutY="334.0" prefHeight="25.0" prefWidth="176.0" />
+      <Button fx:id="btnAddEvent" layoutX="526.0" layoutY="535.0" mnemonicParsing="false" onAction="#addEvent" text="Add event" />
    </children>
 </AnchorPane>

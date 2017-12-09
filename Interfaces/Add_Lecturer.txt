@@ -1,5 +1,5 @@
 /**
- * Sample Skeleton for 'lecturer.fxml' Controller Class
+ * Sample Skeleton for 'Add_Lecturer.fxml' Controller Class
  */
 
 import java.net.URL;
@@ -40,14 +40,19 @@ public class PleaseProvideControllerClassName {
 
     }
 
+    @FXML
+    void cmbCategory(ActionEvent event) {
+
+    }
+
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() {
-        assert txtPhone != null : "fx:id=\"txtPhone\" was not injected: check your FXML file 'lecturer.fxml'.";
-        assert cmbCategory != null : "fx:id=\"cmbCategory\" was not injected: check your FXML file 'lecturer.fxml'.";
-        assert txtName != null : "fx:id=\"txtName\" was not injected: check your FXML file 'lecturer.fxml'.";
-        assert txtAddress != null : "fx:id=\"txtAddress\" was not injected: check your FXML file 'lecturer.fxml'.";
-        assert btnAddLecturer != null : "fx:id=\"btnAddLecturer\" was not injected: check your FXML file 'lecturer.fxml'.";
-        assert txtEmail != null : "fx:id=\"txtEmail\" was not injected: check your FXML file 'lecturer.fxml'.";
+        assert txtPhone != null : "fx:id=\"txtPhone\" was not injected: check your FXML file 'Add_Lecturer.fxml'.";
+        assert cmbCategory != null : "fx:id=\"cmbCategory\" was not injected: check your FXML file 'Add_Lecturer.fxml'.";
+        assert txtName != null : "fx:id=\"txtName\" was not injected: check your FXML file 'Add_Lecturer.fxml'.";
+        assert txtAddress != null : "fx:id=\"txtAddress\" was not injected: check your FXML file 'Add_Lecturer.fxml'.";
+        assert btnAddLecturer != null : "fx:id=\"btnAddLecturer\" was not injected: check your FXML file 'Add_Lecturer.fxml'.";
+        assert txtEmail != null : "fx:id=\"txtEmail\" was not injected: check your FXML file 'Add_Lecturer.fxml'.";
 
     }
 }
