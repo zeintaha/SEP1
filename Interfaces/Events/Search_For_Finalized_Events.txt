@@ -1,0 +1,93 @@
+/**
+ * Sample Skeleton for 'Search_For_Finalized_Events.fxml' Controller Class
+ */
+
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TextField;
+
+public class PleaseProvideControllerClassName {
+
+    @FXML // ResourceBundle that was given to the FXMLLoader
+    private ResourceBundle resources;
+
+    @FXML // URL location of the FXML file that was given to the FXMLLoader
+    private URL location;
+
+    @FXML // fx:id="dteStartDate"
+    private DatePicker dteStartDate; // Value injected by FXMLLoader
+
+    @FXML // fx:id="btnSearchEvent"
+    private Button btnSearchEvent; // Value injected by FXMLLoader
+
+    @FXML // fx:id="txtDate"
+    private TextField txtDate; // Value injected by FXMLLoader
+
+    @FXML // fx:id="cmbEvent"
+    private ComboBox<?> cmbEvent; // Value injected by FXMLLoader
+
+    @FXML // fx:id="txtType"
+    private TextField txtType; // Value injected by FXMLLoader
+
+    @FXML // fx:id="dteEndDate"
+    private DatePicker dteEndDate; // Value injected by FXMLLoader
+
+    @FXML // fx:id="txtPrice"
+    private TextField txtPrice; // Value injected by FXMLLoader
+
+    @FXML // fx:id="txtDuration"
+    private TextField txtDuration; // Value injected by FXMLLoader
+
+    @FXML // fx:id="txtDiscountedPrice"
+    private TextField txtDiscountedPrice; // Value injected by FXMLLoader
+
+    @FXML // fx:id="txtLecturer"
+    private TextField txtLecturer; // Value injected by FXMLLoader
+
+    @FXML // fx:id="txtTime"
+    private TextField txtTime; // Value injected by FXMLLoader
+
+    @FXML // fx:id="txtTitle"
+    private TextField txtTitle; // Value injected by FXMLLoader
+
+    @FXML
+    void searchEvent(ActionEvent event) {
+
+    }
+
+    @FXML
+    void eventList(ActionEvent event) {
+
+    }
+
+    @FXML
+    void dteStartDate(ActionEvent event) {
+
+    }
+
+    @FXML
+    void dteEndDate(ActionEvent event) {
+
+    }
+
+    @FXML // This method is called by the FXMLLoader when initialization is complete
+    void initialize() {
+        assert dteStartDate != null : "fx:id=\"dteStartDate\" was not injected: check your FXML file 'Search_For_Finalized_Events.fxml'.";
+        assert btnSearchEvent != null : "fx:id=\"btnSearchEvent\" was not injected: check your FXML file 'Search_For_Finalized_Events.fxml'.";
+        assert txtDate != null : "fx:id=\"txtDate\" was not injected: check your FXML file 'Search_For_Finalized_Events.fxml'.";
+        assert cmbEvent != null : "fx:id=\"cmbEvent\" was not injected: check your FXML file 'Search_For_Finalized_Events.fxml'.";
+        assert txtType != null : "fx:id=\"txtType\" was not injected: check your FXML file 'Search_For_Finalized_Events.fxml'.";
+        assert dteEndDate != null : "fx:id=\"dteEndDate\" was not injected: check your FXML file 'Search_For_Finalized_Events.fxml'.";
+        assert txtPrice != null : "fx:id=\"txtPrice\" was not injected: check your FXML file 'Search_For_Finalized_Events.fxml'.";
+        assert txtDuration != null : "fx:id=\"txtDuration\" was not injected: check your FXML file 'Search_For_Finalized_Events.fxml'.";
+        assert txtDiscountedPrice != null : "fx:id=\"txtDiscountedPrice\" was not injected: check your FXML file 'Search_For_Finalized_Events.fxml'.";
+        assert txtLecturer != null : "fx:id=\"txtLecturer\" was not injected: check your FXML file 'Search_For_Finalized_Events.fxml'.";
+        assert txtTime != null : "fx:id=\"txtTime\" was not injected: check your FXML file 'Search_For_Finalized_Events.fxml'.";
+        assert txtTitle != null : "fx:id=\"txtTitle\" was not injected: check your FXML file 'Search_For_Finalized_Events.fxml'.";
+
+    }
+}
