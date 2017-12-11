@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="AnchorPaneDeleteSponsor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="189.0" prefWidth="609.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="btnSearchSponsor" layoutX="429.0" layoutY="43.0" mnemonicParsing="false" onAction="#searchSponsor" text="Search sponsor" />
+      <Label layoutX="74.0" layoutY="47.0" text="Sponsor's name" />
+      <TextField fx:id="txtSponsor" layoutX="216.0" layoutY="43.0" prefHeight="25.0" prefWidth="178.0" text="Enter sponsor name" />
+      <Button fx:id="btnDeleteSponsor" layoutX="430.0" layoutY="135.0" mnemonicParsing="false" onAction="#deleteSponsor" text="Delete sponsor" />
+      <Label layoutX="74.0" layoutY="106.0" text="Select Sponsor to delete:" />
+      <Separator layoutX="40.0" layoutY="84.0" prefWidth="550.0" />
+      <ComboBox fx:id="cmbSelectSponsor" layoutX="216.0" layoutY="102.0" prefHeight="25.0" prefWidth="178.0" promptText="Select Sponsor" />
+   </children>
+</AnchorPane>

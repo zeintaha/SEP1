@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="AnchorePaneDeleteMember" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="189.0" prefWidth="609.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="80.0" layoutY="109.0" text="Member Name" />
+      <Button fx:id="btnSearchId" layoutX="409.0" layoutY="44.0" mnemonicParsing="false" onAction="#searchId" text="Search ID" />
+      <Label layoutX="80.0" layoutY="48.0" text="Member ID:" />
+      <TextField fx:id="txtId" layoutX="199.0" layoutY="44.0" prefHeight="25.0" prefWidth="178.0" text="Enter member ID" />
+      <Button fx:id="btnDeleteMember" layoutX="409.0" layoutY="136.0" mnemonicParsing="false" onAction="#deleteMember" text="Delete member" />
+      <TextField fx:id="txtName" layoutX="199.0" layoutY="105.0" prefHeight="25.0" prefWidth="178.0" />
+      <Separator layoutX="37.0" layoutY="86.0" prefWidth="550.0" />
+   </children>
+</AnchorPane>

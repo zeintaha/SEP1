@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="AnchorPaneDeleteEvent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="302.0" prefWidth="653.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="203.0" layoutY="131.0" text="Select date:" />
+      <DatePicker fx:id="dteDate" layoutX="338.0" layoutY="127.0" onAction="#dteStartDate" promptText="Select Date" />
+      <Label layoutX="202.0" layoutY="178.0" text="Select event:" />
+      <ComboBox fx:id="cmbSelectEvent" layoutX="337.0" layoutY="174.0" onAction="#cmbSelectEvent" prefHeight="25.0" prefWidth="176.0" promptText="Select Event" />
+      <Button fx:id="btnDeleteEvent" layoutX="535.0" layoutY="240.0" mnemonicParsing="false" onAction="#saveChanges" text="Delete Event" />
+      <ComboBox fx:id="cmbSelectCategory" layoutX="339.0" layoutY="38.0" prefHeight="25.0" prefWidth="174.0" promptText="Select Category" />
+      <ComboBox fx:id="cmbSelectType" layoutX="339.0" layoutY="81.0" prefHeight="25.0" prefWidth="174.0" promptText="Select Type" />
+      <Label layoutX="203.0" layoutY="44.0" text="Select Category:" />
+      <Label layoutX="205.0" layoutY="85.0" text="Select Type:" />
+      <Label layoutX="27.0" layoutY="38.0" text="Find Event to delete:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
