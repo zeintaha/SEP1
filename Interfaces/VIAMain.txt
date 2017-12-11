@@ -1,0 +1,158 @@
+/**
+ * Sample Skeleton for 'VIAMain.fxml' Controller Class
+ */
+
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.MenuItem;
+
+public class PleaseProvideControllerClassName {
+
+    @FXML // ResourceBundle that was given to the FXMLLoader
+    private ResourceBundle resources;
+
+    @FXML // URL location of the FXML file that was given to the FXMLLoader
+    private URL location;
+
+    @FXML // fx:id="mnuCategory"
+    private Menu mnuCategory; // Value injected by FXMLLoader
+
+    @FXML // fx:id="mniAddEvent"
+    private MenuItem mniAddEvent; // Value injected by FXMLLoader
+
+    @FXML // fx:id="mniDeleteLecturer"
+    private MenuItem mniDeleteLecturer; // Value injected by FXMLLoader
+
+    @FXML // fx:id="btnLecturer"
+    private Button btnLecturer; // Value injected by FXMLLoader
+
+    @FXML // fx:id="mniEditMember"
+    private MenuItem mniEditMember; // Value injected by FXMLLoader
+
+    @FXML // fx:id="mniAddCategory"
+    private MenuItem mniAddCategory; // Value injected by FXMLLoader
+
+    @FXML // fx:id="mniDeleteSponsor"
+    private MenuItem mniDeleteSponsor; // Value injected by FXMLLoader
+
+    @FXML // fx:id="mniDeleteMember"
+    private MenuItem mniDeleteMember; // Value injected by FXMLLoader
+
+    @FXML // fx:id="mniDeleteEvent1"
+    private MenuItem mniDeleteEvent1; // Value injected by FXMLLoader
+
+    @FXML // fx:id="mniDeleteEvent"
+    private MenuItem mniDeleteEvent; // Value injected by FXMLLoader
+
+    @FXML // fx:id="cmbCategorySponsorsLecturers"
+    private ComboBox<?> cmbCategorySponsorsLecturers; // Value injected by FXMLLoader
+
+    @FXML // fx:id="mniAddSponsor"
+    private MenuItem mniAddSponsor; // Value injected by FXMLLoader
+
+    @FXML // fx:id="mnuType"
+    private Menu mnuType; // Value injected by FXMLLoader
+
+    @FXML // fx:id="mniAddMember"
+    private MenuItem mniAddMember; // Value injected by FXMLLoader
+
+    @FXML // fx:id="mniAddLecturer"
+    private MenuItem mniAddLecturer; // Value injected by FXMLLoader
+
+    @FXML // fx:id="btnMemebresNotPaidMembership"
+    private Button btnMemebresNotPaidMembership; // Value injected by FXMLLoader
+
+    @FXML // fx:id="mniEditLecturer"
+    private MenuItem mniEditLecturer; // Value injected by FXMLLoader
+
+    @FXML // fx:id="btnNoneMembers"
+    private Button btnNoneMembers; // Value injected by FXMLLoader
+
+    @FXML // fx:id="c"
+    private Menu c; // Value injected by FXMLLoader
+
+    @FXML // fx:id="mnuLecturer"
+    private Menu mnuLecturer; // Value injected by FXMLLoader
+
+    @FXML // fx:id="mniDeleteType"
+    private MenuItem mniDeleteType; // Value injected by FXMLLoader
+
+    @FXML // fx:id="mnuMember"
+    private Menu mnuMember; // Value injected by FXMLLoader
+
+    @FXML // fx:id="mnuSponsor"
+    private Menu mnuSponsor; // Value injected by FXMLLoader
+
+    @FXML // fx:id="btnNonFinalizedEvents"
+    private Button btnNonFinalizedEvents; // Value injected by FXMLLoader
+
+    @FXML // fx:id="btnSponsors"
+    private Button btnSponsors; // Value injected by FXMLLoader
+
+    @FXML // fx:id="mniEditSponsor"
+    private MenuItem mniEditSponsor; // Value injected by FXMLLoader
+
+    @FXML // fx:id="btnMembers"
+    private Button btnMembers; // Value injected by FXMLLoader
+
+    @FXML // fx:id="mniAddType"
+    private MenuItem mniAddType; // Value injected by FXMLLoader
+
+    @FXML // fx:id="mniDeleteCategory"
+    private MenuItem mniDeleteCategory; // Value injected by FXMLLoader
+
+    @FXML // fx:id="mnuBar"
+    private MenuBar mnuBar; // Value injected by FXMLLoader
+
+    @FXML // fx:id="mniEditEvent"
+    private MenuItem mniEditEvent; // Value injected by FXMLLoader
+
+    @FXML // fx:id="mniDeleteEvent11"
+    private MenuItem mniDeleteEvent11; // Value injected by FXMLLoader
+
+    @FXML // fx:id="btnFinalizedEvents"
+    private Button btnFinalizedEvents; // Value injected by FXMLLoader
+
+    @FXML // This method is called by the FXMLLoader when initialization is complete
+    void initialize() {
+        assert mnuCategory != null : "fx:id=\"mnuCategory\" was not injected: check your FXML file 'VIAMain.fxml'.";
+        assert mniAddEvent != null : "fx:id=\"mniAddEvent\" was not injected: check your FXML file 'VIAMain.fxml'.";
+        assert mniDeleteLecturer != null : "fx:id=\"mniDeleteLecturer\" was not injected: check your FXML file 'VIAMain.fxml'.";
+        assert btnLecturer != null : "fx:id=\"btnLecturer\" was not injected: check your FXML file 'VIAMain.fxml'.";
+        assert mniEditMember != null : "fx:id=\"mniEditMember\" was not injected: check your FXML file 'VIAMain.fxml'.";
+        assert mniAddCategory != null : "fx:id=\"mniAddCategory\" was not injected: check your FXML file 'VIAMain.fxml'.";
+        assert mniDeleteSponsor != null : "fx:id=\"mniDeleteSponsor\" was not injected: check your FXML file 'VIAMain.fxml'.";
+        assert mniDeleteMember != null : "fx:id=\"mniDeleteMember\" was not injected: check your FXML file 'VIAMain.fxml'.";
+        assert mniDeleteEvent1 != null : "fx:id=\"mniDeleteEvent1\" was not injected: check your FXML file 'VIAMain.fxml'.";
+        assert mniDeleteEvent != null : "fx:id=\"mniDeleteEvent\" was not injected: check your FXML file 'VIAMain.fxml'.";
+        assert cmbCategorySponsorsLecturers != null : "fx:id=\"cmbCategorySponsorsLecturers\" was not injected: check your FXML file 'VIAMain.fxml'.";
+        assert mniAddSponsor != null : "fx:id=\"mniAddSponsor\" was not injected: check your FXML file 'VIAMain.fxml'.";
+        assert mnuType != null : "fx:id=\"mnuType\" was not injected: check your FXML file 'VIAMain.fxml'.";
+        assert mniAddMember != null : "fx:id=\"mniAddMember\" was not injected: check your FXML file 'VIAMain.fxml'.";
+        assert mniAddLecturer != null : "fx:id=\"mniAddLecturer\" was not injected: check your FXML file 'VIAMain.fxml'.";
+        assert btnMemebresNotPaidMembership != null : "fx:id=\"btnMemebresNotPaidMembership\" was not injected: check your FXML file 'VIAMain.fxml'.";
+        assert mniEditLecturer != null : "fx:id=\"mniEditLecturer\" was not injected: check your FXML file 'VIAMain.fxml'.";
+        assert btnNoneMembers != null : "fx:id=\"btnNoneMembers\" was not injected: check your FXML file 'VIAMain.fxml'.";
+        assert c != null : "fx:id=\"c\" was not injected: check your FXML file 'VIAMain.fxml'.";
+        assert mnuLecturer != null : "fx:id=\"mnuLecturer\" was not injected: check your FXML file 'VIAMain.fxml'.";
+        assert mniDeleteType != null : "fx:id=\"mniDeleteType\" was not injected: check your FXML file 'VIAMain.fxml'.";
+        assert mnuMember != null : "fx:id=\"mnuMember\" was not injected: check your FXML file 'VIAMain.fxml'.";
+        assert mnuSponsor != null : "fx:id=\"mnuSponsor\" was not injected: check your FXML file 'VIAMain.fxml'.";
+        assert btnNonFinalizedEvents != null : "fx:id=\"btnNonFinalizedEvents\" was not injected: check your FXML file 'VIAMain.fxml'.";
+        assert btnSponsors != null : "fx:id=\"btnSponsors\" was not injected: check your FXML file 'VIAMain.fxml'.";
+        assert mniEditSponsor != null : "fx:id=\"mniEditSponsor\" was not injected: check your FXML file 'VIAMain.fxml'.";
+        assert btnMembers != null : "fx:id=\"btnMembers\" was not injected: check your FXML file 'VIAMain.fxml'.";
+        assert mniAddType != null : "fx:id=\"mniAddType\" was not injected: check your FXML file 'VIAMain.fxml'.";
+        assert mniDeleteCategory != null : "fx:id=\"mniDeleteCategory\" was not injected: check your FXML file 'VIAMain.fxml'.";
+        assert mnuBar != null : "fx:id=\"mnuBar\" was not injected: check your FXML file 'VIAMain.fxml'.";
+        assert mniEditEvent != null : "fx:id=\"mniEditEvent\" was not injected: check your FXML file 'VIAMain.fxml'.";
+        assert mniDeleteEvent11 != null : "fx:id=\"mniDeleteEvent11\" was not injected: check your FXML file 'VIAMain.fxml'.";
+        assert btnFinalizedEvents != null : "fx:id=\"btnFinalizedEvents\" was not injected: check your FXML file 'VIAMain.fxml'.";
+
+    }
+}
