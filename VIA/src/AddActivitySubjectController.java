@@ -7,6 +7,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
@@ -18,7 +21,10 @@ import javafx.scene.control.TextField;
 public class AddActivitySubjectController extends ToBinary implements Initializable{
    private ArrayList<Activity_Subject> activityList;
    private String filename = "D://Liviu//ECLIPSE STORAGE//VIA/activitysubject.txt";
-
+   public AddActivitySubjectController()
+   {
+   activityList = new ArrayList<Activity_Subject>();
+   }
    @FXML
    private Button btnAddActivitySubject;
 
@@ -29,14 +35,13 @@ public class AddActivitySubjectController extends ToBinary implements Initializa
    private TextField activityNameTxtField;
 
    @FXML
-  private ComboBox<String> cmbActivitySubject= new ComboBox<>();
+  private ComboBox<Activity_Subject> cmbActivitySubject = new ComboBox();
 
    @FXML
    private Button btnEditActivity;
 
   
     public void cmbSelectSubject() {
-   
      
       
     // activityList = new ArrayList<Activity_Subject>();
@@ -58,15 +63,15 @@ public class AddActivitySubjectController extends ToBinary implements Initializa
    public void addActivitySubject() throws ClassNotFoundException, IOException, EOFException {
         String activityName = activityNameTxtField.getText();
         String activityType = activityTypeTxtField.getText();
-        activityList = new ArrayList<Activity_Subject>();
         Activity_Subject asb = new Activity_Subject(activityName, activityType);
         activityList.add(asb);
-        serializeAddress(activityList);
+        writeObjFromFile(activityList);
         JOptionPane.showMessageDialog(null, asb.toString() + " Added ");
         showWrittenData();
+        refreshComboBox();
     }
     private void showWrittenData() {
-       ArrayList<Activity_Subject> list = (ArrayList<Activity_Subject>) deserializeAddress(filename);
+       ArrayList<Activity_Subject> list = (ArrayList<Activity_Subject>) readObjFromFile(filename);
        for (int i = 0; i < list.size(); i++)
       {
        System.out.println(list.get(i));
@@ -75,7 +80,7 @@ public class AddActivitySubjectController extends ToBinary implements Initializa
     }
    public void editActivity() {
        activityList = new ArrayList<Activity_Subject>();
-       activityList = (ArrayList<Activity_Subject>) deserializeAddress(filename);
+       activityList = (ArrayList<Activity_Subject>) readObjFromFile(filename);
        String activityName = activityNameTxtField.getText();
        String activityType = activityTypeTxtField.getText();
        //editActivitySubject(cmbActivitySubject.getValue(), activityName, activityType); 
@@ -106,15 +111,16 @@ public class AddActivitySubjectController extends ToBinary implements Initializa
         removeActivitySubject(a1);
         addASubject(activityName, activityType);
     }
+    public void refreshComboBox() {
+       activityList = (ArrayList<Activity_Subject>) readObjFromFile(filename);
+       cmbActivitySubject.getItems().addAll(activityList);
+    }
 
    @Override
    public void initialize(URL arg0, ResourceBundle arg1)
-   {  
-      cmbActivitySubject.setItems(FXCollections.observableArrayList(
-         "cat",
-         "dog",
-         "bird"));
+   {
+      refreshComboBox();
+      }
       // TODO Auto-generated method stub
       
    }
-}

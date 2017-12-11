@@ -13,7 +13,7 @@ public class ToBinary
    {
 
    }
-   public void serializeAddress(Object obj)
+   public void writeObjFromFile(Object obj)
    {
 
       FileOutputStream fout = null;
@@ -65,7 +65,7 @@ public class ToBinary
    }
 
    
-   public Object deserializeAddress(String filename)
+   public Object readObjFromFile(String filename)
    {
       // Cum e facut ca sa fie doar o metoda de prelucrat fiecare fisier fara sa
       // ii specific denumirea de ArrayList, Ca pe urma dupa ce ii fac cast sa
