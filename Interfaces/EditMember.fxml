@@ -6,7 +6,7 @@
 
 <AnchorPane fx:id="AnchorPaneEditMember" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="388.0" prefWidth="609.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button fx:id="btnGetMember" layoutX="458.0" layoutY="46.0" mnemonicParsing="false" onAction="#searchId" text="Get Member" />
+      <Button fx:id="btnGetMember" layoutX="458.0" layoutY="46.0" mnemonicParsing="false" onAction="#getMember" text="Get Member" />
       <Label layoutX="98.0" layoutY="50.0" text="Member ID:" />
       <TextField fx:id="txtMemberId" layoutX="217.0" layoutY="46.0" prefHeight="25.0" prefWidth="178.0" />
       <Label layoutX="126.0" layoutY="121.0" text="Name:" />
@@ -17,9 +17,9 @@
       <Label layoutX="123.0" layoutY="221.0" text="Phone:" />
       <TextField fx:id="txtEmail" layoutX="218.0" layoutY="266.0" prefHeight="25.0" prefWidth="176.0" />
       <Label layoutX="131.0" layoutY="272.0" text="Email:" />
-      <ComboBox fx:id="cmbSelectCategory" layoutX="218.0" layoutY="312.0" onAction="#preferances" prefHeight="25.0" prefWidth="176.0" promptText="Select Category" />
+      <ComboBox fx:id="cmbSelectCategory" layoutX="218.0" layoutY="312.0" onAction="#selectCategory" prefHeight="25.0" prefWidth="176.0" promptText="Select Category" />
       <Label layoutX="98.0" layoutY="316.0" text="Preferances:" />
-      <Button fx:id="btnSaveChanges" layoutX="456.0" layoutY="343.0" mnemonicParsing="false" onAction="#editMember" text="Save changes" />
+      <Button fx:id="btnSaveChanges" layoutX="456.0" layoutY="343.0" mnemonicParsing="false" onAction="#saveChanges" text="Save changes" />
       <Separator layoutX="66.0" layoutY="89.0" prefWidth="500.0" />
    </children>
 </AnchorPane>

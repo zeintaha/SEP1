@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
 <?import java.lang.*?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
 <AnchorPane fx:id="anchorPaneAddMember" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="609.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ComboBox fx:id="cmbSelectCategory" layoutX="226.0" layoutY="229.0" onAction="#cmbPreferences" prefHeight="25.0" prefWidth="176.0" promptText="Select Category" />
+      <ComboBox fx:id="cmbSelectCategory" layoutX="226.0" layoutY="229.0" onAction="#selectCategory" prefHeight="25.0" prefWidth="176.0" promptText="Select Category" />
       <TextField fx:id="txtName" layoutX="226.0" layoutY="49.0" prefHeight="25.0" prefWidth="176.0" />
       <TextField fx:id="txtAddress" layoutX="226.0" layoutY="97.0" prefHeight="25.0" prefWidth="176.0" />
       <TextField fx:id="txtPhone" layoutX="226.0" layoutY="138.0" prefHeight="25.0" prefWidth="176.0" />
@@ -15,7 +15,7 @@
       <Label layoutX="125.0" layoutY="101.0" text="Address:" />
       <Label layoutX="129.0" layoutY="142.0" text="Phone:" />
       <Label layoutX="133.0" layoutY="189.0" text="Email:" />
-      <DatePicker fx:id="dteStartOfMembership" layoutX="227.0" layoutY="269.0" onAction="#dteStartOfMembership" />
+      <DatePicker fx:id="dteStartOfMembership" layoutX="227.0" layoutY="269.0" onAction="#selectDate" />
       <Label layoutX="98.0" layoutY="233.0" text="Preferances:" />
       <Label layoutX="60.0" layoutY="273.0" text="Start date of membership" />
       <Button fx:id="btnAddMember" layoutX="422.0" layoutY="312.0" mnemonicParsing="false" onAction="#addMember" text="Add Member" />

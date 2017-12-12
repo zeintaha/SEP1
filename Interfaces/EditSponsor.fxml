@@ -17,9 +17,9 @@
       <TextField fx:id="txtPhone" layoutX="210.0" layoutY="173.0" prefHeight="25.0" prefWidth="176.0" />
       <TextField fx:id="txtAddress" layoutX="210.0" layoutY="131.0" prefHeight="25.0" prefWidth="176.0" />
       <TextField fx:id="txtName" layoutX="210.0" layoutY="93.0" prefHeight="25.0" prefWidth="176.0" />
-      <ComboBox fx:id="cmbSelectCategory" layoutX="210.0" layoutY="257.0" onAction="#cmbActivitySubject" prefHeight="25.0" prefWidth="176.0" promptText="Select Category" />
+      <ComboBox fx:id="cmbSelectCategory" layoutX="210.0" layoutY="257.0" onAction="#selectCategory" prefHeight="25.0" prefWidth="176.0" promptText="Select Category" />
       <Label layoutX="93.0" layoutY="261.0" text="Prefrences:" />
-      <Button fx:id="btnSaveChanges" layoutX="438.0" layoutY="282.0" mnemonicParsing="false" onAction="#addSponsor" prefHeight="25.0" prefWidth="97.0" text="Save Changes" />
+      <Button fx:id="btnSaveChanges" layoutX="438.0" layoutY="282.0" mnemonicParsing="false" onAction="#saveChanges" prefHeight="25.0" prefWidth="97.0" text="Save Changes" />
       <Separator layoutX="64.0" layoutY="75.0" prefWidth="500.0" />
    </children>
 </AnchorPane>
