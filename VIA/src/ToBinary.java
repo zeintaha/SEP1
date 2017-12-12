@@ -13,7 +13,7 @@ public class ToBinary
    {
 
    }
-   public void writeObjFromFile(Object obj)
+   public void writeObjFromFile(Object obj, String filename)
    {
 
       FileOutputStream fout = null;
@@ -22,7 +22,7 @@ public class ToBinary
       try
       {
 
-         fout = new FileOutputStream("D://Liviu//ECLIPSE STORAGE//VIA/activitysubject.txt");
+         fout = new FileOutputStream(filename);
          oos = new ObjectOutputStream(fout);
          oos.writeObject(obj);
 
@@ -118,24 +118,6 @@ public class ToBinary
       }
       return obj;
    }
-
-//   public void serializeAddressJDK7(Object obj, String filename)
-//   {
-//
-//      try (ObjectOutputStream oos = new ObjectOutputStream(
-//            new FileOutputStream(filename)))
-//      {
-//
-//         oos.writeObject(obj);
-//         System.out.println("Done");
-//
-//      }
-//      catch (Exception ex)
-//      {
-//         ex.printStackTrace();
-//      }
-//     
-//   }
    
       public static byte[] serialize(Object obj) throws IOException
  {

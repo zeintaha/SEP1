@@ -1,15 +1,25 @@
-import java.util.ArrayList;
+
 
 public class Lecturer {
     private String name;
     private String email;
-    private ArrayList<Activity_Subject> category;
-    public Lecturer(String name, String email, ArrayList<Activity_Subject> category){
+    private String phoneNr;
+    private String category;
+    public Lecturer(String name, String email, String phoneNr, String category){
         this.name = name;
         this.email = email;
+        this.phoneNr = phoneNr;
         this.category = category;
     }
-    public String getName() {
+    public String getPhoneNr()
+   {
+      return phoneNr;
+   }
+   public void setPhoneNr(String phoneNr)
+   {
+      this.phoneNr = phoneNr;
+   }
+   public String getName() {
         return name;
     }
     public void setName(String name) {
@@ -21,11 +31,15 @@ public class Lecturer {
     public void setEmail(String email) {
         this.email = email;
     }
-    public ArrayList<Activity_Subject> getCategory() {
+    public String getCategory() {
         return category;
     }
-    public void setCategory(ArrayList<Activity_Subject> category) {
+    public void setCategory(String category) {
         this.category = category;
+    }
+    
+    public String toString() {
+       return  name + "/ " + email + "/ " + phoneNr + "/ " + category;
     }
     
 }

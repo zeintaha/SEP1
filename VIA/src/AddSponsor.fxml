@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="AnchorPaneAddSponsor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="325.0" prefWidth="609.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="131.0" layoutY="198.0" text="Email:" />
+      <Label layoutX="131.0" layoutY="151.0" text="Phone:" />
+      <Label layoutX="131.0" layoutY="108.0" text="Address:" />
+      <Label layoutX="131.0" layoutY="62.0" text="Name:" />
+      <TextField fx:id="txtEmail" layoutX="231.0" layoutY="194.0" prefHeight="25.0" prefWidth="176.0" />
+      <TextField fx:id="txtPhone" layoutX="231.0" layoutY="147.0" prefHeight="25.0" prefWidth="176.0" />
+      <TextField fx:id="txtAddress" layoutX="231.0" layoutY="104.0" prefHeight="25.0" prefWidth="176.0" />
+      <TextField fx:id="txtName" layoutX="231.0" layoutY="58.0" prefHeight="25.0" prefWidth="176.0" />
+      <ComboBox fx:id="cmbSelectCategory" layoutX="229.0" layoutY="242.0"  prefHeight="25.0" prefWidth="176.0" promptText="Select Category" />
+      <Label layoutX="118.0" layoutY="246.0" text="Preferances:" />
+      <Button fx:id="btnAddSponsor" layoutX="470.0" layoutY="282.0" mnemonicParsing="false" onAction="#addSponsor" text="Add Sponsor" />
+   </children>
+</AnchorPane>
