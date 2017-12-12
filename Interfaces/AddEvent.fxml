@@ -7,12 +7,10 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="609.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <TextField fx:id="txtPrice" layoutX="241.0" layoutY="439.0" prefHeight="25.0" prefWidth="176.0" />
-      <TextField fx:id="txtDate" layoutX="241.0" layoutY="228.0" prefHeight="25.0" prefWidth="176.0" />
-      <Label layoutX="113.0" layoutY="231.0" text="Date:" />
-      <Label layoutX="98.0" layoutY="52.0" text="Select date:" />
+      <Label layoutX="112.0" layoutY="239.0" text="Date:" />
       <Button fx:id="btnAddEvent" layoutX="501.0" layoutY="477.0" mnemonicParsing="false" onAction="#addEvent" text="Add event" />
       <TextField fx:id="txtTime" layoutX="241.0" layoutY="280.0" prefHeight="25.0" prefWidth="176.0" />
-      <DatePicker fx:id="dteStartDate" layoutX="242.0" layoutY="48.0" onAction="#selectDate" promptText="Starting date:" />
+      <DatePicker fx:id="dteStartDate" layoutX="241.0" layoutY="226.0" onAction="#selectDate" promptText="Starting date:" />
       <Label layoutX="115.0" layoutY="186.0" text="Title:" />
       <TextField fx:id="txtTitle" layoutX="241.0" layoutY="179.0" prefHeight="25.0" prefWidth="176.0" />
       <TextField fx:id="txtLecturer" layoutX="242.0" layoutY="384.0" prefHeight="25.0" prefWidth="174.0" />
