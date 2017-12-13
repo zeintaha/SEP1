@@ -1,16 +1,13 @@
-import java.io.EOFException;
-import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
-import javax.swing.JOptionPane;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 
-public class AddLecturerController extends ToBinary implements Initializable
+public class AddLecturerController implements Initializable
 {
 
    @FXML
@@ -37,14 +34,13 @@ public class AddLecturerController extends ToBinary implements Initializable
        comboBoxLoader();
    }
 
-   @SuppressWarnings("unchecked")
    public void comboBoxLoader()
    {
-      cmbSelectCategory = new ComboBox<Category>();
-      ArrayList<Category> categories = new ArrayList<Category>();
-      categories = (ArrayList<Category>) readObjFromFile(
-            "D://Liviu//ECLIPSE STORAGE//VIA/activitysubject.txt");
-      cmbSelectCategory.getItems().addAll(categories);
+//      cmbSelectCategory = new ComboBox<Category>();
+//      ArrayList<Category> categories = new ArrayList<Category>();
+//      categories = (ArrayList<Category>) readObjFromFile(
+//            "D://Liviu//ECLIPSE STORAGE//VIA/activitysubject.txt");
+//      cmbSelectCategory.getItems().addAll(categories);
    }
 
    @FXML
@@ -53,23 +49,23 @@ public class AddLecturerController extends ToBinary implements Initializable
 //      comboBoxLoader();
    }
 
-   @SuppressWarnings("unchecked")
-   @FXML
-   void addLecturer() throws ClassNotFoundException, IOException, EOFException
-   {
-      String name = txtName.getText();
-      String email = txtEmail.getText();
-      String category = cmbSelectCategory.getAccessibleText();
-      String phoneNr = txtPhone.getText();
-      Lecturer lec = new Lecturer(name, email, phoneNr, category);
-      ArrayList<Lecturer> lecturers = new ArrayList<Lecturer>();
-      lecturers = ((ArrayList<Lecturer>) readObjFromFile(
-            "D://Liviu//ECLIPSE STORAGE//VIA/lecturers.txt"));
-      lecturers.add(lec);
-      writeObjFromFile(lecturers,
-            "D://Liviu//ECLIPSE STORAGE//VIA/lecturers.txt");
-      JOptionPane.showMessageDialog(null, lec.toString() + "Added ");
-   }
+//   @SuppressWarnings("unchecked")
+//   @FXML
+//   void addLecturer() throws ClassNotFoundException, IOException, EOFException
+//   {
+//      String name = txtName.getText();
+//      String email = txtEmail.getText();
+//      String category = cmbSelectCategory.getAccessibleText();
+//      String phoneNr = txtPhone.getText();
+//      Lecturer lec = new Lecturer(name, email, phoneNr, category);
+//      ArrayList<Lecturer> lecturers = new ArrayList<Lecturer>();
+//      lecturers = ((ArrayList<Lecturer>) readObjFromFile(
+//            "D://Liviu//ECLIPSE STORAGE//VIA/lecturers.txt"));
+//      lecturers.add(lec);
+//      writeObjFromFile(lecturers,
+//            "D://Liviu//ECLIPSE STORAGE//VIA/lecturers.txt");
+//      JOptionPane.showMessageDialog(null, lec.toString() + "Added ");
+//   }
 
    private ArrayList<Lecturer> lecturerArray;
 

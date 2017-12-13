@@ -3,24 +3,18 @@
  * Sample Skeleton for ‘Add_Activity_Subject.fxml’ Controller Class
  */
 
-import java.io.EOFException;
-import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
-import javax.swing.JOptionPane;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 
-public class AddActivitySubjectController extends ToBinary
-      implements Initializable
+public class AddActivitySubjectController implements Initializable
 {
    private ArrayList<Activity_Subject> activityList;
-   private String filename = "D://Liviu//ECLIPSE STORAGE//VIA/activitysubject.txt";
-
    public AddActivitySubjectController()
    {
       activityList = new ArrayList<Activity_Subject>();
@@ -60,42 +54,43 @@ public class AddActivitySubjectController extends ToBinary
    //
    // }
 
-   @SuppressWarnings("unchecked")
-   public void addActivitySubject()
-         throws ClassNotFoundException, IOException, EOFException
-   {
-      String activityName = activityNameTxtField.getText();
-      String activityType = activityTypeTxtField.getText();
-      activityList = new ArrayList<Activity_Subject>();
-      cmbActivitySubject = new ComboBox<Activity_Subject>();
-      activityList = (ArrayList<Activity_Subject>) readObjFromFile(filename);
-      Activity_Subject asb = new Activity_Subject(activityName, activityType);
-      activityList.add(asb);
-      writeObjFromFile(activityList, filename);
-      //cmbActivitySubject.getItems().addAll(activityList);
-      
-      JOptionPane.showMessageDialog(null, asb.toString() + " Added ");
-      refreshComboBox();
-   }
+   // @SuppressWarnings("unchecked")
+   // public void addActivitySubject()
+   // throws ClassNotFoundException, IOException, EOFException
+   // {
+   // String activityName = activityNameTxtField.getText();
+   // String activityType = activityTypeTxtField.getText();
+   // activityList = new ArrayList<Activity_Subject>();
+   // cmbActivitySubject = new ComboBox<Activity_Subject>();
+   // activityList = (ArrayList<Activity_Subject>) readObjFromFile(filename);
+   // Activity_Subject asb = new Activity_Subject(activityName, activityType);
+   // activityList.add(asb);
+   // writeObjFromFile(activityList, filename);
+   // // cmbActivitySubject.getItems().addAll(activityList);
+   //
+   // JOptionPane.showMessageDialog(null, asb.toString() + " Added ");
+   // refreshComboBox();
+   // }
 
-   @SuppressWarnings({ "unused", "unchecked" })
-   private void showWrittenData()
-   {
-      ArrayList<Activity_Subject> list = (ArrayList<Activity_Subject>) readObjFromFile(
-            filename);
-      for (int i = 0; i < list.size(); i++)
-      {
-         System.out.println(list.get(i));
-      }
-
-   }
+   // @SuppressWarnings({ "unused", "unchecked" })
+   // private void showWrittenData()
+   // {
+   // ArrayList<Activity_Subject> list = (ArrayList<Activity_Subject>)
+   // readObjFromFile(
+   // filename);
+   // for (int i = 0; i < list.size(); i++)
+   // {
+   // System.out.println(list.get(i));
+   // }
+   //
+   // }
 
    public void editActivity()
    {
-//      activityList = new ArrayList<Activity_Subject>();
-//      activityList = (ArrayList<Activity_Subject>) readObjFromFile(filename);
-//      String activityName = activityNameTxtField.getText();
-//      String activityType = activityTypeTxtField.getText();
+      // activityList = new ArrayList<Activity_Subject>();
+      // activityList = (ArrayList<Activity_Subject>) readObjFromFile(filename);
+      // String activityName = activityNameTxtField.getText();
+      // String activityType = activityTypeTxtField.getText();
       // editActivitySubject(cmbActivitySubject.getValue(), activityName,
       // activityType);
    }
@@ -133,11 +128,10 @@ public class AddActivitySubjectController extends ToBinary
       addASubject(activityName, activityType);
    }
 
-   @SuppressWarnings("unchecked")
    public void refreshComboBox()
    {
-      activityList = (ArrayList<Activity_Subject>) readObjFromFile(filename);
-      cmbActivitySubject.getItems().addAll(activityList);
+      // activityList = (ArrayList<Activity_Subject>) readObjFromFile(filename);
+      // cmbActivitySubject.getItems().addAll(activityList);
    }
 
    @Override

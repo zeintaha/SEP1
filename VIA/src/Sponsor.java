@@ -1,18 +1,28 @@
-public class Sponsor {
-    private String name;
-    private String email;
-    private String phone;
-    private String address;
-    private String category;
-    public Sponsor(String name, String email, String phone, String address, String category){
-        this.name = name;
-        this.email = email;
-        this.address = address;
-        this.phone = phone;
-        this.category = category;
-    }
-    
-    public String getCategory()
+import java.io.Serializable;
+
+public class Sponsor implements Serializable
+{
+   /**
+   * 
+   */
+   private static final long serialVersionUID = 1L;
+   private String name;
+   private String email;
+   private String phone;
+   private String address;
+   private String category;
+
+   public Sponsor(String name, String email, String phone, String address,
+         String category)
+   {
+      this.name = name;
+      this.email = email;
+      this.address = address;
+      this.phone = phone;
+      this.category = category;
+   }
+
+   public String getCategory()
    {
       return category;
    }
@@ -42,20 +52,28 @@ public class Sponsor {
       this.address = address;
    }
 
-   public void setName(String name){
-        this.name = name;
-    }
-    public String getName(){
-        return name;
-    }
-    public void setEmail(String email){
-        this.email = email;
-    }
-    public String getEmail(){
-        return email;
-    }
-    
-    public String toString() {
-       return name + "/" + email + "/" + phone + "/" + address;
-    }
+   public void setName(String name)
+   {
+      this.name = name;
+   }
+
+   public String getName()
+   {
+      return name;
+   }
+
+   public void setEmail(String email)
+   {
+      this.email = email;
+   }
+
+   public String getEmail()
+   {
+      return email;
+   }
+
+   public String toString()
+   {
+      return name + "/" + email + "/" + phone + "/" + address + "/" + category;
+   }
 }

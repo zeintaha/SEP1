@@ -4,14 +4,13 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button id="addCategory" fx:id="btnAddCategory" layoutX="368.0" layoutY="31.0" mnemonicParsing="false" onAction="#addCategory" text="Add Category" />
+      <Button id="btnAddCategory" fx:id="btnAddCategory" layoutX="368.0" layoutY="31.0" mnemonicParsing="false" onAction="#addCategory" text="Add Category" />
       <Button id="btnDeleteCategory" fx:id="btnDeleteCategory" layoutX="368.0" layoutY="80.0" mnemonicParsing="false" onAction="#deleteCategory" text="Delete Category" />
       <Label fx:id="lblCategory" layoutX="98.0" layoutY="60.0" text="Category" />
       <TextField id="txtCategory" fx:id="txtCategory" layoutX="186.0" layoutY="56.0" />
-      <TableView layoutX="92.0" layoutY="141.0" prefHeight="200.0" prefWidth="416.0">
+      <TableView id="tableViewCategory" fx:id="tableViewCategory" layoutX="92.0" layoutY="141.0" onMouseClicked="#getCategoryFromTable" prefHeight="200.0" prefWidth="416.0">
         <columns>
           <TableColumn id="listOfCategories" fx:id="listOfCategories" prefWidth="415.0" text="Category" />
         </columns>

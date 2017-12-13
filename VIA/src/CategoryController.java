@@ -1,7 +1,9 @@
+import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
-import javax.swing.JOptionPane;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -9,14 +11,20 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import java.io.EOFException;
-import java.io.IOException;
+import javafx.scene.control.cell.PropertyValueFactory;
 
-public class CategoryController extends ToBinary implements Initializable
+public class CategoryController implements Initializable
 {
+   private ArrayList<Category> categories = new ArrayList<Category>();
+   private ToBinary file;
+   private String filename = "categories.txt";
+   private static ObservableList<Category> observableCategory;
 
    @FXML
    private Label lblCategory;
+
+   @FXML
+   private TableView<Category> tableViewCategory = new TableView<Category>();
 
    @FXML
    private TableColumn<Category, String> listOfCategories = new TableColumn<Category, String>();
@@ -30,55 +38,67 @@ public class CategoryController extends ToBinary implements Initializable
    @FXML
    private Button btnDeleteCategory;
 
-   @SuppressWarnings("unchecked")
-   public void addCategory()
-         throws ClassNotFoundException, IOException, EOFException
+   public void addCategory() throws InvocationTargetException
    {
       String category = txtCategory.getText();
       Category cat = new Category(category);
-      ArrayList<Category> categories = new ArrayList<Category>();
-      categories = (ArrayList<Category>) readObjFromFile(
-            "D://Liviu//ECLIPSE STORAGE//VIA/categories.txt");
       categories.add(cat);
-      writeObjFromFile(categories,
-            "D://Liviu//ECLIPSE STORAGE//VIA/categories.txt");
-      JOptionPane.showMessageDialog(null, cat.toString() + "Added ");
+      file.writeObjToFile(categories);
+      initializeTable();
+   }
+
+   public void deleteCategory() throws InvocationTargetException
+   {    
+      String category = txtCategory.getText();
+      Category cat = new Category(category);    
+      
+      for(int i = 0; i < categories.size(); i++) {
+         if(categories.get(i).getCategory().equals(cat.getCategory())) {
+            categories.remove(i);
+         }
+      }
+      System.out.println(categories);
+      file.writeObjToFile(categories);
+      initializeTable();
    }
 
    @SuppressWarnings("unchecked")
-   public void deleteCategory()
-         throws ClassNotFoundException, IOException, EOFException
+   private void showWrittenData()
    {
-      String category = txtCategory.getText();
-      Category cat = new Category(category);
-      ArrayList<Category> categories = new ArrayList<Category>();
-      categories = (ArrayList<Category>) readObjFromFile(
-            "D://Liviu//ECLIPSE STORAGE//VIA/categories.txt");
-      categories.add(cat);
-      writeObjFromFile(categories,
-            "D://Liviu//ECLIPSE STORAGE//VIA/categories.txt");
-      JOptionPane.showMessageDialog(null, cat.toString() + "Deleted ");
+      ArrayList<Category> list = (ArrayList<Category>) file.readObjFromFile();
+      for (int i = 0; i < list.size(); i++)
+      {
+         System.out.println(list.get(i));
+      }
+      System.out.println(list.get(0).getCategory());
    }
 
    @SuppressWarnings("unchecked")
    public void initializeTable()
    {
-      ArrayList<Category> data = new ArrayList<Category>();
-      data = ((ArrayList<Category>) readObjFromFile(
-            "D://Liviu//ECLIPSE STORAGE//VIA/categories.txt"));
-      TableView<Category> listOfCategories = new TableView<Category>();
-
-      for (int i = 0; i < data.size(); i++)
-      {
-         TableColumn<Category, String> firstNameCol = new TableColumn<Category, String>(
-               data.get(i).getCategory());
-         listOfCategories.getColumns().add(firstNameCol);
-      }
+      listOfCategories.setCellValueFactory(
+            new PropertyValueFactory<Category, String>("category"));
+      observableCategory = FXCollections
+            .observableList((ArrayList<Category>) file.readObjFromFile());
+      tableViewCategory.setItems(observableCategory);
+      tableViewCategory.setStyle("-fx-alignment: CENTER;");
+      listOfCategories.setStyle("-fx-alignment: CENTER;");
+   }
+   
+   public void getCategoryFromTable() throws InvocationTargetException
+   {
+      txtCategory.setText(tableViewCategory.getSelectionModel().getSelectedItem().toString());
    }
 
+
+   @SuppressWarnings("unchecked")
    public void initialize(URL arg0, ResourceBundle arg1)
    {
-      //initializeTable();
+      file = new ToBinary(filename);
+      categories = new ArrayList<Category>();
+      categories = (ArrayList<Category>) file.readObjFromFile();
+      initializeTable();
+      showWrittenData();
    }
 
 }

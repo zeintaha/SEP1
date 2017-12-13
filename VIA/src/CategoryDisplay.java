@@ -12,7 +12,7 @@ public class CategoryDisplay extends Application
       // Instantiate and invoke the fxml loader
       FXMLLoader loader = new FXMLLoader();
       // set controller
-      loader.setController(new AddLecturerController());
+      loader.setController(new CategoryController());
       // set the location of the fxml doc
       loader.setLocation(getClass().getResource("Category.fxml"));
       Parent root = loader.load();

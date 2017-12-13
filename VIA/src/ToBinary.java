@@ -8,12 +8,14 @@ import java.io.ObjectOutputStream;
 
 public class ToBinary
 {
+   private String filename;
 
-   public ToBinary()
+   public ToBinary(String filename)
    {
-
+      this.filename = filename;
    }
-   public void writeObjFromFile(Object obj, String filename)
+
+   public void writeObjToFile(Object obj)
    {
 
       FileOutputStream fout = null;
@@ -22,7 +24,7 @@ public class ToBinary
       try
       {
 
-         fout = new FileOutputStream(filename);
+         fout = new FileOutputStream(filename, false);
          oos = new ObjectOutputStream(fout);
          oos.writeObject(obj);
 
@@ -64,12 +66,8 @@ public class ToBinary
       }
    }
 
-   
-   public Object readObjFromFile(String filename)
+   public Object readObjFromFile()
    {
-      // Cum e facut ca sa fie doar o metoda de prelucrat fiecare fisier fara sa
-      // ii specific denumirea de ArrayList, Ca pe urma dupa ce ii fac cast sa
-      // imi poata citi si stoca in ArrayList<Sponsor><Lecturer> de exemplu
       FileInputStream fout = null;
       ObjectInputStream ois = null;
       Object obj = new Object();
@@ -118,29 +116,29 @@ public class ToBinary
       }
       return obj;
    }
-   
-      public static byte[] serialize(Object obj) throws IOException
- {
- try (ByteArrayOutputStream b = new ByteArrayOutputStream())
- {
-    try (ObjectOutputStream o = new ObjectOutputStream(b))
-    {
-       o.writeObject(obj);
-    }
-    return b.toByteArray();
- }
-}
 
-public static Object deserialize(byte[] bytes)
-    throws IOException, ClassNotFoundException
-{
- try (ByteArrayInputStream b = new ByteArrayInputStream(bytes))
- {
-    try (ObjectInputStream o = new ObjectInputStream(b))
-    {
-       return o.readObject();
-    }
- }
-}
+   public static byte[] serialize(Object obj) throws IOException
+   {
+      try (ByteArrayOutputStream b = new ByteArrayOutputStream())
+      {
+         try (ObjectOutputStream o = new ObjectOutputStream(b))
+         {
+            o.writeObject(obj);
+         }
+         return b.toByteArray();
+      }
+   }
+
+   public static Object deserialize(byte[] bytes)
+         throws IOException, ClassNotFoundException
+   {
+      try (ByteArrayInputStream b = new ByteArrayInputStream(bytes))
+      {
+         try (ObjectInputStream o = new ObjectInputStream(b))
+         {
+            return o.readObject();
+         }
+      }
+   }
 
 }

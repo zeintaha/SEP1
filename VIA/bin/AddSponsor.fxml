@@ -14,8 +14,9 @@
       <TextField fx:id="txtPhone" layoutX="231.0" layoutY="147.0" prefHeight="25.0" prefWidth="176.0" />
       <TextField fx:id="txtAddress" layoutX="231.0" layoutY="104.0" prefHeight="25.0" prefWidth="176.0" />
       <TextField fx:id="txtName" layoutX="231.0" layoutY="58.0" prefHeight="25.0" prefWidth="176.0" />
-      <ComboBox fx:id="cmbSelectCategory" layoutX="229.0" layoutY="242.0"  prefHeight="25.0" prefWidth="176.0" promptText="Select Category" />
+      <ComboBox fx:id="cmbSelectCategory" layoutX="229.0" layoutY="242.0" onAction="#cmbSelectCategory" prefHeight="25.0" prefWidth="176.0" promptText="Select Category" />
       <Label layoutX="118.0" layoutY="246.0" text="Preferances:" />
       <Button fx:id="btnAddSponsor" layoutX="470.0" layoutY="282.0" mnemonicParsing="false" onAction="#addSponsor" text="Add Sponsor" />
    </children>
 </AnchorPane>
+
