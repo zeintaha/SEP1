@@ -26,9 +26,6 @@ public class PleaseProvideControllerClassName {
     @FXML // fx:id="cmbSelectCategory"
     private ComboBox<?> cmbSelectCategory; // Value injected by FXMLLoader
 
-    @FXML // fx:id="txtAddress"
-    private TextField txtAddress; // Value injected by FXMLLoader
-
     @FXML // fx:id="txtEmail"
     private TextField txtEmail; // Value injected by FXMLLoader
 
@@ -50,7 +47,6 @@ public class PleaseProvideControllerClassName {
         assert txtPhone != null : "fx:id=\"txtPhone\" was not injected: check your FXML file 'AddLecturer.fxml'.";
         assert txtName != null : "fx:id=\"txtName\" was not injected: check your FXML file 'AddLecturer.fxml'.";
         assert cmbSelectCategory != null : "fx:id=\"cmbSelectCategory\" was not injected: check your FXML file 'AddLecturer.fxml'.";
-        assert txtAddress != null : "fx:id=\"txtAddress\" was not injected: check your FXML file 'AddLecturer.fxml'.";
         assert txtEmail != null : "fx:id=\"txtEmail\" was not injected: check your FXML file 'AddLecturer.fxml'.";
         assert btnAddLecturer != null : "fx:id=\"btnAddLecturer\" was not injected: check your FXML file 'AddLecturer.fxml'.";
 

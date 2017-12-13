@@ -9,7 +9,7 @@
    <children>
       <TextField fx:id="txtTitle" layoutX="337.0" layoutY="343.0" prefHeight="25.0" prefWidth="176.0" />
       <Label layoutX="203.0" layoutY="131.0" text="Select date:" />
-      <DatePicker fx:id="dteDate" layoutX="338.0" layoutY="127.0" onAction="#selectDate" promptText="Select Date" />
+      <DatePicker fx:id="dteDate" layoutX="338.0" layoutY="127.0" onAction="#selectDateFind" promptText="Select Date" />
       <TextField fx:id="txtPrice" layoutX="337.0" layoutY="612.0" prefHeight="25.0" prefWidth="174.0" />
       <TextField fx:id="txtLecturer" layoutX="337.0" layoutY="557.0" prefHeight="25.0" prefWidth="176.0" />
       <Label layoutX="236.0" layoutY="614.0" prefHeight="25.0" prefWidth="36.0" text="Price:" />
@@ -21,17 +21,17 @@
       <Label layoutX="232.0" layoutY="347.0" text="Title:" />
       <Label layoutX="231.0" layoutY="396.0" text="Date:" />
       <Label layoutX="231.0" layoutY="449.0" text="Time:" />
-      <ComboBox fx:id="cmbSelectEvent" layoutX="337.0" layoutY="174.0" onAction="#selectEvent" prefHeight="25.0" prefWidth="176.0" promptText="Select Event" />
+      <ComboBox fx:id="cmbSelectEvent" layoutX="337.0" layoutY="174.0" onAction="#selectEventFind" prefHeight="25.0" prefWidth="176.0" promptText="Select Event" />
       <TextField fx:id="txtDuration" layoutX="337.0" layoutY="502.0" prefHeight="25.0" prefWidth="176.0" />
       <Button fx:id="btnSaveChanges" layoutX="536.0" layoutY="652.0" mnemonicParsing="false" onAction="#saveChanges" text="Save changes" />
-      <ComboBox fx:id="cmbSelectCategory" layoutX="339.0" layoutY="38.0" onAction="#selectCategory" prefHeight="25.0" prefWidth="174.0" promptText="Select Category" />
-      <ComboBox fx:id="cmbSelectType" layoutX="339.0" layoutY="81.0" onAction="#selectType" prefHeight="25.0" prefWidth="174.0" promptText="Select Type" />
+      <ComboBox fx:id="cmbSelectCategory" layoutX="339.0" layoutY="38.0" onAction="#selectCategoryFind" prefHeight="25.0" prefWidth="174.0" promptText="Select Category" />
+      <ComboBox fx:id="cmbSelectType" layoutX="339.0" layoutY="81.0" onAction="#selectTypeFind" prefHeight="25.0" prefWidth="174.0" promptText="Select Type" />
       <Label layoutX="203.0" layoutY="44.0" text="Select Category:" />
       <Label layoutX="205.0" layoutY="85.0" text="Select Type:" />
       <Separator layoutX="24.0" layoutY="216.0" prefWidth="600.0" />
-      <ComboBox fx:id="cmbSelectCategoryEdit" layoutX="336.0" layoutY="254.0" onAction="#selectCategory" prefHeight="25.0" prefWidth="176.0" promptText="Select Category" />
+      <ComboBox fx:id="cmbSelectCategoryEdit" layoutX="336.0" layoutY="254.0" onAction="#selectCategoryEdit" prefHeight="25.0" prefWidth="176.0" promptText="Select Category" />
       <Label layoutX="222.0" layoutY="258.0" text="Select category:" />
-      <ComboBox fx:id="cmbSelectTypeEdit" layoutX="336.0" layoutY="301.0" onAction="#selectType" prefHeight="25.0" prefWidth="176.0" promptText="Select Type" />
+      <ComboBox fx:id="cmbSelectTypeEdit" layoutX="336.0" layoutY="301.0" onAction="#selectTypeEdit" prefHeight="25.0" prefWidth="176.0" promptText="Select Type" />
       <Label layoutX="27.0" layoutY="38.0" text="Find Event to edit:">
          <font>
             <Font size="18.0" />
@@ -42,6 +42,6 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <DatePicker fx:id="dteDateEdit" layoutX="337.0" layoutY="392.0" onAction="#selectDate" promptText="Select Date" />
+      <DatePicker fx:id="dteDateEdit" layoutX="337.0" layoutY="392.0" onAction="#selectDateEdit" promptText="Select Date" />
    </children>
 </AnchorPane>
