@@ -1,0 +1,124 @@
+/**
+ * Sample Skeleton for 'EditEvent.fxml' Controller Class
+ */
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+
+public class EditEventController {
+
+    @FXML // ResourceBundle that was given to the FXMLLoader
+    private ResourceBundle resources;
+
+    @FXML // URL location of the FXML file that was given to the FXMLLoader
+    private URL location;
+
+    @FXML // fx:id="AnchorPaneEditEvent"
+    private AnchorPane AnchorPaneEditEvent; // Value injected by FXMLLoader
+
+    @FXML // fx:id="cmbSelectEvent"
+    private ComboBox<?> cmbSelectEvent; // Value injected by FXMLLoader
+
+    @FXML // fx:id="cmbSelectCategory"
+    private ComboBox<?> cmbSelectCategory; // Value injected by FXMLLoader
+
+    @FXML // fx:id="cmbSelectTypeEdit"
+    private ComboBox<?> cmbSelectTypeEdit; // Value injected by FXMLLoader
+
+    @FXML // fx:id="dteDateEdit"
+    private DatePicker dteDateEdit; // Value injected by FXMLLoader
+
+    @FXML // fx:id="txtDuration"
+    private TextField txtDuration; // Value injected by FXMLLoader
+
+    @FXML // fx:id="txtLecturer"
+    private TextField txtLecturer; // Value injected by FXMLLoader
+
+    @FXML // fx:id="btnSaveChanges"
+    private Button btnSaveChanges; // Value injected by FXMLLoader
+
+    @FXML // fx:id="dteDate"
+    private DatePicker dteDate; // Value injected by FXMLLoader
+
+    @FXML // fx:id="cmbSelectType"
+    private ComboBox<?> cmbSelectType; // Value injected by FXMLLoader
+
+    @FXML // fx:id="cmbSelectCategoryEdit"
+    private ComboBox<?> cmbSelectCategoryEdit; // Value injected by FXMLLoader
+
+    @FXML // fx:id="txtPrice"
+    private TextField txtPrice; // Value injected by FXMLLoader
+
+    @FXML // fx:id="txtTitle"
+    private TextField txtTitle; // Value injected by FXMLLoader
+
+    @FXML // fx:id="txtTime"
+    private TextField txtTime; // Value injected by FXMLLoader
+
+    @FXML
+    void selectDateFind(ActionEvent event) {
+
+    }
+
+    @FXML
+    void selectEventFind(ActionEvent event) {
+
+    }
+
+    @FXML
+    void saveChanges(ActionEvent event) {
+
+    }
+
+    @FXML
+    void selectCategoryFind(ActionEvent event) {
+
+    }
+
+    @FXML
+    void selectTypeFind(ActionEvent event) {
+
+    }
+
+    @FXML
+    void selectCategoryEdit(ActionEvent event) {
+
+    }
+
+    @FXML
+    void selectTypeEdit(ActionEvent event) {
+
+    }
+
+    @FXML
+    void selectDateEdit(ActionEvent event) {
+
+    }
+
+    @FXML // This method is called by the FXMLLoader when initialization is complete
+    void initialize() {
+        assert AnchorPaneEditEvent != null : "fx:id=\"AnchorPaneEditEvent\" was not injected: check your FXML file 'EditEvent.fxml'.";
+        assert cmbSelectEvent != null : "fx:id=\"cmbSelectEvent\" was not injected: check your FXML file 'EditEvent.fxml'.";
+        assert cmbSelectCategory != null : "fx:id=\"cmbSelectCategory\" was not injected: check your FXML file 'EditEvent.fxml'.";
+        assert cmbSelectTypeEdit != null : "fx:id=\"cmbSelectTypeEdit\" was not injected: check your FXML file 'EditEvent.fxml'.";
+        assert dteDateEdit != null : "fx:id=\"dteDateEdit\" was not injected: check your FXML file 'EditEvent.fxml'.";
+        assert txtDuration != null : "fx:id=\"txtDuration\" was not injected: check your FXML file 'EditEvent.fxml'.";
+        assert txtLecturer != null : "fx:id=\"txtLecturer\" was not injected: check your FXML file 'EditEvent.fxml'.";
+        assert btnSaveChanges != null : "fx:id=\"btnSaveChanges\" was not injected: check your FXML file 'EditEvent.fxml'.";
+        assert dteDate != null : "fx:id=\"dteDate\" was not injected: check your FXML file 'EditEvent.fxml'.";
+        assert cmbSelectType != null : "fx:id=\"cmbSelectType\" was not injected: check your FXML file 'EditEvent.fxml'.";
+        assert cmbSelectCategoryEdit != null : "fx:id=\"cmbSelectCategoryEdit\" was not injected: check your FXML file 'EditEvent.fxml'.";
+        assert txtPrice != null : "fx:id=\"txtPrice\" was not injected: check your FXML file 'EditEvent.fxml'.";
+        assert txtTitle != null : "fx:id=\"txtTitle\" was not injected: check your FXML file 'EditEvent.fxml'.";
+        assert txtTime != null : "fx:id=\"txtTime\" was not injected: check your FXML file 'EditEvent.fxml'.";
+
+    }
+}

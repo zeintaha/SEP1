@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="483.0" prefWidth="598.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuBar fx:id="mnuBar" layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
+        <menus>
+          <Menu fx:id="c" mnemonicParsing="false" text="Event">
+            <items>
+              <MenuItem fx:id="mniAddEvent" mnemonicParsing="false" onAction="#addEvent" text="Add Event" />
+                  <MenuItem fx:id="mniEditEvent" mnemonicParsing="false" onAction="#editEvent" text="Edit Event" />
+                  <MenuItem fx:id="mniDeleteEvent" mnemonicParsing="false" onAction="#deleteEvent" text="Delete Event" />
+                  <MenuItem fx:id="mniAddParticipant" mnemonicParsing="false" onAction="#addParticipant" text="Add Participant to Event" />
+                  <MenuItem fx:id="mniDeleteParticipant" mnemonicParsing="false" onAction="#deleteParticipantFromEvent" text="Delete Participant from Event" />
+                  <MenuItem fx:id="mniAddLecturer" mnemonicParsing="false" onAction="#addLecturerToEvent" text="Add Lecturer to Event" />
+                  <MenuItem fx:id="mniDeleteLecturer" mnemonicParsing="false" onAction="#deleteLecturerFromEvent" text="Delete Lecturer from Event" />
+            </items>
+          </Menu>
+          <Menu fx:id="mnuMember" mnemonicParsing="false" text="Member">
+            <items>
+              <MenuItem fx:id="mniAddMember" mnemonicParsing="false" onAction="#addMember" text="Add Member" />
+                  <MenuItem fx:id="mniEditMember" mnemonicParsing="false" onAction="#editMember" text="Edit Member" />
+                  <MenuItem fx:id="mniDeleteMember" mnemonicParsing="false" onAction="#deleteMember" text="Delete Member" />
+            </items>
+          </Menu>
+          <Menu fx:id="mnuSponsor" mnemonicParsing="false" text="Sponsor">
+            <items>
+              <MenuItem fx:id="mniAddSponsor" mnemonicParsing="false" onAction="#addSponsor" text="Add Sponsor" />
+                  <MenuItem fx:id="mniEditSponsor" mnemonicParsing="false" onAction="#editSponsor" text="Edit Sponsor" />
+                  <MenuItem fx:id="mniDeleteSponsor" mnemonicParsing="false" onAction="#deleteSponsor" text="Delete Sponsor" />
+            </items>
+          </Menu>
+            <Menu fx:id="mnuLecturer" mnemonicParsing="false" text="Lecturer">
+               <items>
+                  <MenuItem fx:id="mniAddLecturer" mnemonicParsing="false" onAction="#addLecturer" text="Add Lecturer" />
+                  <MenuItem fx:id="mniEditLecturer" mnemonicParsing="false" onAction="#editLecturer" text="Edit Lecturer" />
+                  <MenuItem fx:id="mniDeleteLecturer" mnemonicParsing="false" onAction="#deleteLecturer" text="Delete Lecturer" />
+               </items>
+            </Menu>
+            <Menu fx:id="mnuCategory" mnemonicParsing="false" text="Category">
+               <items>
+                  <MenuItem fx:id="mniAddCategory" mnemonicParsing="false" onAction="#addCategory" text="Add Category" />
+                  <MenuItem fx:id="mniDeleteCategory" mnemonicParsing="false" onAction="#deleteCategory" text="Delete Category" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <Button fx:id="btnFinalizedEvents" layoutX="315.0" layoutY="72.0" mnemonicParsing="false" onAction="#getFinalizedEvents" prefHeight="25.0" prefWidth="150.0" text="Finalized events" />
+      <Button fx:id="btnNonFinalizedEvents" layoutX="135.0" layoutY="72.0" mnemonicParsing="false" onAction="#getNonFinalizedEvents" prefHeight="25.0" prefWidth="150.0" text="Non-finalized events" />
+      <ComboBox fx:id="cmbCategorySponsorsLecturers" layoutX="136.0" layoutY="169.0" onAction="#selectCategory" prefWidth="150.0" promptText="Select Category" />
+      <Button fx:id="btnSponsors" layoutX="316.0" layoutY="169.0" mnemonicParsing="false" onAction="#getSponsors" prefHeight="25.0" prefWidth="150.0" text="Sponsors" />
+      <Button fx:id="btnLecturer" layoutX="316.0" layoutY="209.0" mnemonicParsing="false" onAction="#getLecturer" prefWidth="150.0" text="Lecturers" />
+      <Button fx:id="btnNoneMembers" layoutX="315.0" layoutY="301.0" mnemonicParsing="false" onAction="#getNoneMembers" prefHeight="25.0" prefWidth="150.0" text="None-members" />
+      <Separator layoutX="50.0" layoutY="126.0" prefWidth="500.0" />
+      <Button fx:id="btnMembers" layoutX="315.0" layoutY="258.0" mnemonicParsing="false" onAction="#getMembers" prefHeight="25.0" prefWidth="150.0" text="Members" />
+      <Button fx:id="btnMemebresNotPaidMembership" layoutX="200.0" layoutY="414.0" mnemonicParsing="false" onAction="#getMembersHaveToPayMembership" text="Memebres have to pay membership" />
+      <Label layoutX="57.0" layoutY="55.0" text="Events:" />
+      <Label layoutX="58.0" layoutY="139.0" text="Sponsors/Lecturer:" />
+      <Separator layoutX="50.0" layoutY="356.0" prefWidth="500.0" />
+      <Label layoutX="57.0" layoutY="382.0" text="Members not paid membership:" />
+   </children>
+</AnchorPane>

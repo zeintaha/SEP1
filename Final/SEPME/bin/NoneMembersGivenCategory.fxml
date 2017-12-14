@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="AnchorPaneNoneMembers" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="868.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="378.0" layoutY="14.0" text="NoneMembers:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblNoneMember" layoutX="30.0" layoutY="53.0" prefHeight="498.0" prefWidth="810.0">
+        <columns>
+          <TableColumn fx:id="tblColumnName" prefWidth="162.0" text="Name" />
+            <TableColumn fx:id="tblColumnAddress" prefWidth="162.0" text="Address" />
+            <TableColumn fx:id="tblColumnPhone" prefWidth="162.0" text="Phone" />
+            <TableColumn fx:id="tblColumnEmail" prefWidth="162.0" text="Email" />
+            <TableColumn fx:id="tblColumnPreferences" prefWidth="162.0" text="Preferences" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
