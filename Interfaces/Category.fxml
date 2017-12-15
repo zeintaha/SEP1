@@ -6,10 +6,10 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button id="addCategory" fx:id="btnAddCategory" layoutX="358.0" layoutY="56.0" mnemonicParsing="false" onAction="#addCategory" prefHeight="25.0" prefWidth="102.0" text="Add Category" />
-      <Button id="btnDeleteCategory" fx:id="btnDeleteCategory" layoutX="358.0" layoutY="98.0" mnemonicParsing="false" onAction="#deleteCategory" text="Delete Category" />
-      <Label fx:id="lblCategory" layoutX="98.0" layoutY="60.0" text="Category Name:" />
-      <TextField id="txtCategory" fx:id="txtCategory" layoutX="193.0" layoutY="56.0" promptText="Enter category name" />
+      <Button id="btnAddCategory" fx:id="btnAddCategory" layoutX="367.0" layoutY="51.0" mnemonicParsing="false" onAction="#addCategory" prefHeight="25.0" prefWidth="102.0" text="Add Category" />
+      <Button id="btnDeleteCategory" fx:id="btnDeleteCategory" layoutX="367.0" layoutY="91.0" mnemonicParsing="false" onAction="#deleteCategory" text="Delete Category" />
+      <Label fx:id="lblCategory" layoutX="120.0" layoutY="55.0" text="Category" />
+      <TextField id="txtCategory" fx:id="txtCategory" layoutX="196.0" layoutY="51.0" />
       <TableView id="tableViewCategory" fx:id="tableViewCategory" layoutX="92.0" layoutY="141.0" onMouseClicked="#getCategoryFromTable" prefHeight="200.0" prefWidth="416.0">
         <columns>
           <TableColumn id="listOfCategories" fx:id="listOfCategories" prefWidth="415.0" text="Category" />

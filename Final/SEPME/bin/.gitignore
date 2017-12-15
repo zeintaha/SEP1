@@ -60,3 +60,6 @@
 /Members.class
 /Non_Members.class
 /Sponsor.class
+/AddNoneMember.fxml
+/AddNoneMemberController.class
+/ManageCategoryController.class

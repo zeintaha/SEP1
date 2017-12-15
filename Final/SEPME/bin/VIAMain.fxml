@@ -42,8 +42,7 @@
             </Menu>
             <Menu fx:id="mnuCategory" mnemonicParsing="false" text="Category">
                <items>
-                  <MenuItem fx:id="mniAddCategory" mnemonicParsing="false" onAction="#addCategory" text="Add Category" />
-                  <MenuItem fx:id="mniDeleteCategory" mnemonicParsing="false" onAction="#deleteCategory" text="Delete Category" />
+                  <MenuItem fx:id="mniManageCategory" mnemonicParsing="false" onAction="#manageCategory" text="Manage Category" />
                </items>
             </Menu>
         </menus>
