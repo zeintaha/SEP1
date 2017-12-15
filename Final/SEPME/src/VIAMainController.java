@@ -44,8 +44,8 @@ public class VIAMainController
    @FXML // fx:id="mniEditMember"
    private MenuItem mniEditMember; // Value injected by FXMLLoader
 
-   @FXML // fx:id="mniAddCategory"
-   private MenuItem mniAddCategory; // Value injected by FXMLLoader
+   @FXML // fx:id="mniManageCategory"
+   private MenuItem mniManageCategory; // Value injected by FXMLLoader
 
    @FXML // fx:id="mniDeleteSponsor"
    private MenuItem mniDeleteSponsor; // Value injected by FXMLLoader
@@ -117,8 +117,6 @@ public class VIAMainController
    @FXML // fx:id="mniAddType"
    private MenuItem mniAddType; // Value injected by FXMLLoader
 
-   @FXML // fx:id="mniDeleteCategory"
-   private MenuItem mniDeleteCategory; // Value injected by FXMLLoader
 
    @FXML // fx:id="mnuBar"
    private MenuBar mnuBar; // Value injected by FXMLLoader
@@ -694,7 +692,7 @@ public class VIAMainController
    }
 
    @FXML
-   void addCategory(ActionEvent event)
+   void manageCategory(ActionEvent event)
    {
       Parent root;
       try
@@ -703,7 +701,7 @@ public class VIAMainController
          FXMLLoader loader = new FXMLLoader();
 
          // set controller
-         loader.setController(new CategoryController());
+         loader.setController(new ManageCategoryController());
 
          // set the location of the FXML doc
          loader.setLocation(getClass().getResource("Category.fxml"));
@@ -717,7 +715,7 @@ public class VIAMainController
 
          // show the window using the scene graph
          stage.getIcons().add(new Image(getClass().getResourceAsStream("favicon.png")));
-         stage.setTitle("Category");
+         stage.setTitle("Manage Category");
          stage.setScene(scene);
          stage.show();
       }
@@ -725,40 +723,7 @@ public class VIAMainController
       {
          e.printStackTrace();
       }
-   }
 
-   @FXML
-   void deleteCategory(ActionEvent event)
-   {
-      Parent root;
-      try
-      {
-         // instatiate invoke the fxml loader
-         FXMLLoader loader = new FXMLLoader();
-
-         // set controller
-         loader.setController(new CategoryController());
-
-         // set the location of the FXML doc
-         loader.setLocation(getClass().getResource("Category.fxml"));
-         root = loader.load();
-
-         // Build the scene graph
-
-         Scene scene = new Scene(root);
-
-         Stage stage = new Stage();
-
-         // show the window using the scene graph
-         stage.getIcons().add(new Image(getClass().getResourceAsStream("favicon.png")));
-         stage.setTitle("Category");
-         stage.setScene(scene);
-         stage.show();
-      }
-      catch (IOException e)
-      {
-         e.printStackTrace();
-      }
    }
 
 
@@ -1023,7 +988,7 @@ public class VIAMainController
       assert mniDeleteLecturer != null : "fx:id=\"mniDeleteLecturer\" was not injected: check your FXML file 'VIAMain.fxml'.";
       assert btnLecturer != null : "fx:id=\"btnLecturer\" was not injected: check your FXML file 'VIAMain.fxml'.";
       assert mniEditMember != null : "fx:id=\"mniEditMember\" was not injected: check your FXML file 'VIAMain.fxml'.";
-      assert mniAddCategory != null : "fx:id=\"mniAddCategory\" was not injected: check your FXML file 'VIAMain.fxml'.";
+      assert mniManageCategory != null : "fx:id=\"mniAddCategory\" was not injected: check your FXML file 'VIAMain.fxml'.";
       assert mniDeleteSponsor != null : "fx:id=\"mniDeleteSponsor\" was not injected: check your FXML file 'VIAMain.fxml'.";
       assert mniDeleteMember != null : "fx:id=\"mniDeleteMember\" was not injected: check your FXML file 'VIAMain.fxml'.";
       assert mniAddParticipant != null : "fx:id=\"mniAddParticipant\" was not injected: check your FXML file 'VIAMain.fxml'.";
@@ -1046,7 +1011,6 @@ public class VIAMainController
       assert mniEditSponsor != null : "fx:id=\"mniEditSponsor\" was not injected: check your FXML file 'VIAMain.fxml'.";
       assert btnMembers != null : "fx:id=\"btnMembers\" was not injected: check your FXML file 'VIAMain.fxml'.";
       assert mniAddType != null : "fx:id=\"mniAddType\" was not injected: check your FXML file 'VIAMain.fxml'.";
-      assert mniDeleteCategory != null : "fx:id=\"mniDeleteCategory\" was not injected: check your FXML file 'VIAMain.fxml'.";
       assert mnuBar != null : "fx:id=\"mnuBar\" was not injected: check your FXML file 'VIAMain.fxml'.";
       assert mniEditEvent != null : "fx:id=\"mniEditEvent\" was not injected: check your FXML file 'VIAMain.fxml'.";
       assert btnFinalizedEvents != null : "fx:id=\"btnFinalizedEvents\" was not injected: check your FXML file 'VIAMain.fxml'.";

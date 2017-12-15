@@ -5,9 +5,6 @@
 
 import java.util.ArrayList;
 import java.util.ResourceBundle;
-
-import javax.swing.JOptionPane;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -33,7 +30,7 @@ public class AddParticipantToEventController implements Initializable
    private String filename = "events.txt";
    private ArrayList<Category> categories;
    private ArrayList<Event> events;
-   @SuppressWarnings("unused")
+   private Event eventToAddParticipant;
    private Non_Members nonmemparticipant;
 
    @FXML // ResourceBundle that was given to the FXMLLoader
@@ -52,7 +49,7 @@ public class AddParticipantToEventController implements Initializable
    private Button btnCreateNewNonMember; // Value injected by FXMLLoader
 
    @FXML // fx:id="cmbSelectEvent"
-   private ComboBox<String> cmbSelectEvent; // Value injected by FXMLLoader
+   private ComboBox<Event> cmbSelectEvent; // Value injected by FXMLLoader
 
    @FXML // fx:id="cmbSelectCategory"
    private ComboBox<Category> cmbSelectCategory; // Value injected by FXMLLoader
@@ -93,32 +90,30 @@ public class AddParticipantToEventController implements Initializable
    {
       ArrayList<Event> events2 = new ArrayList<>();
       MyDate date = new MyDate(dteDate.getValue().getDayOfMonth(),
-      dteDate.getValue().getMonthValue(), dteDate.getValue().getYear());
-     for (int i = 0; i < events.size(); i++)
-     {
-        if (events.get(i).getDate().equals(date))         
-              {
-                 events2.add(events.get(i));
-              }
-     }
-     cmbSelectEvent.getItems().clear();
-     for(int i = 0; i < events2.size(); i++) {
-     cmbSelectEvent.getItems().add(events2.get(i).getTitle());
-     }
-     System.out.println(events2.toString());
+            dteDate.getValue().getMonthValue(), dteDate.getValue().getYear());
+      for (int i = 0; i < events.size(); i++)
+      {
+         if (events.get(i).getDate().equals(date))
+         {
+            events2.add(events.get(i));
+         }
+      }
+      cmbSelectEvent.getItems().clear();
+      cmbSelectEvent.getItems().addAll(events2);
    }
 
    @FXML
    void selectEvent(ActionEvent event)
    {
+      eventToAddParticipant = cmbSelectEvent.getSelectionModel()
+            .getSelectedItem();
       for (int i = 0; i < events.size(); i++)
       {
-         if (events.get(i).getTitle().equals(cmbSelectEvent.getSelectionModel().getSelectedItem()))
+         if (events.get(i).equals(eventToAddParticipant))
          {
             events.remove(i);
-            System.out.println(i);
          }
-      }  
+      }
    }
 
    @SuppressWarnings("unchecked")
@@ -155,9 +150,7 @@ public class AddParticipantToEventController implements Initializable
          }
       }
       cmbSelectEvent.getItems().clear();
-      for(int i = 0; i < events2.size(); i++) {
-      cmbSelectEvent.getItems().add(events2.get(i).getTitle());
-      }
+      cmbSelectEvent.getItems().addAll(events2);
    }
 
    @FXML
@@ -173,9 +166,7 @@ public class AddParticipantToEventController implements Initializable
          }
       }
       cmbSelectEvent.getItems().clear();
-      for(int i = 0; i < events2.size(); i++) {
-      cmbSelectEvent.getItems().add(events2.get(i).getTitle());
-      }
+      cmbSelectEvent.getItems().addAll(events2);
    }
 
    @SuppressWarnings("unchecked")
@@ -201,27 +192,23 @@ public class AddParticipantToEventController implements Initializable
    @FXML
    void addMember(ActionEvent event)
    {
-//      Participants participant = new Participants(nonmemparticipant);
-//      eventToAddParticipant.addParticipantsToEvent(participant);
-//      events.add(eventToAddParticipant);
-//      filename = "events.txt";
-//      file = new ToBinary(filename);
-//      file.writeObjToFile(events);
-      
-      JOptionPane.showMessageDialog(null, " Member addded to the Event ");
+      Participants participant = new Participants(nonmemparticipant);
+      eventToAddParticipant.addParticipantsToEvent(participant);
+      events.add(eventToAddParticipant);
+      filename = "events.txt";
+      file = new ToBinary(filename);
+      file.writeObjToFile(events);
    }
 
    @FXML
    void addNonMember(ActionEvent event)
    {
-//      Participants participant = new Participants(nonmemparticipant);
-//      eventToAddParticipant.addParticipantsToEvent(participant);
-//      events.add(eventToAddParticipant);
-//      filename = "events.txt";
-//      file = new ToBinary(filename);
-//      file.writeObjToFile(events);
-      
-      JOptionPane.showMessageDialog(null," Non Member added to the event");
+      Participants participant = new Participants(nonmemparticipant);
+      eventToAddParticipant.addParticipantsToEvent(participant);
+      events.add(eventToAddParticipant);
+      filename = "events.txt";
+      file = new ToBinary(filename);
+      file.writeObjToFile(events);
    }
 
    @SuppressWarnings("unchecked")
@@ -247,6 +234,12 @@ public class AddParticipantToEventController implements Initializable
    @FXML
    void createNewMember(ActionEvent event)
    {
+
+   }
+
+   @FXML
+   void createNewNonMember(ActionEvent event)
+   {
       Parent root;
       try
       {
@@ -254,10 +247,10 @@ public class AddParticipantToEventController implements Initializable
          FXMLLoader loader = new FXMLLoader();
 
          // set controller
-         loader.setController(new AddMemberController());
+         loader.setController(new AddNoneMemberController());
 
          // set the location of the FXML doc
-         loader.setLocation(getClass().getResource("AddMember.fxml"));
+         loader.setLocation(getClass().getResource("AddNoneMember.fxml"));
          root = loader.load();
 
          // Build the scene graph
@@ -268,7 +261,7 @@ public class AddParticipantToEventController implements Initializable
 
          // show the window using the scene graph
          stage.getIcons().add(new Image(getClass().getResourceAsStream("favicon.png")));
-         stage.setTitle("Add Member");
+         stage.setTitle("Add None-Member");
          stage.setScene(scene);
          stage.show();
       }
@@ -276,12 +269,7 @@ public class AddParticipantToEventController implements Initializable
       {
          e.printStackTrace();
       }
-   }
 
-   @FXML
-   void createNewNonMember(ActionEvent event)
-   {
-      
    }
 
    @FXML // This method is called by the FXMLLoader when initialization is
