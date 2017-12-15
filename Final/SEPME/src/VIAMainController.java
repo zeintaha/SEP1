@@ -696,13 +696,69 @@ public class VIAMainController
    @FXML
    void addCategory(ActionEvent event)
    {
+      Parent root;
+      try
+      {
+         // instatiate invoke the fxml loader
+         FXMLLoader loader = new FXMLLoader();
 
+         // set controller
+         loader.setController(new CategoryController());
+
+         // set the location of the FXML doc
+         loader.setLocation(getClass().getResource("Category.fxml"));
+         root = loader.load();
+
+         // Build the scene graph
+
+         Scene scene = new Scene(root);
+
+         Stage stage = new Stage();
+
+         // show the window using the scene graph
+         stage.getIcons().add(new Image(getClass().getResourceAsStream("favicon.png")));
+         stage.setTitle("Category");
+         stage.setScene(scene);
+         stage.show();
+      }
+      catch (IOException e)
+      {
+         e.printStackTrace();
+      }
    }
 
    @FXML
    void deleteCategory(ActionEvent event)
    {
+      Parent root;
+      try
+      {
+         // instatiate invoke the fxml loader
+         FXMLLoader loader = new FXMLLoader();
 
+         // set controller
+         loader.setController(new CategoryController());
+
+         // set the location of the FXML doc
+         loader.setLocation(getClass().getResource("Category.fxml"));
+         root = loader.load();
+
+         // Build the scene graph
+
+         Scene scene = new Scene(root);
+
+         Stage stage = new Stage();
+
+         // show the window using the scene graph
+         stage.getIcons().add(new Image(getClass().getResourceAsStream("favicon.png")));
+         stage.setTitle("Category");
+         stage.setScene(scene);
+         stage.show();
+      }
+      catch (IOException e)
+      {
+         e.printStackTrace();
+      }
    }
 
 
