@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="483.0" prefWidth="598.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="389.0" prefWidth="598.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <MenuBar fx:id="mnuBar" layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
         <menus>
@@ -49,16 +49,15 @@
       </MenuBar>
       <Button fx:id="btnFinalizedEvents" layoutX="315.0" layoutY="72.0" mnemonicParsing="false" onAction="#getFinalizedEvents" prefHeight="25.0" prefWidth="150.0" text="Finalized events" />
       <Button fx:id="btnNonFinalizedEvents" layoutX="135.0" layoutY="72.0" mnemonicParsing="false" onAction="#getNonFinalizedEvents" prefHeight="25.0" prefWidth="150.0" text="Non-finalized events" />
-      <ComboBox fx:id="cmbCategorySponsorsLecturers" layoutX="136.0" layoutY="169.0" onAction="#selectCategory" prefWidth="150.0" promptText="Select Category" />
       <Button fx:id="btnSponsors" layoutX="316.0" layoutY="169.0" mnemonicParsing="false" onAction="#getSponsors" prefHeight="25.0" prefWidth="150.0" text="Sponsors" />
-      <Button fx:id="btnLecturer" layoutX="316.0" layoutY="209.0" mnemonicParsing="false" onAction="#getLecturer" prefWidth="150.0" text="Lecturers" />
-      <Button fx:id="btnNoneMembers" layoutX="315.0" layoutY="301.0" mnemonicParsing="false" onAction="#getNoneMembers" prefHeight="25.0" prefWidth="150.0" text="None-members" />
+      <Button fx:id="btnLecturer" layoutX="125.0" layoutY="169.0" mnemonicParsing="false" onAction="#getLecturer" prefWidth="150.0" text="Lecturers" />
+      <Button fx:id="btnNoneMembers" layoutX="125.0" layoutY="217.0" mnemonicParsing="false" onAction="#getNoneMembers" prefHeight="25.0" prefWidth="150.0" text="None-members" />
       <Separator layoutX="50.0" layoutY="126.0" prefWidth="500.0" />
-      <Button fx:id="btnMembers" layoutX="315.0" layoutY="258.0" mnemonicParsing="false" onAction="#getMembers" prefHeight="25.0" prefWidth="150.0" text="Members" />
-      <Button fx:id="btnMemebresNotPaidMembership" layoutX="200.0" layoutY="414.0" mnemonicParsing="false" onAction="#getMembersHaveToPayMembership" text="Memebres have to pay membership" />
+      <Button fx:id="btnMembers" layoutX="316.0" layoutY="217.0" mnemonicParsing="false" onAction="#getMembers" prefHeight="25.0" prefWidth="150.0" text="Members" />
+      <Button fx:id="btnMemebresNotPaidMembership" layoutX="209.0" layoutY="330.0" mnemonicParsing="false" onAction="#getMembersHaveToPayMembership" text="Memebres have to pay membership" />
       <Label layoutX="57.0" layoutY="55.0" text="Events:" />
-      <Label layoutX="58.0" layoutY="139.0" text="Sponsors/Lecturer:" />
-      <Separator layoutX="50.0" layoutY="356.0" prefWidth="500.0" />
-      <Label layoutX="57.0" layoutY="382.0" text="Members not paid membership:" />
+      <Label layoutX="58.0" layoutY="139.0" text="Find by category:" />
+      <Separator layoutX="43.0" layoutY="275.0" prefWidth="500.0" />
+      <Label layoutX="66.0" layoutY="298.0" text="Members not paid membership:" />
    </children>
 </AnchorPane>

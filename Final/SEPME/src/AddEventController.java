@@ -23,6 +23,7 @@ public class AddEventController implements Initializable
    private ToBinary file;
    private String filename = "event.txt";
    ArrayList<Category> categories;
+   ArrayList<Lecturer> lecturers;
 
 
    @FXML // ResourceBundle that was given to the FXMLLoader
@@ -39,6 +40,9 @@ public class AddEventController implements Initializable
 
    @FXML // fx:id="cmbSelectType"
    private ComboBox<String> cmbSelectType; // Value injected by FXMLLoader
+   
+   @FXML // fx:id="cmbSelectLecturer"
+   private ComboBox<String> cmbSelectLecturer; // Value injected by FXMLLoader
 
    @FXML // fx:id="txtPrice"
    private TextField txtPrice; // Value injected by FXMLLoader
@@ -72,7 +76,7 @@ public class AddEventController implements Initializable
       for (int i = 0; i < lec.size(); i++)
       {
          if (lec.get(i).getName().toString()
-               .equals(txtLecturer.getText().toString()))
+               .equals(cmbSelectLecturer.getSelectionModel().getSelectedItem()))
          {
             lecturer = lec.get(i);
          }
@@ -98,10 +102,32 @@ public class AddEventController implements Initializable
 
    }
 
+   @SuppressWarnings({ "unchecked", "unlikely-arg-type" })
    @FXML
    void selectCategory(ActionEvent event)
    {
+      filename = "lecturers.txt";
+      file = new ToBinary(filename);
+      lecturers = new ArrayList<Lecturer>();
+      
+      lecturers = (ArrayList<Lecturer>) file.readObjFromFile();
+      ArrayList<String> LecturerArray = new ArrayList<String>();
 
+      for (int i = 0; i < lecturers.size(); i++)
+      {
+         if (lecturers.get(i).getCategory().toString()
+               .equals(cmbSelectCategory.getSelectionModel().getSelectedItem().toString()))
+         {
+
+            LecturerArray.add(lecturers.get(i).getName());  
+            
+         }
+         
+      }
+      cmbSelectLecturer.getItems().clear();
+      cmbSelectLecturer.getItems().addAll(LecturerArray);
+          
+ 
    }
 
    @FXML
@@ -109,6 +135,13 @@ public class AddEventController implements Initializable
    {
 
    }
+   
+   @FXML
+   void selectLecturer(ActionEvent event)
+   {
+
+   }
+   
    @FXML
    void selecTypeCat()
    {
@@ -136,10 +169,12 @@ public class AddEventController implements Initializable
       categories = (ArrayList<Category>) file.readObjFromFile();
       cmbSelectCategory.getItems().addAll(categories);
    }
+   
 
    @Override
    public void initialize(URL arg0, ResourceBundle arg1)
    {
+
       filename = "categories.txt";
       file = new ToBinary(filename);
       categories = new ArrayList<Category>();

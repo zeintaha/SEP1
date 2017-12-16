@@ -21,5 +21,6 @@
             <TableColumn fx:id="tblColumnCategory" prefWidth="160.0" text="Category" />
         </columns>
       </TableView>
+      <ComboBox fx:id="cmbSelectCategory" layoutX="76.0" layoutY="20.0" onAction="#selectCategory" prefWidth="150.0" promptText="Select Category" />
    </children>
 </AnchorPane>

@@ -13,7 +13,7 @@
       <DatePicker fx:id="dteStartDate" layoutX="241.0" layoutY="226.0" onAction="#selectDate" promptText="Starting date:" />
       <Label layoutX="115.0" layoutY="186.0" text="Title:" />
       <TextField fx:id="txtTitle" layoutX="241.0" layoutY="179.0" prefHeight="25.0" prefWidth="176.0" />
-      <TextField fx:id="txtLecturer" layoutX="242.0" layoutY="384.0" prefHeight="25.0" prefWidth="174.0" />
+      
       <Label layoutX="113.0" layoutY="388.0" text="Lecturer:" />
       <Label layoutX="111.0" layoutY="287.0" text="Time:" />
       <TextField fx:id="txtDuration" layoutX="241.0" layoutY="328.0" prefHeight="25.0" prefWidth="176.0" />
@@ -23,5 +23,6 @@
       <ComboBox fx:id="cmbSelectCategory" layoutX="242.0" layoutY="94.0" onAction="#selectCategory" prefHeight="25.0" prefWidth="174.0" promptText="Select Category" />
       <ComboBox fx:id="cmbSelectType" layoutX="242.0" layoutY="137.0" onAction="#selecType" prefHeight="25.0" prefWidth="174.0" promptText="Select Type" />
       <Label layoutX="114.0" layoutY="141.0" text="Type:" />
+      <ComboBox fx:id="cmbSelectLecturer" layoutX="241.0" layoutY="386.0" onAction="#selectLecturer" prefHeight="25.0" prefWidth="174.0" promptText="Select Lecturer" />
    </children>
 </AnchorPane>
