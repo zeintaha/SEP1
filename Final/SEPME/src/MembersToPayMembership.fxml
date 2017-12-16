@@ -5,22 +5,27 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="AnchorPaneMembersToPayMembership" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="868.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="AnchorPaneMembersToPayMembership" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="765.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="393.0" layoutY="20.0" text="Members:">
+      <Label layoutX="66.0" layoutY="18.0" text="Members:">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TableView fx:id="tblMember" layoutX="30.0" layoutY="53.0" prefHeight="498.0" prefWidth="810.0">
+      <TableView fx:id="tblMember" layoutX="30.0" layoutY="53.0" prefHeight="498.0" prefWidth="709.0">
         <columns>
-          <TableColumn fx:id="tblColumnName" prefWidth="135.0" text="Name" />
-            <TableColumn fx:id="tblColumnAddress" prefWidth="135.0" text="Address" />
-            <TableColumn fx:id="tblColumnPhone" prefWidth="135.0" text="Phone" />
-            <TableColumn fx:id="tblColumnEmail" prefWidth="135.0" text="Email" />
-            <TableColumn fx:id="tblColumnPreferences" prefWidth="135.0" text="Preferences" />
-            <TableColumn fx:id="tblColumnMembershipDate" prefWidth="135.0" text="Membership Date" />
+          <TableColumn fx:id="tblColumnName" prefWidth="461.0" text="Member" />
+            <TableColumn fx:id="tblColumnStartOfMembership" prefWidth="123.0" text="Membership Date" />
+            <TableColumn fx:id="tblColumnEndOfMembership" prefWidth="124.0" text="End of membership" />
+            <TableColumn prefWidth="75.0" text="Column X">
+               <columns>
+                  <TableColumn minWidth="0.0" prefWidth="75.0" text="Column X" />
+               </columns>
+            </TableColumn>
         </columns>
       </TableView>
+      <DatePicker fx:id="toDate" layoutX="467.0" layoutY="19.0" />
+      <Label layoutX="393.0" layoutY="23.0" text="To date:" />
+      <Button fx:id="find" layoutX="680.0" layoutY="19.0" mnemonicParsing="false" onAction="#findByDates" text="Find" />
    </children>
 </AnchorPane>
