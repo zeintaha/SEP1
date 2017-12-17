@@ -20,31 +20,31 @@ public class FinalizedEventController {
     private URL location;
 
     @FXML // fx:id="tblColumnType"
-    private TableColumn<?, ?> tblColumnType; // Value injected by FXMLLoader
+    private TableColumn<Event, String> tblColumnType; // Value injected by FXMLLoader
 
     @FXML // fx:id="tblColumnLecturer"
-    private TableColumn<?, ?> tblColumnLecturer; // Value injected by FXMLLoader
+    private TableColumn<Event, Lecturer> tblColumnLecturer; // Value injected by FXMLLoader
 
     @FXML // fx:id="AnchorPaneFinalizedEvents"
     private AnchorPane AnchorPaneFinalizedEvents; // Value injected by FXMLLoader
 
     @FXML // fx:id="tblColumnDate"
-    private TableColumn<?, ?> tblColumnDate; // Value injected by FXMLLoader
+    private TableColumn<Event, MyDate> tblColumnDate; // Value injected by FXMLLoader
 
     @FXML // fx:id="tblColumnDuration"
-    private TableColumn<?, ?> tblColumnDuration; // Value injected by FXMLLoader
+    private TableColumn<Event, String> tblColumnDuration; // Value injected by FXMLLoader
 
     @FXML // fx:id="tblFinalizedEvent"
-    private TableView<?> tblFinalizedEvent; // Value injected by FXMLLoader
+    private TableView<Event> tblFinalizedEvent; // Value injected by FXMLLoader
 
     @FXML // fx:id="tblColumnPrice"
-    private TableColumn<?, ?> tblColumnPrice; // Value injected by FXMLLoader
+    private TableColumn<Event, String> tblColumnPrice; // Value injected by FXMLLoader
 
     @FXML // fx:id="tblColumnCategory"
-    private TableColumn<?, ?> tblColumnCategory; // Value injected by FXMLLoader
+    private TableColumn<Event, Category> tblColumnCategory; // Value injected by FXMLLoader
 
     @FXML // fx:id="tblColumnTime"
-    private TableColumn<?, ?> tblColumnTime; // Value injected by FXMLLoader
+    private TableColumn<Event, String> tblColumnTime; // Value injected by FXMLLoader
 
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() {

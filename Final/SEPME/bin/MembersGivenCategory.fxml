@@ -5,22 +5,20 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="AnchorPaneMembers" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="868.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="AnchorPaneMembers" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="932.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="393.0" layoutY="20.0" text="Members:">
+      <Label layoutX="535.0" layoutY="20.0" text="Members:">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TableView fx:id="tblMember" layoutX="30.0" layoutY="53.0" prefHeight="498.0" prefWidth="810.0">
+      <TableView fx:id="tblMember" layoutX="30.0" layoutY="53.0" prefHeight="498.0" prefWidth="869.0">
         <columns>
-          <TableColumn fx:id="tblColumnName" prefWidth="135.0" text="Name" />
-            <TableColumn fx:id="tblColumnAddress" prefWidth="135.0" text="Address" />
-            <TableColumn fx:id="tblColumnPhone" prefWidth="135.0" text="Phone" />
-            <TableColumn fx:id="tblColumnEmail" prefWidth="135.0" text="Email" />
-            <TableColumn fx:id="tblColumnPreferences" prefWidth="135.0" text="Preferences" />
-            <TableColumn fx:id="tblColumnMembershipDate" prefWidth="135.0" text="Membership Date" />
+            <TableColumn fx:id="tblPersonalInfo" prefWidth="609.0" text="Personal Information" />
+            <TableColumn fx:id="tblColumnMembershipDate" prefWidth="133.0" text="Membership Date" />
+            <TableColumn fx:id="tblColumnEndMembershipDate" prefWidth="126.0" text="Membership End" />
         </columns>
       </TableView>
+      <ComboBox fx:id="cmbPreferences" layoutX="30.0" layoutY="21.0" onAction="#preferences" prefWidth="150.0" promptText="Select Category" />
    </children>
 </AnchorPane>

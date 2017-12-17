@@ -1,58 +1,131 @@
 
-
 /**
  * Sample Skeleton for 'MembersGivenCategory.fxml' Controller Class
  */
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 
-public class MembersGivenCategoryController {
+public class MembersGivenCategoryController implements Initializable
+{
 
-    @FXML // ResourceBundle that was given to the FXMLLoader
-    private ResourceBundle resources;
+   private ArrayList<Members> membersArray = new ArrayList<Members>();
+   private ToBinary file;
+   private String filename = "members.txt";
+   private static ObservableList<Members> observableMembers;
 
-    @FXML // URL location of the FXML file that was given to the FXMLLoader
-    private URL location;
+   @FXML
+   private AnchorPane AnchorPaneMembers;
 
-    @FXML // fx:id="AnchorPaneMembers"
-    private AnchorPane AnchorPaneMembers; // Value injected by FXMLLoader
+   @FXML
+   private ComboBox<Category> cmbPreferences;
 
-    @FXML // fx:id="tblColumnPhone"
-    private TableColumn<?, ?> tblColumnPhone; // Value injected by FXMLLoader
+   @FXML
+   private TableView<Members> tblMember;
 
-    @FXML // fx:id="tblColumnName"
-    private TableColumn<?, ?> tblColumnName; // Value injected by FXMLLoader
+   @FXML
+   private TableColumn<Members, MyDate> tblColumnMembershipDate;
 
-    @FXML // fx:id="tblMember"
-    private TableView<?> tblMember; // Value injected by FXMLLoader
+   @FXML
+   private TableColumn<Members, MyDate> tblColumnEndMembershipDate;
 
-    @FXML // fx:id="tblColumnMembershipDate"
-    private TableColumn<?, ?> tblColumnMembershipDate; // Value injected by FXMLLoader
 
-    @FXML // fx:id="tblColumnEmail"
-    private TableColumn<?, ?> tblColumnEmail; // Value injected by FXMLLoader
+   @FXML
+   private TableColumn<Members, Non_Members> tblPersonalInfo;
 
-    @FXML // fx:id="tblColumnAddress"
-    private TableColumn<?, ?> tblColumnAddress; // Value injected by FXMLLoader
 
-    @FXML // fx:id="tblColumnPreferences"
-    private TableColumn<?, ?> tblColumnPreferences; // Value injected by FXMLLoader
 
-    @FXML // This method is called by the FXMLLoader when initialization is complete
-    void initialize() {
-        assert AnchorPaneMembers != null : "fx:id=\"AnchorPaneMembers\" was not injected: check your FXML file 'MembersGivenCategory.fxml'.";
-        assert tblColumnPhone != null : "fx:id=\"tblColumnPhone\" was not injected: check your FXML file 'MembersGivenCategory.fxml'.";
-        assert tblColumnName != null : "fx:id=\"tblColumnName\" was not injected: check your FXML file 'MembersGivenCategory.fxml'.";
-        assert tblMember != null : "fx:id=\"tblMember\" was not injected: check your FXML file 'MembersGivenCategory.fxml'.";
-        assert tblColumnMembershipDate != null : "fx:id=\"tblColumnMembershipDate\" was not injected: check your FXML file 'MembersGivenCategory.fxml'.";
-        assert tblColumnEmail != null : "fx:id=\"tblColumnEmail\" was not injected: check your FXML file 'MembersGivenCategory.fxml'.";
-        assert tblColumnAddress != null : "fx:id=\"tblColumnAddress\" was not injected: check your FXML file 'MembersGivenCategory.fxml'.";
-        assert tblColumnPreferences != null : "fx:id=\"tblColumnPreferences\" was not injected: check your FXML file 'MembersGivenCategory.fxml'.";
+   @SuppressWarnings("unchecked")
+   public void initializeTable()
+   {
+      tblPersonalInfo.setCellValueFactory(
+            new PropertyValueFactory<Members, Non_Members>("member"));
+      tblColumnMembershipDate.setCellValueFactory(
+            new PropertyValueFactory<Members, MyDate>("datePaid"));
+      tblColumnEndMembershipDate.setCellValueFactory(
+            new PropertyValueFactory<Members, MyDate>("dateEnd"));
+      // tblPersonalInfo.getColumns().addAll(memberId, tblColumnName,
+      // tblColumnAddress, tblColumnPhone, tblColumnEmail,
+      // tblColumnPreferences);
+      observableMembers = FXCollections
+            .observableList((ArrayList<Members>) file.readObjFromFile());
+      tblMember.setItems(observableMembers);
+      tblMember.setStyle("-fx-alignment: CENTER;");
+   }
 
-    }
+   @SuppressWarnings("unchecked")
+   public void refreshComboBox()
+   {
+      ArrayList<Category> categories = new ArrayList<Category>();
+
+      String category = "Show All";
+      Category cat = new Category(category);
+
+      categories = (ArrayList<Category>) file.readObjFromFile();
+      categories.add(cat);
+      cmbPreferences.getItems().addAll(categories);
+   }
+
+   @SuppressWarnings("unchecked")
+   private void showWrittenData()
+   {
+      ArrayList<Members> list = (ArrayList<Members>) file.readObjFromFile();
+      for (int i = 0; i < list.size(); i++)
+      {
+         System.out.println(list.get(i));
+      }
+   }
+
+   @FXML
+   void preferences(ActionEvent event)
+   {
+      ArrayList<Members> mem = new ArrayList<Members>();
+      for (int i = 0; i < membersArray.size(); i++)
+      {
+         if ((cmbPreferences.getSelectionModel().getSelectedItem().toString())
+               .equals("Show All"))
+         {
+            mem.add(membersArray.get(i));
+
+         }
+         else if (membersArray.get(i).getMember().getPreferences().toString()
+               .equals(cmbPreferences.getSelectionModel().getSelectedItem()
+                     .toString()))
+         {
+            mem.add(membersArray.get(i));
+         }
+      }
+      observableMembers = FXCollections.observableList(mem);
+      tblMember.setItems(observableMembers);
+      System.out.println();
+
+   }
+
+   @SuppressWarnings("unchecked")
+   public void initialize(URL arg0, ResourceBundle arg1)
+   {
+      filename = "categories.txt";
+      file = new ToBinary(filename);
+      refreshComboBox();
+      filename = "members.txt";
+      file = new ToBinary(filename);
+      membersArray = new ArrayList<Members>();
+      membersArray = (ArrayList<Members>) file.readObjFromFile();
+      showWrittenData();
+      initializeTable();
+
+   }
+
 }
