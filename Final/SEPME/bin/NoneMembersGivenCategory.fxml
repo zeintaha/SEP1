@@ -5,7 +5,7 @@
 <?import javafx.scene.text.*?>
 <AnchorPane fx:id="AnchorPaneMembers" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="751.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="393.0" layoutY="20.0" text="Non-Members:">
+      <Label layoutX="320.0" layoutY="20.0" text="Non-Members:">
          <font>
             <Font size="18.0" />
          </font>
@@ -19,6 +19,6 @@
             <TableColumn fx:id="tblColumnPreferences" prefWidth="135.0" text="Preferences" />
         </columns>
       </TableView>
-      <ComboBox fx:id="cmbPreferences" layoutX="30.0" layoutY="21.0" onAction="#preferences" prefWidth="150.0" />
+      <ComboBox fx:id="cmbPreferences" layoutX="30.0" layoutY="21.0" onAction="#preferences" prefWidth="150.0" promptText="Select Preference" />
    </children>
 </AnchorPane>
