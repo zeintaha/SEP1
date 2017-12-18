@@ -102,7 +102,7 @@ public class AddEventController implements Initializable
 
    }
 
-   @SuppressWarnings({ "unchecked", "unlikely-arg-type" })
+   @SuppressWarnings({ "unchecked"})
    @FXML
    void selectCategory(ActionEvent event)
    {
