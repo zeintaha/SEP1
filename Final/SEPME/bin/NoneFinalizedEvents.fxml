@@ -16,7 +16,7 @@
         <columns>
           <TableColumn fx:id="tblColumnCategory" prefWidth="100.0" text="Category" />
             <TableColumn fx:id="tblColumnType" prefWidth="100.0" text="Type" />
-            <TableColumn fx:id="tblColumnType" prefWidth="100.0" text="Title" />
+            <TableColumn fx:id="tblColumnTitle" prefWidth="100.0" text="Title" />
             <TableColumn fx:id="tblColumnDate" prefWidth="100.0" text="Date" />
             <TableColumn fx:id="tblColumnTime" prefWidth="100.0" text="Time" />
             <TableColumn fx:id="tblColumnDuration" prefWidth="100.0" text="Duration" />
