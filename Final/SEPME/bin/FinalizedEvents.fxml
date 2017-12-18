@@ -16,12 +16,14 @@
         <columns>
           <TableColumn fx:id="tblColumnCategory" prefWidth="100.0" text="Category" />
             <TableColumn fx:id="tblColumnType" prefWidth="100.0" text="Type" />
-            <TableColumn fx:id="tblColumnType" prefWidth="100.0" text="Title" />
+            <TableColumn fx:id="tblColumnTitle" prefWidth="100.0" text="Title" />
             <TableColumn fx:id="tblColumnDate" prefWidth="100.0" text="Date" />
             <TableColumn fx:id="tblColumnTime" prefWidth="100.0" text="Time" />
             <TableColumn fx:id="tblColumnDuration" prefWidth="100.0" text="Duration" />
             <TableColumn fx:id="tblColumnLecturer" prefWidth="100.0" text="Lecturer" />
             <TableColumn fx:id="tblColumnPrice" prefWidth="100.0" text="Price" />
+            <TableColumn fx:id="tblDiscountedPrice" prefWidth="75.0" text="Discounted Price" />
+            <TableColumn fx:id="tblParticipants" prefWidth="75.0" text="Participants" />
         </columns>
       </TableView>
    </children>

@@ -5,6 +5,9 @@
 
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+
+import javax.swing.JOptionPane;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -183,7 +186,8 @@ public class AddParticipantToEventController implements Initializable
       {
          if (memArray.get(i).getMember().getiD().toString().equals(idMember))
          {
-            txtNameMember.setText(memArray.get(i).getMember().getName().toString());
+            txtNameMember
+                  .setText(memArray.get(i).getMember().getName().toString());
             nonmemparticipant = memArray.get(i).getMember();
          }
       }
@@ -192,23 +196,27 @@ public class AddParticipantToEventController implements Initializable
    @FXML
    void addMember(ActionEvent event)
    {
-      Participants participant = new Participants(nonmemparticipant);
-      eventToAddParticipant.addParticipantsToEvent(participant);
-      events.add(eventToAddParticipant);
-      filename = "events.txt";
-      file = new ToBinary(filename);
-      file.writeObjToFile(events);
+      // Participants participant = new Participants(nonmemparticipant);
+      // eventToAddParticipant.addParticipantsToEvent(participant);
+      // events.add(eventToAddParticipant);
+      // filename = "events.txt";
+      // file = new ToBinary(filename);
+      // file.writeObjToFile(events);
+      JOptionPane.showMessageDialog(null, nonmemparticipant.getName()
+            + " Added to the event" + eventToAddParticipant.getTitle());
    }
 
    @FXML
    void addNonMember(ActionEvent event)
    {
-      Participants participant = new Participants(nonmemparticipant);
-      eventToAddParticipant.addParticipantsToEvent(participant);
-      events.add(eventToAddParticipant);
-      filename = "events.txt";
-      file = new ToBinary(filename);
-      file.writeObjToFile(events);
+      // Participants participant = new Participants(nonmemparticipant);
+      // eventToAddParticipant.addParticipantsToEvent(participant);
+      // events.add(eventToAddParticipant);
+      // filename = "events.txt";
+      // file = new ToBinary(filename);
+      // file.writeObjToFile(events);
+      JOptionPane.showMessageDialog(null, nonmemparticipant.getName()
+            + " Added to the event" + eventToAddParticipant.getTitle());
    }
 
    @SuppressWarnings("unchecked")
@@ -220,10 +228,10 @@ public class AddParticipantToEventController implements Initializable
       file = new ToBinary(filename);
       nonmemArray = (ArrayList<Non_Members>) file.readObjFromFile();
 
-      String idMember = txtMemberId.getText();
+      String idNonMember = txtMemberId1.getText();
       for (int i = 0; i < nonmemArray.size(); i++)
       {
-         if (memArray.get(i).getMember().getiD().equals(idMember))
+         if (nonmemArray.get(i).getiD().equals(idNonMember))
          {
             txtNameNonMember.setText(nonmemArray.get(i).getName());
             nonmemparticipant = nonmemArray.get(i);
@@ -234,7 +242,36 @@ public class AddParticipantToEventController implements Initializable
    @FXML
    void createNewMember(ActionEvent event)
    {
+      Parent root;
+      try
+      {
+         // instatiate invoke the fxml loader
+         FXMLLoader loader = new FXMLLoader();
 
+         // set controller
+         loader.setController(new AddMemberController());
+
+         // set the location of the FXML doc
+         loader.setLocation(getClass().getResource("AddMember.fxml"));
+         root = loader.load();
+
+         // Build the scene graph
+
+         Scene scene = new Scene(root);
+
+         Stage stage = new Stage();
+
+         // show the window using the scene graph
+         stage.getIcons()
+               .add(new Image(getClass().getResourceAsStream("favicon.png")));
+         stage.setTitle("Add Member");
+         stage.setScene(scene);
+         stage.show();
+      }
+      catch (IOException e)
+      {
+         e.printStackTrace();
+      }
    }
 
    @FXML
@@ -260,7 +297,8 @@ public class AddParticipantToEventController implements Initializable
          Stage stage = new Stage();
 
          // show the window using the scene graph
-         stage.getIcons().add(new Image(getClass().getResourceAsStream("favicon.png")));
+         stage.getIcons()
+               .add(new Image(getClass().getResourceAsStream("favicon.png")));
          stage.setTitle("Add None-Member");
          stage.setScene(scene);
          stage.show();
@@ -300,6 +338,5 @@ public class AddParticipantToEventController implements Initializable
       file = new ToBinary(filename);
       events = new ArrayList<Event>();
       events = (ArrayList<Event>) file.readObjFromFile();
-
    }
 }

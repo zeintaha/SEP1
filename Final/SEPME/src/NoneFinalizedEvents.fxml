@@ -22,6 +22,8 @@
             <TableColumn fx:id="tblColumnDuration" prefWidth="100.0" text="Duration" />
             <TableColumn fx:id="tblColumnLecturer" prefWidth="100.0" text="Lecturer" />
             <TableColumn fx:id="tblColumnPrice" prefWidth="100.0" text="Price" />
+            <TableColumn fx:id="tblDiscountedPrice" prefWidth="75.0" text="Discounted Price" />
+            <TableColumn fx:id="tblParticipants" prefWidth="75.0" text="Participants" />
         </columns>
       </TableView>
    </children>
