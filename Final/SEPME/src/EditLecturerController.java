@@ -3,16 +3,22 @@
  */
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
-public class EditLecturerController {
+public class EditLecturerController implements Initializable{
+   private ToBinary file;
+   private String fileName = "lecturers.txt";
+   private ArrayList<Lecturer> lecturerArray;
+   ArrayList<Category> categories;
 
     @FXML // ResourceBundle that was given to the FXMLLoader
     private ResourceBundle resources;
@@ -33,7 +39,7 @@ public class EditLecturerController {
     private TextField txtName; // Value injected by FXMLLoader
 
     @FXML // fx:id="cmbSelectCategory"
-    private ComboBox<?> cmbSelectCategory; // Value injected by FXMLLoader
+    private ComboBox<Category> cmbSelectCategory; // Value injected by FXMLLoader
 
     @FXML // fx:id="txtAddress"
     private TextField txtAddress; // Value injected by FXMLLoader
@@ -47,9 +53,23 @@ public class EditLecturerController {
     @FXML // fx:id="btnSearchLecturer"
     private Button btnSearchLecturer; // Value injected by FXMLLoader
 
-    @FXML
+    @SuppressWarnings("unchecked")
+   @FXML
     void searchLecturer(ActionEvent event) {
+       lecturerArray = new ArrayList<Lecturer>();
+       lecturerArray = (ArrayList<Lecturer>) file.readObjFromFile();
 
+       String nameLecturer = txtLecturersName.getText();
+
+       for (int i = 0; i < lecturerArray.size(); i++)
+       {
+          if (lecturerArray.get(i).getName().equals(nameLecturer))
+          {
+             txtName.setText(lecturerArray.get(i).getName());
+             txtPhone.setText(lecturerArray.get(i).getPhoneNr());
+             txtEmail.setText(lecturerArray.get(i).getEmail());
+          }
+       }
     }
 
     @FXML
@@ -57,9 +77,15 @@ public class EditLecturerController {
 
     }
 
-    @FXML
+    @SuppressWarnings("unchecked")
+   @FXML
     void saveChanges(ActionEvent event) {
-
+       Lecturer lec = new Lecturer(txtName.getText(),
+             txtPhone.getText(), txtEmail.getText(),
+             cmbSelectCategory.getSelectionModel().getSelectedItem().toString());
+       lecturerArray = (ArrayList<Lecturer>) file.readObjFromFile();
+       lecturerArray.add(lec);
+       file.writeObjToFile(lecturerArray);
     }
 
     @FXML // This method is called by the FXMLLoader when initialization is complete
@@ -76,5 +102,35 @@ public class EditLecturerController {
 
     }
     
+    public void initialize(URL arg0, ResourceBundle arg1)
+    {
+       fileName = "categories.txt";
+       file = new ToBinary(fileName);
+       categories = new ArrayList<Category>();
+       refreshComboBox();
+       fileName = "lecturers.txt";
+       file = new ToBinary(fileName);
+       lecturerArray = new ArrayList<Lecturer>();
+       showWrittenData();
+
+    }
     
+    @SuppressWarnings("unchecked")
+    public void refreshComboBox()
+    {
+       categories = new ArrayList<Category>();
+       categories = (ArrayList<Category>) file.readObjFromFile();
+       cmbSelectCategory.getItems().addAll(categories);
+    }
+
+    @SuppressWarnings("unchecked")
+    private void showWrittenData()
+    {
+       ArrayList<Lecturer> list = (ArrayList<Lecturer>) file.readObjFromFile();
+       for (int i = 0; i < list.size(); i++)
+       {
+          System.out.println(list.get(i));
+       }
+       System.out.println(list.get(0).getName());
+    }
 }
