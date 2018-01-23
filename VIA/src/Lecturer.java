@@ -5,13 +5,21 @@ public class Lecturer {
     private String email;
     private String phoneNr;
     private String category;
-    public Lecturer(String name, String email, String phoneNr, String category){
+    private String address;
+    public Lecturer(String name, String email, String phoneNr, String category, String address){
         this.name = name;
         this.email = email;
         this.phoneNr = phoneNr;
         this.category = category;
+        this.address = address;
     }
-    public String getPhoneNr()
+    public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getPhoneNr()
    {
       return phoneNr;
    }

@@ -1,103 +1,102 @@
-import java.util.ArrayList;
+import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
-public class Non_Members
+public class Non_Members implements Serializable
 {
+   /**
+    *
+    */
+   private static final long serialVersionUID = 1L;
    private String name;
    private String address;
-   private int phoneNr;
+   private String phone;
    private String email;
-   private ArrayList<Activity_Subject> preferences;
-   private int iD;
+   private String preferences;
+   private String iD;
 
-   public Non_Members(int iD, String name, String address, int phoneNr,
-         String email)
+  public Non_Members(String name, String address, String email, String phone,
+         String preferences)
    {
-      this.iD = iD;
+      
+     this.iD = idGenerator();
       this.name = name;
       this.address = address;
-      this.phoneNr = phoneNr;
-      this.email = email;
-      this.preferences = new ArrayList<Activity_Subject>();
-   }
-   
-   public Non_Members(int iD, String name, String address, int phoneNr,
-         String email, ArrayList<Activity_Subject> preferences)
-   {
-      this.iD = iD;
-      this.name = name;
-      this.address = address;
-      this.phoneNr = phoneNr;
+      this.phone = phone;
       this.email = email;
       this.preferences = preferences;
    }
 
-   public String getName()
+  public String getName()
    {
       return name;
    }
 
-   public void setName(String name)
+  public void setName(String name)
    {
       this.name = name;
    }
 
-   public String getAddress()
+  public String getAddress()
    {
       return address;
    }
 
-   public void setAddress(String address)
+  public void setAddress(String address)
    {
       this.address = address;
    }
 
-   public int getPhoneNr()
+  public String getPhone()
    {
-      return phoneNr;
+      return phone;
    }
 
-   public void setPhoneNr(int phoneNr)
+  public void setPhone(String phone)
    {
-      this.phoneNr = phoneNr;
+      this.phone = phone;
    }
 
-   public String getEmail()
+  public String getEmail()
    {
       return email;
    }
 
-   public void setEmail(String email)
+  public void setEmail(String email)
    {
       this.email = email;
    }
 
-   public ArrayList<Activity_Subject> getPreferences()
+  public String getPreferences()
    {
       return preferences;
    }
 
-   public void addPreferences(Activity_Subject subject)
-   {
-      this.preferences.add(subject);
-   }
-
-   public int getiD()
+  public String getiD()
    {
       return iD;
    }
 
-   public void setiD(int iD)
+  public void setiD(String id)
    {
-      this.iD = iD;
+      this.iD = id;
    }
 
-   public String toString()
+  public String idGenerator()
    {
-      return iD + "//" + name + "//" + address + "//" + phoneNr + "//"
-            + email + "//" + preferences;
+      Date NdNow = new Date();
+      SimpleDateFormat Nft = new SimpleDateFormat("yyMMddhhmmss");
+      String Ndatetime = "N" + Nft.format(NdNow);
+      return Ndatetime;
    }
-   
-   public boolean equals(Object obj)
+
+  public String toString()
+   {
+      return iD + "/" + name + "/" + address + "/" + phone + "/" + email + "/"
+            + preferences;
+   }
+
+  public boolean equals(Object obj)
    {
       if (!(obj instanceof Non_Members))
       {
@@ -105,6 +104,8 @@ public class Non_Members
       }
 
      Non_Members other = (Non_Members) obj;
-      return iD == (other.iD) && name.equals(other.name) && address.equals(other.address) && phoneNr == other.phoneNr && email.equals(other.email);
+      return iD == (other.iD) && name.equals(other.name)
+            && address.equals(other.address) && phone == other.phone
+            && email.equals(other.email);
    }
 }

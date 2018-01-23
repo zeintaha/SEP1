@@ -1,23 +1,30 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Event
+public class Event implements Serializable
 {
-   private Activity_Subject type;
+   /**
+    * 
+    */
+   private static final long serialVersionUID = 1L;
+   private Category category;
    private String title;
    private MyDate date;
-   private Clock time;
-   private Clock duration;
+   private String time;
+   private String duration;
    private Lecturer lecturer;
    private double price;
    private double discountedPrice;
    private int numOfParticipants;
    private ArrayList<Participants> participants;
+   private String type;
 
-   public Event(Activity_Subject type, String title, MyDate date, Clock time,
-         Clock duration, Lecturer lecturer, double price,
-         double discountedPrice, int numOfParticipants)
+   public Event(Category category, String type, String title, MyDate date,
+         String time, String duration, Lecturer lecturer, double price,
+         double discountedPrice)
    {
       this.type = type;
+      this.category = category;
       this.title = title;
       this.date = date;
       this.time = time;
@@ -25,31 +32,36 @@ public class Event
       this.lecturer = lecturer;
       this.price = price;
       this.discountedPrice = discountedPrice;
-      this.numOfParticipants = numOfParticipants;
-      participants = new ArrayList<Participants>();
+      this.participants = new ArrayList<Participants>();
    }
 
    public void addParticipantsToEvent(Participants participant)
-   { if(participants.size() <= numOfParticipants) {
-      participants.add(participant);
-   }
+   {
+      if (participants.size() <= numOfParticipants)
+      {
+         participants.add(participant);
+      }
 
    }
-   
-   public void removeParticipantsFromEvent(int iD) {
-      for(int i = 0; i < participants.size(); i++) {
-      participants.get(i).deleteParticipant(iD);
+
+   public void removeParticipantsFromEvent(String iD)
+   {
+      for (int i = 0; i < participants.size(); i++)
+      {
+         if(participants.get(i).getParticipant().getiD().equals(iD)) {
+            participants.remove(i);
+         }
       }
    }
 
-   public Activity_Subject getType()
+   public Category getCategory()
    {
-      return type;
+      return category;
    }
 
-   public void setType(Activity_Subject type)
+   public void setCategory(Category category)
    {
-      this.type = type;
+      this.category = category;
    }
 
    public String getTitle()
@@ -72,22 +84,22 @@ public class Event
       this.date = date;
    }
 
-   public Clock getTime()
+   public String getTime()
    {
       return time;
    }
 
-   public void setTime(Clock time)
+   public void setTime(String time)
    {
       this.time = time;
    }
 
-   public Clock getDuration()
+   public String getDuration()
    {
       return duration;
    }
 
-   public void setDuration(Clock duration)
+   public void setDuration(String duration)
    {
       this.duration = duration;
    }
@@ -132,6 +144,26 @@ public class Event
       this.numOfParticipants = numOfParticipants;
    }
 
+   public ArrayList<Participants> getParticipants()
+   {
+      return participants;
+   }
+
+   public void setParticipants(ArrayList<Participants> participants)
+   {
+      this.participants = participants;
+   }
+
+   public String getType()
+   {
+      return type;
+   }
+
+   public void setType(String type)
+   {
+      this.type = type;
+   }
+
    public boolean equals(Object obj)
    {
       if (!(obj instanceof Event))
@@ -140,11 +172,21 @@ public class Event
       }
 
       Event other = (Event) obj;
-      return type.equals(other.type) && title.equals(other.title)
+      return category.equals(other.category) && type.equals(other.type) && title.equals(other.title)
             && date.equals(other.date) && time.equals(other.time)
             && duration.equals(other.duration)
             && lecturer.equals(other.lecturer) && price == (other.price)
             && discountedPrice == (other.discountedPrice)
             && numOfParticipants == (other.numOfParticipants);
+   }
+
+   @Override
+   public String toString()
+   {
+      return "Event [category=" + category + ", title=" + title + ", date="
+            + date + ", time=" + time + ", duration=" + duration + ", lecturer="
+            + lecturer + ", price=" + price + ", discountedPrice="
+            + discountedPrice + ", numOfParticipants=" + numOfParticipants
+            + ", participants=" + participants + ", type=" + type + "]";
    }
 }

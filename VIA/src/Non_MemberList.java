@@ -25,7 +25,7 @@ public class Non_MemberList extends Participants
       for (int i = 0; i < nonMemberArray.size(); i++)
       {
          Non_Members nonMember = nonMemberArray.get(i);
-         if (nonMember.getiD() == (iD))
+         if (nonMember.getiD().equals(iD))
          {
             iD1.add(nonMember);
          }
@@ -45,44 +45,7 @@ public class Non_MemberList extends Participants
          }
       }
       return name1;
-   }
-
-   public ArrayList<Non_Members> findByPreferenceActivityType(
-         String activityType)
-   {
-      ArrayList<Non_Members> members1 = new ArrayList<Non_Members>();
-      for (int i = 0; i < nonMemberArray.size(); i++)
-      {
-         Non_Members mem = nonMemberArray.get(i);
-         for (int index = 0; index < mem.getPreferences().size(); index++)
-         {
-            if (mem.getPreferences().get(index).getActivityType()
-                  .equals(activityType))
-            {
-               members1.add(mem);
-            }
-         }
-      }
-      return members1;
-   }
-
-   public ArrayList<Non_Members> findByPreferenceActivityName(
-         String activityName)
-   {
-      ArrayList<Non_Members> members1 = new ArrayList<Non_Members>();
-      for (int i = 0; i < nonMemberArray.size(); i++)
-      {
-         Non_Members mem = nonMemberArray.get(i);
-         for (int index = 0; index < mem.getPreferences().size(); index++)
-         {
-            if (mem.getPreferences().get(index).getActivityType()
-                  .equals(activityName))
-            {
-               members1.add(mem);
-            }
-         }
-      }
-      return members1;
+   
    }
 
    public ArrayList<Non_Members> findByPhoneNr(int phoneNr)
@@ -91,7 +54,7 @@ public class Non_MemberList extends Participants
       for (int i = 0; i < nonMemberArray.size(); i++)
       {
          Non_Members nonMemberPhone = nonMemberArray.get(i);
-         if (nonMemberPhone.getPhoneNr() == (phoneNr))
+         if (nonMemberPhone.getPhoneNr().equals(phoneNr))
          {
             phoneNr1.add(nonMemberPhone);
          }
@@ -99,35 +62,35 @@ public class Non_MemberList extends Participants
       return phoneNr1;
    }
 
-   public void editLecturer(String name, String email, int iD, int phoneNr,
+   public void editLecturer(String name, String email, int iD, String phoneNr,
          String address)
    {
       if (nonMemberArray.size() != 0)
       {
          for (int i = 0; i < nonMemberArray.size(); i++)
          {
-            if (nonMemberArray.get(i).getiD() == (iD))
+            if (nonMemberArray.get(i).getiD().equals(iD))
             {
                nonMemberArray.get(i).setEmail(email);
                System.out.println(
                      "NonMember with the iD " + nonMemberArray.get(i).getiD()
                            + "has successfully updated his email adress");
             }
-            if (nonMemberArray.get(i).getiD() == (iD))
+            if (nonMemberArray.get(i).getiD().equals(iD))
             {
                nonMemberArray.get(i).setName(name);
                System.out.println(
                      "NonMember with the iD " + nonMemberArray.get(i).getiD()
                            + "has successfully updated his name");
             }
-            if (nonMemberArray.get(i).getiD() == (iD))
+            if (nonMemberArray.get(i).getiD().equals(iD))
             {
                nonMemberArray.get(i).setAddress(address);
                System.out.println(
                      "NonMember with the iD " + nonMemberArray.get(i).getiD()
                            + "has successfully updated his address");
             }
-            if (nonMemberArray.get(i).getiD() == (iD))
+            if (nonMemberArray.get(i).getiD().equals(iD))
             {
                nonMemberArray.get(i).setPhoneNr(phoneNr);
                System.out.println(
