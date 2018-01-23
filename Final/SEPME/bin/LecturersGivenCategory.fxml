@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="AnchorPaneSponsors" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="858.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="AnchorPaneLecturers" layoutX="381.0" layoutY="20.0" text="Lecturers:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblLecturers" layoutX="30.0" layoutY="53.0" prefHeight="498.0" prefWidth="801.0">
+        <columns>
+          <TableColumn fx:id="tblColumnName" prefWidth="160.0" text="Name" />
+            <TableColumn fx:id="tblColumnAddress" prefWidth="160.0" text="Address" />
+            <TableColumn fx:id="tblColumnPhone" prefWidth="160.0" text="Phone" />
+            <TableColumn fx:id="tblColumnEmail" prefWidth="160.0" text="Email" />
+            <TableColumn fx:id="tblColumnCategory" prefWidth="160.0" text="Category" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="cmbSelectCategory" layoutX="76.0" layoutY="20.0" onAction="#selectCategory" prefWidth="150.0" promptText="Select Category" />
+   </children>
+</AnchorPane>

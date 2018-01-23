@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button id="addCategory" fx:id="btnDeleteCategory" layoutX="414.0" layoutY="91.0" mnemonicParsing="false" onAction="#deleteCategory" prefHeight="25.0" prefWidth="102.0" text="Delete Category" />
+      <Label fx:id="lblCategory" layoutX="64.0" layoutY="95.0" text="Select category to delete:" />
+      <ComboBox fx:id="cmbSelectCategory" layoutX="219.0" layoutY="91.0" prefHeight="25.0" prefWidth="169.0" promptText="Select Category" />
+      <TableView id="tableViewCategory" fx:id="tableViewCategory" layoutX="92.0" layoutY="158.0" onMouseClicked="#getCategoryFromTable" prefHeight="200.0" prefWidth="416.0">
+         <columns>
+            <TableColumn id="listOfCategories" fx:id="listOfCategories" prefWidth="415.0" text="Category" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -10,7 +10,7 @@
       <Label layoutX="63.0" layoutY="109.0" text="Select lecture to deleter:" />
       <Button fx:id="btnSearchLecturer" layoutX="405.0" layoutY="40.0" mnemonicParsing="false" onAction="#searchLecturer" text="Search lecturer" />
       <Label layoutX="63.0" layoutY="44.0" text="Lecturer's name:" />
-      <TextField fx:id="txtLecturersName" layoutX="211.0" layoutY="40.0" prefHeight="25.0" prefWidth="178.0" text="Enter lecturer name" />
+      <TextField fx:id="txtLecturersName" layoutX="211.0" layoutY="40.0" onMouseClicked="#clearName" prefHeight="25.0" prefWidth="178.0" text="Enter lecturer name" />
       <Button fx:id="btnDeleteLecturer" layoutX="405.0" layoutY="144.0" mnemonicParsing="false" onAction="#deleteLecturer" text="Delete lecturer" />
       <Separator layoutX="41.0" layoutY="83.0" prefWidth="550.0" />
    </children>

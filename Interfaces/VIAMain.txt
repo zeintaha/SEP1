@@ -43,8 +43,8 @@ public class PleaseProvideControllerClassName {
     @FXML // fx:id="mniDeleteMember"
     private MenuItem mniDeleteMember; // Value injected by FXMLLoader
 
-    @FXML // fx:id="mniDeleteEvent1"
-    private MenuItem mniDeleteEvent1; // Value injected by FXMLLoader
+    @FXML // fx:id="mniAddParticipant"
+    private MenuItem mniAddParticipant; // Value injected by FXMLLoader
 
     @FXML // fx:id="mniDeleteEvent"
     private MenuItem mniDeleteEvent; // Value injected by FXMLLoader
@@ -58,11 +58,11 @@ public class PleaseProvideControllerClassName {
     @FXML // fx:id="mnuType"
     private Menu mnuType; // Value injected by FXMLLoader
 
-    @FXML // fx:id="mniAddMember"
-    private MenuItem mniAddMember; // Value injected by FXMLLoader
-
     @FXML // fx:id="mniAddLecturer"
     private MenuItem mniAddLecturer; // Value injected by FXMLLoader
+
+    @FXML // fx:id="mniAddMember"
+    private MenuItem mniAddMember; // Value injected by FXMLLoader
 
     @FXML // fx:id="btnMemebresNotPaidMembership"
     private Button btnMemebresNotPaidMembership; // Value injected by FXMLLoader
@@ -112,11 +112,138 @@ public class PleaseProvideControllerClassName {
     @FXML // fx:id="mniEditEvent"
     private MenuItem mniEditEvent; // Value injected by FXMLLoader
 
-    @FXML // fx:id="mniDeleteEvent11"
-    private MenuItem mniDeleteEvent11; // Value injected by FXMLLoader
-
     @FXML // fx:id="btnFinalizedEvents"
     private Button btnFinalizedEvents; // Value injected by FXMLLoader
+
+    @FXML
+    void addEvent(ActionEvent event) {
+
+    }
+
+    @FXML
+    void editEvent(ActionEvent event) {
+
+    }
+
+    @FXML
+    void deleteEvent(ActionEvent event) {
+
+    }
+
+    @FXML
+    void addParticipant(ActionEvent event) {
+
+    }
+
+    @FXML
+    void addLecturer(ActionEvent event) {
+
+    }
+
+    @FXML
+    void addMember(ActionEvent event) {
+
+    }
+
+    @FXML
+    void editMember(ActionEvent event) {
+
+    }
+
+    @FXML
+    void deleteMember(ActionEvent event) {
+
+    }
+
+    @FXML
+    void addSponsor(ActionEvent event) {
+
+    }
+
+    @FXML
+    void editSponsor(ActionEvent event) {
+
+    }
+
+    @FXML
+    void deleteSponsor(ActionEvent event) {
+
+    }
+
+    @FXML
+    void addLecturer(ActionEvent event) {
+
+    }
+
+    @FXML
+    void editLecturer(ActionEvent event) {
+
+    }
+
+    @FXML
+    void deleteLecturer(ActionEvent event) {
+
+    }
+
+    @FXML
+    void addCategory(ActionEvent event) {
+
+    }
+
+    @FXML
+    void deleteCategory(ActionEvent event) {
+
+    }
+
+    @FXML
+    void addType(ActionEvent event) {
+
+    }
+
+    @FXML
+    void deleteType(ActionEvent event) {
+
+    }
+
+    @FXML
+    void getFinalizedEvents(ActionEvent event) {
+
+    }
+
+    @FXML
+    void getNonFinalizedEvents(ActionEvent event) {
+
+    }
+
+    @FXML
+    void selectCategory(ActionEvent event) {
+
+    }
+
+    @FXML
+    void getSponsors(ActionEvent event) {
+
+    }
+
+    @FXML
+    void getLecturer(ActionEvent event) {
+
+    }
+
+    @FXML
+    void getNoneMembers(ActionEvent event) {
+
+    }
+
+    @FXML
+    void getMembers(ActionEvent event) {
+
+    }
+
+    @FXML
+    void getMembersHaveToPayMembership(ActionEvent event) {
+
+    }
 
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() {
@@ -128,13 +255,13 @@ public class PleaseProvideControllerClassName {
         assert mniAddCategory != null : "fx:id=\"mniAddCategory\" was not injected: check your FXML file 'VIAMain.fxml'.";
         assert mniDeleteSponsor != null : "fx:id=\"mniDeleteSponsor\" was not injected: check your FXML file 'VIAMain.fxml'.";
         assert mniDeleteMember != null : "fx:id=\"mniDeleteMember\" was not injected: check your FXML file 'VIAMain.fxml'.";
-        assert mniDeleteEvent1 != null : "fx:id=\"mniDeleteEvent1\" was not injected: check your FXML file 'VIAMain.fxml'.";
+        assert mniAddParticipant != null : "fx:id=\"mniAddParticipant\" was not injected: check your FXML file 'VIAMain.fxml'.";
         assert mniDeleteEvent != null : "fx:id=\"mniDeleteEvent\" was not injected: check your FXML file 'VIAMain.fxml'.";
         assert cmbCategorySponsorsLecturers != null : "fx:id=\"cmbCategorySponsorsLecturers\" was not injected: check your FXML file 'VIAMain.fxml'.";
         assert mniAddSponsor != null : "fx:id=\"mniAddSponsor\" was not injected: check your FXML file 'VIAMain.fxml'.";
         assert mnuType != null : "fx:id=\"mnuType\" was not injected: check your FXML file 'VIAMain.fxml'.";
-        assert mniAddMember != null : "fx:id=\"mniAddMember\" was not injected: check your FXML file 'VIAMain.fxml'.";
         assert mniAddLecturer != null : "fx:id=\"mniAddLecturer\" was not injected: check your FXML file 'VIAMain.fxml'.";
+        assert mniAddMember != null : "fx:id=\"mniAddMember\" was not injected: check your FXML file 'VIAMain.fxml'.";
         assert btnMemebresNotPaidMembership != null : "fx:id=\"btnMemebresNotPaidMembership\" was not injected: check your FXML file 'VIAMain.fxml'.";
         assert mniEditLecturer != null : "fx:id=\"mniEditLecturer\" was not injected: check your FXML file 'VIAMain.fxml'.";
         assert btnNoneMembers != null : "fx:id=\"btnNoneMembers\" was not injected: check your FXML file 'VIAMain.fxml'.";
@@ -151,7 +278,6 @@ public class PleaseProvideControllerClassName {
         assert mniDeleteCategory != null : "fx:id=\"mniDeleteCategory\" was not injected: check your FXML file 'VIAMain.fxml'.";
         assert mnuBar != null : "fx:id=\"mnuBar\" was not injected: check your FXML file 'VIAMain.fxml'.";
         assert mniEditEvent != null : "fx:id=\"mniEditEvent\" was not injected: check your FXML file 'VIAMain.fxml'.";
-        assert mniDeleteEvent11 != null : "fx:id=\"mniDeleteEvent11\" was not injected: check your FXML file 'VIAMain.fxml'.";
         assert btnFinalizedEvents != null : "fx:id=\"btnFinalizedEvents\" was not injected: check your FXML file 'VIAMain.fxml'.";
 
     }

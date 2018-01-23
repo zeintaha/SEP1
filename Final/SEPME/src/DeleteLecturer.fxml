@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="AnchorPaneDeleteLecturer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="189.0" prefWidth="609.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ComboBox fx:id="cmbSelectLecturer" layoutX="211.0" layoutY="105.0" onAction="#selectLecturer" prefHeight="25.0" prefWidth="178.0" promptText="Select Lecturer" />
+      <Label layoutX="63.0" layoutY="109.0" text="Select lecture to deleter:" />
+      <Button fx:id="btnSearchLecturer" layoutX="405.0" layoutY="40.0" mnemonicParsing="false" onAction="#searchLecturer" text="Search lecturer" />
+      <Label layoutX="63.0" layoutY="44.0" text="Lecturer's name:" />
+      <TextField fx:id="txtLecturersName" layoutX="211.0" layoutY="40.0" prefHeight="25.0" prefWidth="178.0" text="Enter lecturer name" />
+      <Button fx:id="btnDeleteLecturer" layoutX="405.0" layoutY="144.0" mnemonicParsing="false" onAction="#deleteLecturer" text="Delete lecturer" />
+      <Separator layoutX="41.0" layoutY="83.0" prefWidth="550.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="AnchorPaneDeleteParticipantFromEvent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="579.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="203.0" layoutY="131.0" text="Select date:" />
+      <DatePicker fx:id="dteDate" layoutX="338.0" layoutY="127.0" onAction="#selectDate" promptText="Select Date" />
+      <Label layoutX="202.0" layoutY="178.0" text="Select event:" />
+      <ComboBox fx:id="cmbSelectEvent" layoutX="337.0" layoutY="174.0" onAction="#selectEvent" prefHeight="25.0" prefWidth="176.0" promptText="Select Event" />
+      <ComboBox fx:id="cmbSelectCategory" layoutX="339.0" layoutY="38.0" onAction="#selectCategory" prefHeight="25.0" prefWidth="174.0" promptText="Select Category" />
+      <ComboBox fx:id="cmbSelectType" layoutX="339.0" layoutY="81.0" onAction="#selectType" prefHeight="25.0" prefWidth="174.0" promptText="Select Type" />
+      <Label layoutX="203.0" layoutY="44.0" text="Select Category:" />
+      <Label layoutX="205.0" layoutY="85.0" text="Select Type:" />
+      <Separator layoutX="91.0" layoutY="217.0" prefWidth="600.0" />
+      <Label layoutX="27.0" layoutY="14.0" text="Find Event to delete lecturer from:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="239.0" text="Delete lecturer from event:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="167.0" layoutY="306.0" text="Select lecturer to delete:" />
+      <Button fx:id="btnDeleteLecturer" layoutX="553.0" layoutY="302.0" mnemonicParsing="false" onAction="#deleteLecturer" prefHeight="25.0" prefWidth="117.0" text="Delete Lecturer" />
+      <ComboBox fx:id="cmbSelectLecturer" layoutX="338.0" layoutY="302.0" onAction="#selectLecturer" prefHeight="25.0" prefWidth="176.0" promptText="Select Lecturer" />
+   </children>
+</AnchorPane>
